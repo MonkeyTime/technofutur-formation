@@ -16,11 +16,12 @@ return array(
 	'website' => 'Artiste website',
 	'alert' => array(
 		'1' => 'Votre requête a été insérée dans la base de données.', 
-		'0' => 'Mauvaise requête ou configuration PDO manquante.', 
+		'0' => 'Désolé. Mauvaise requête ou configuration PDO manquante.', 
 		'2' => 'Pas de ctégorie d\'artiste définie. Merci de créer d\'abord une catégorie au minimum.',
 		'3' => 'Pas de ctégorie d\'album définie. Merci de créer d\'abord une catégorie au minimum.',
 		'4' => 'Pas d\'entrée trouvée actuellement dans la base de donnée pour votre requête. Merci de créer quelque chose d\'abord.',
 		'5' => 'Merci de d\'abord choisir un artiste dans la liste et de cliquer sur l\'action bouton "Ajouter album". Merci.',
+		'7' => 'Merci de d\'abord choisir un album dans la liste et de cliquer sur l\'action bouton "Modif album". Merci.',
 		'6' => 'Pas d\'entrée trouvée actuellement dans la base de donnée pour votre requête.'
 		),
 	'category_name' => 'Nom de la catégorie d\'artiste',
@@ -64,5 +65,7 @@ return array(
 	'delete_artist_confirm' => 'Voulez-vous vraiment supprimer cet artiste? (Cette opération est irréversible et supprime également ses albums)',
 	'login' => 'Login',
 	'pass' => 'Password',
-	'result_search' => 'Resultat(s) pour votre recherche:'
+	'result_search' => 'Resultat(s) pour votre recherche:',
+	'edit_album' => 'Modif album',
+	'album_edit_h1' => 'Edition de l\' album'
 );

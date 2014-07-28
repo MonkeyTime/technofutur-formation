@@ -33,6 +33,29 @@ function post_album($post, $pdo) {
 	return false;
 }
 
+function update_album($post, $pdo) {
+	
+	$query = 'UPDATE albums, album_cats 
+			  SET name = :name, description = :description, released = :released, artiste_id = :artiste_id, album_cats.category_id = :category
+			  WHERE albums.id = :id';
+	
+	$req = $pdo->prepare($query);
+
+	$req->bindParam(':name', $post['name'], PDO::PARAM_STR, 255);
+	$req->bindParam(':description', $post['description'], PDO::PARAM_STR);
+	$req->bindParam(':released', $post['released'], PDO::PARAM_STR);
+	$req->bindParam(':artiste_id', $post['artiste_id'], PDO::PARAM_INT);
+	$req->bindParam(':id', $post['id'], PDO::PARAM_INT);
+	$req->bindParam(':category', $post['category'], PDO::PARAM_INT);
+	
+	if($req->execute()) {
+
+		return true;
+	}
+
+	return false;
+}
+
 function artist_exist($id, $pdo) {
 	
 	$query = 'SELECT artistes.id
@@ -54,6 +77,56 @@ function artist_exist($id, $pdo) {
 
 		return false;
 	}
+}
+
+function album_exist($id, $pdo) {
+	
+	$query = 'SELECT albums.id
+			  FROM albums 
+			  WHERE id = :id';
+	
+	$req = $pdo->prepare($query);
+
+	$req->bindParam(':id', $id, PDO::PARAM_INT);
+	
+	if($req->execute()) {
+		
+		$arr = $req->fetchAll(PDO::FETCH_ASSOC);
+
+		if(count($arr) > 0) {
+			
+			return true;
+		}
+
+		return false;
+	}
+}
+
+function get_album($id, $pdo) {
+	
+	$query = 'SELECT a.name, a.description, a.released, a.artiste_id, cat.id
+			  FROM albums AS a, categories AS cat, album_cats AS al_cats
+			  WHERE a.id = :id1
+			  AND al_cats.album_id = :id2
+			  AND al_cats.category_id = cat.id';
+	
+	$req = $pdo->prepare($query);
+
+	$req->bindParam(':id1', $id, PDO::PARAM_INT);
+	$req->bindParam(':id2', $id, PDO::PARAM_INT);
+	
+	if($req->execute()) {
+		
+		$arr = $req->fetchAll(PDO::FETCH_ASSOC);
+
+		$arr = array_shift($arr);
+
+		$req->closeCursor();
+
+		return $arr;
+	}
+
+	return false;
 }
 
 function post_category($post, $pdo) {

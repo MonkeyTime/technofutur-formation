@@ -105,6 +105,19 @@ class AdminAlbumHandler {
     }
 }
 
+class AdminAlbumEditHandler {
+    
+    function get($language = 'en') {
+        //load controller (job of controller action is mixin model and its view for the current request)
+        include_once(CONTROLLER_PATH . '/admin/album/Edit.php');
+    }
+
+    function post($language = 'en') {
+        //load controller (job of controller action is mixin model and its view for the current request)
+        include_once(CONTROLLER_PATH . '/admin/album/Update.php');
+    }
+}
+
 class AdminAlbumListHandler {
     
     function get($language = 'en') {
@@ -148,6 +161,7 @@ Route::serve(array(
     '/([a-z]{2,2})/admin/artist/category/list' => 'AdminArtistCategoryListHandler',
     
 	'/([a-z]{2,2})/admin/album' => 'AdminAlbumHandler',
+    '/([a-z]{2,2})/admin/album/edit' => 'AdminAlbumEditHandler',
     '/([a-z]{2,2})/admin/album/list' => 'AdminAlbumListHandler',
     '/([a-z]{2,2})/admin/album/category' => 'AdminAlbumCategoryHandler',
     '/([a-z]{2,2})/admin/album/category/list' => 'AdminAlbumCategoryListHandler'

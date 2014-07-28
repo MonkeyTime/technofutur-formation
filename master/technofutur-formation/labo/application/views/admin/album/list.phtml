@@ -2,6 +2,18 @@
 
 	<h1><?php echo $lang['album_list_h1'] ?></h1>
 
+	<?php if(isset($_GET['choose'])) { echo '<p class="alert alert-info">' . $lang['alert']['7']. '</p>'; } ?>
+
+	<?php
+	if(isset($_GET['ok']) and $_GET['ok'] == '1') {
+		echo '<p class="alert alert-success">'. $lang['alert'][$_GET['ok']].'</p>';
+	}
+
+	if(isset($_GET['ok']) and $_GET['ok'] == '0') {
+		echo '<p class="alert alert-error">'. $lang['alert'][$_GET['ok']].'</p>';
+	}
+	?>
+
 	<table class="table mt3" style="width:100%">
 		<thead>
 	        <tr>
@@ -20,8 +32,11 @@
 	for($i = 0; $i < $count; $i++) {
 
 		if($i % 2 == 0) {
+
 			echo '<tr class="odd">';
+
 		} else {
+
 			echo '<tr>';
 		}
 
@@ -30,7 +45,7 @@
 		echo '<td>' . $album['name'] . '</td>';
 		echo '<td class="hidden-phone">' . $album['description'] . '</td>';
 		echo '<td>' . $album['released'] . '</td>';
-		echo '<td><a class="btn btn-primary" href="/' . $language . '/admin/artist/profile?id=' . $album['artiste_id'] . '">' . $lang['view_artist'] . '</a></td>';
+		echo '<td><a class="btn btn-primary m1" href="/' . $language . '/admin/artist/profile?id=' . $album['artiste_id'] . '">' . $lang['view_artist'] . '</a> <a class="btn btn-primary m1" href="/' . $language . '/admin/album/edit?id=' . $album['id'] . '">' . $lang['edit_album'] . '</a></td>';
 
 		echo '</tr>';
 	}

@@ -5,8 +5,12 @@
     	<h1><?php echo $lang['album_h1']; ?></h1>
         
         <?php
-		if(isset($_GET['ok'])) {
-			echo '<p class="alert alert-success">'. $lang['alert'][htmlentities($_GET['ok'])].'</p>';
+		if(isset($_GET['ok']) and $_GET['ok'] == '1') {
+			echo '<p class="alert alert-success">'. $lang['alert'][$_GET['ok']].'</p>';
+		}
+
+		if(isset($_GET['ok']) and $_GET['ok'] == '0') {
+			echo '<p class="alert alert-error">'. $lang['alert'][$_GET['ok']].'</p>';
 		}
 		?>
 

@@ -72,7 +72,7 @@ class Session {
 	  */
 	public static function is_valid($sess = '') {
 		
-		return ($sess != '' and self::get() === $sess) ? true : false;
+		return ($sess != '' and self::get() === $sess);
 	}
 	
 	/**

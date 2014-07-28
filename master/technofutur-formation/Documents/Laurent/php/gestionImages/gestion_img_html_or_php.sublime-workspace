@@ -1,0 +1,356 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"op",
+				"option	Tag"
+			],
+			[
+				"sec",
+				"select	Tag"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"border-co",
+				"border-color"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"c",
+				"center"
+			],
+			[
+				"paddi",
+				"padding"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"inli",
+				"inline"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"no",
+				"normal"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"st",
+				"style	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 153.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/wamp/www/php/gestionImages/versionPHP/subfolder/display_img.php",
+		"/C/wamp/www/php/gestionImages/versionPHP/index.php",
+		"/C/wamp/www/php/gestionImages/versionHTML/index.html",
+		"/C/wamp/www/php/gestionImages/versionHTML/subfolder/img3.html",
+		"/C/wamp/www/php/gestionImages/versionHTML/subfolder/img2.html",
+		"/C/wamp/www/php/gestionImages/versionHTML/subfolder/img4.html",
+		"/C/wamp/www/php/gestionImages/versionHTML/thumbnail/img2.jpg",
+		"/C/wamp/www/php/SQLv1SQLite/index.php",
+		"/C/wamp/www/php/_phpex/d/d2.php",
+		"/C/wamp/www/php/_phpex/d/d1.php",
+		"/S/Laurent/php/formv7CsvLoop/index.php",
+		"/C/wamp/www/html-css/exercice/index.html",
+		"/P/Laurent/perso/mvc2/conf/config.inc.php",
+		"/P/Laurent/perso/mvc1/index.php",
+		"/P/Laurent/perso/mvc1/lib/autoload.inc.php",
+		"/P/Laurent/perso/mvc1/lib/classes/TextFileHandler.inc.php",
+		"/P/Laurent/perso/mvc1/conf/config.inc.php",
+		"/C/wamp/www/blackbox/public/index.php",
+		"/C/Users/forma1211/Documents/_working-copy/blackbox/public/index.php",
+		"/C/wamp/www/blackbox/_stores/Couch.php",
+		"/C/wamp/www/blackbox/_stores/CouchInterface.php",
+		"/C/Users/forma1211/Downloads/yaf-2.3.2/yaf-2.3.2/yaf.php",
+		"/C/wamp/www/php/formv6DatasTxt/css/main.css",
+		"/C/wamp/www/php/formv6DatasTxt/_inc/newsletter.php",
+		"/C/wamp/www/php/formv6DatasTxt/_inc/newsletter.tpl.php",
+		"/C/wamp/www/php/formv6DatasTxt/_inc/index.tpl.php",
+		"/S/vphp/mvc2/index.php",
+		"/S/vphp/mvc1/index.php",
+		"/S/vphp/designmediamvc/index.php",
+		"/S/vphp/designmediamvcplus/index.php",
+		"/S/vphp/designmediamvcplus/intra.php",
+		"/C/wamp/www/php/formv6DatasTxt/_datas/newsletter.txt",
+		"/C/wamp/www/php/formv6Complete/_inc/footer.tpl.php",
+		"/C/wamp/www/php/formv6Complete/_inc/header.tpl.php",
+		"/C/wamp/www/php/formv6Complete/_inc/menu.tpl.php",
+		"/C/wamp/www/php/formv6Complete/css/main.css",
+		"/C/wamp/www/php/formv6Complete/_inc/index.tpl.php",
+		"/C/wamp/www/php/formv6Complete/_inc/newsletter.tpl.php",
+		"/C/wamp/www/php/formv6Complete/_class/Router.php",
+		"/C/wamp/www/php/formv6Complete/_inc/newsletter.php",
+		"/C/wamp/www/php/formv6Complete/index.php",
+		"/C/wamp/www/php/formv6Complete/.htaccess",
+		"/C/wamp/www/php/formv6Complete/_inc/register_newsletter.tpl.php",
+		"/C/wamp/www/php/formv5Calculatrice/inc/calculatrice/form.tpl.php",
+		"/C/wamp/www/php/formv5Calculatrice/index.php",
+		"/C/wamp/www/php/formv5Calculatrice/inc/calculatrice/traitment.php",
+		"/C/wamp/www/php/formv5Calculatrice/inc/calculatrice/form.php",
+		"/C/Users/forma1211/hubiC/Documents/Laurent/php/formv5Calculatrice/index.php",
+		"/C/wamp/www/php/formv5Calculatrice/inc/header.php",
+		"/S/Laurent/php/formv5Calculatrice/inc/calculatrice/traitment.php",
+		"/S/Laurent/php/formv5Calculatrice/index.php",
+		"/C/wamp/www/php/formv4AdvancedQCMInclude/index.php",
+		"/C/Users/forma1211/hubiC/Documents/Laurent/php/formv4AdvancedQCMInclude/index.php",
+		"/C/wamp/www/php/formv4AdvancedQCMInclude/inc/traitment.php",
+		"/C/wamp/www/php/formv4AdvancedQCMInclude/inc/form.php",
+		"/C/wamp/www/php/formv4AdvancedQCMInclude/inc/footer.php",
+		"/C/wamp/www/php/formv4AdvancedQCMInclude/inc/header.php",
+		"/S/Laurent/php/formv4AdvancedQCMInclude/index.php",
+		"/S/Laurent/php/formv4AdvancedQCMInclude/inc/footer.php",
+		"/C/wamp/www/php/formv3/css/main.css",
+		"/C/wamp/www/php/formv3/index.php",
+		"/C/wamp/www/php/formv2/form.sublime-project",
+		"/C/wamp/www/php/formv2/traitment.php",
+		"/C/wamp/www/php/form/index.php",
+		"/C/wamp/www/php/form/traitment.php",
+		"/C/wamp/www/php/form/css/main.css",
+		"/C/wamp/www/php/form/index.html",
+		"/C/wamp/www/exercice/index.html",
+		"/C/wamp/www/exercice/css/main.css",
+		"/C/wamp/www/exercice/js/jquery.min.js",
+		"/C/wamp/www/exercice/js/smoothscroll.js",
+		"/C/Users/forma1211/Downloads/smoothscroll.js",
+		"/C/wamp/www/exercice/css/font-awesome.css",
+		"/C/wamp/www/exercice/css/font-awesome.min.css",
+		"/C/wamp/www/exercice/fonts/fontawesome-webfont.svg",
+		"/C/wamp/www/exercice/fonts/fontawesome-webfont.woff",
+		"/C/wamp/www/exercice/fonts/FontAwesome.otf",
+		"/C/Users/forma1211/Downloads/df_smooth_scroll/df_smooth_scroll/smooth-src-comments.js",
+		"/C/Users/forma1211/Downloads/df_smooth_scroll/df_smooth_scroll/df_smooth_scroll.html",
+		"/C/Users/forma1211/Downloads/df_smooth_scroll/df_smooth_scroll/smooth.pack.js",
+		"/S/Laurent/html-css/exercice/index.html",
+		"/C/wamp/www/mySite/css/main.css",
+		"/C/wamp/www/mySite/index.html",
+		"/P/Laurent/html-css/mySite/index.html",
+		"/P/Laurent/html-css/mySite/css/main.css",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/P/Laurent/html-css/mySite/lien.html",
+		"/P/Laurent/html-css/mySite/Lien/lien.html"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"echo",
+			"}\n",
+			"#home{padding-top: 123px !important}",
+			"img{width: 50%}",
+			"µ",
+			"wrap30 ",
+			"left",
+			"m",
+			"wrap15",
+			" {",
+			"body {\n			\n		}",
+			"body {\n		\n		}",
+			"body \\{*\\}",
+			"body {(*)}",
+			"body {*}",
+			"body {(.+)}",
+			"background",
+			".pure-",
+			"background: #(.+)",
+			" ",
+			".form ",
+			".table ",
+			"pure-",
+			" !important"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$result .=",
+			"",
+			"right",
+			"l",
+			"wrap30",
+			"{",
+			"",
+			"color",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 100.0
+	},
+	"project": "gestion_img_html_or_php.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"css\\main.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

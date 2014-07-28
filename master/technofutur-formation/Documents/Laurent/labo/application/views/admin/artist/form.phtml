@@ -1,0 +1,62 @@
+<section id="admin">
+
+	<form class="form u66" action="" method="post">
+    
+    	<h1><?php echo $lang['artist_h1']; ?></h1>
+        
+        <?php
+		if(isset($_GET['ok'])) {
+			echo '<p class="alert alert-success">'. $lang['alert'][htmlentities($_GET['ok'])].'</p>';
+		}
+		?>
+        
+        <?php 
+		if (!isset($categories) or (isset($categories) and empty($categories))) {
+			echo '<p class="alert alert-error">' . $lang['alert']['2'] . ' <a href="/' . $language . '/admin/artist/category">' . $lang['createFirst'] . '</a></p>';
+		}?>
+        
+		<label for="firstname"><?php echo $lang['firstname']; ?></label>
+		<input class="u33" type="text" name="firstname" placeholder="<?php echo $lang['firstname']; ?> &hellip;" required />
+
+		<label for="lastname"><?php echo $lang['lastname']; ?></label>
+		<input type="text" name="lastname" placeholder="<?php echo $lang['lastname']; ?> &hellip;" required />
+
+		<label for="nickname"><?php echo $lang['nickname']; ?></label>
+		<input type="text" name="nickname" placeholder="<?php echo $lang['nickname']; ?> &hellip;" required />
+
+		<label for="birthplace"><?php echo $lang['birthplace']; ?></label>
+		<input type="text" name="birthplace" placeholder="<?php echo $lang['birthplace']; ?> &hellip;" required />
+
+		<label for="nationality"><?php echo $lang['nationality']; ?></label>
+		<input type="text" name="nationality" placeholder="<?php echo $lang['nationality']; ?> &hellip;" required />
+
+		<label for="birthdate"><?php echo $lang['birthdate']; ?></label>
+		<input type="date" name="birthdate" required />
+
+		<label for="biography"><?php echo $lang['biography']; ?></label>
+		<textarea name="biography" placeholder="<?php echo $lang['biography']; ?> &hellip;"></textarea>
+
+		<label for="website"><?php echo $lang['website']; ?></label>
+		<input type="text" name="website" placeholder="<?php echo $lang['website']; ?> &hellip;" />
+        
+        <?php 
+		if (isset($categories) and !empty($categories)) {
+			
+			echo '<label for="category">' . $lang['category_name'] . '</label>';
+			echo '<select name="category">';
+			
+			foreach($categories as $category) {
+				echo '	<option value="' . $category['id'] . '">' . $category['name'] . '</option>';
+			}
+			
+			echo '</select> <a class="btn btn-primary" href="/' . $language . '/admin/artist/category">'. $lang['btnAddCat'].'</a>';
+			
+			echo '<label class="hide">&nbsp;</label>';
+			echo '<input type="submit" class="btn btn-primary" value="' . $lang['btnSubmit'] . '" />';
+		
+		} 
+		?>
+
+	</form>
+
+</section>

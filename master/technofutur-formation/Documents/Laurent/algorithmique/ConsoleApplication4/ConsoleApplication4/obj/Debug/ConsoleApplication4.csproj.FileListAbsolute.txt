@@ -1,0 +1,12 @@
+P:\OO\Exercices\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe.config
+P:\OO\Exercices\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe
+P:\OO\Exercices\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.pdb
+P:\OO\Exercices\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.csprojResolveAssemblyReference.cache
+P:\OO\Exercices\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.exe
+P:\OO\Exercices\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.pdb
+P:\_algorithmeBase\C#\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe.config
+P:\_algorithmeBase\C#\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.exe
+P:\_algorithmeBase\C#\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe
+P:\_algorithmeBase\C#\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.pdb
+P:\_algorithmeBase\C#\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.csprojResolveAssemblyReference.cache
+P:\_algorithmeBase\C#\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.pdb

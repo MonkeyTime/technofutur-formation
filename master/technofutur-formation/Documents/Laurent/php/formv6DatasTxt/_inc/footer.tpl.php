@@ -1,0 +1,20 @@
+        <footer id="footer">
+
+            <div class="row wrap30">
+
+                <div class="box u50 mb2">&copy; lorem ipsum</div>
+                
+                <div class="box u50 txtr mb2">
+                    <span class="social-icon"><a href="#"><i class="fa fa-facebook-square fa-3x whi"></i></a></span>
+                    <span class="social-icon"><a href="#"><i class="fa fa-twitter-square fa-3x whi"></i></a></span>
+                    <span class="social-icon"><a href="#"><i class="fa fa-google-plus-square fa-3x whi"></i></a></span>
+                    <span class="social-icon"><a href="#"><i class="fa fa-pinterest-square fa-3x whi"></i></a></span>
+                </div>
+
+            </div>
+
+        </footer>
+
+    </body>
+
+</html>

@@ -1,0 +1,30 @@
+/**
+  * The App
+  */
+body {
+	text-align: center
+}
+.form {
+	background: #000;
+	color: #fff;
+}
+.form label {
+	display: block;
+	padding: 10px;
+}
+
+.questions, .responses {
+	background: #000;
+	color: #fff
+}
+.response.good {
+	color: #0f0;
+}
+
+.response.bad {
+	color: #f00;
+}
+
+.response.no {
+	color: #00f;
+}

@@ -1,0 +1,6 @@
+P:\OO\Exercices\ConsoleApplication8\ConsoleApplication8\bin\Debug\ConsoleApplication8.exe.config
+P:\Laurent-B\algorithmique\ConsoleApplication8\ConsoleApplication8\bin\Debug\ConsoleApplication8.exe.config
+P:\Laurent-B\algorithmique\ConsoleApplication8\ConsoleApplication8\bin\Debug\ConsoleApplication8.exe
+P:\Laurent-B\algorithmique\ConsoleApplication8\ConsoleApplication8\bin\Debug\ConsoleApplication8.pdb
+P:\Laurent-B\algorithmique\ConsoleApplication8\ConsoleApplication8\obj\Debug\ConsoleApplication8.exe
+P:\Laurent-B\algorithmique\ConsoleApplication8\ConsoleApplication8\obj\Debug\ConsoleApplication8.pdb

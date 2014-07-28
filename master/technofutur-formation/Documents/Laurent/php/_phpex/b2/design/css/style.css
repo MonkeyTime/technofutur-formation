@@ -1,0 +1,130 @@
+body, div, h1, form, fieldset, input, textarea 
+{
+	margin: 0; padding: 0; border: 0; outline: none;
+}
+
+html 
+{
+	height: 100%;
+}
+
+body 
+{
+	background: #333;
+	font-family: sans-serif; 
+}
+
+#banner 
+	{
+	width:550px;
+	margin:0px auto;
+	text-align:center; 
+	padding:15px;
+	}
+	
+#formbox, #box 
+{
+	width: 480px; margin: 30px auto; padding: 30px 30px;
+	background: #ddd; border: 1px solid #e1e1e1;
+	-moz-box-shadow: 0px 0px 8px #444;
+	-webkit-box-shadow: 0px 0px 8px #444;
+}
+
+h1 
+{
+	font-size: 25px; color: #117CA3;
+	text-align: center; margin: 0 0 35px 0;
+}
+
+h2 
+{
+	font-size: 20px; color: #117CA3;
+	text-align: center; margin: 0 0 35px 0; 
+}
+
+label 
+{
+	float: left; clear: left; margin: 11px 20px 0 0; width: 95px;
+	text-align: right; font-size: 16px; color: #117CA3; 
+	text-transform: uppercase; 
+}
+
+input 
+{
+	width: 310px; height: 35px; padding: 5px 20px 0px 20px; margin: 0 0 20px 0; 
+	background: #117CA3;
+	border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+	font-family: sans-serif; font-size: 16px; color: #f2f2f2;
+}
+
+input::-webkit-input-placeholder  
+{
+	color: #fff; 
+}
+
+input:-moz-placeholder 
+{
+	color: #fff; 
+}
+
+textarea 
+{
+	width: 310px; height: 170px; padding: 12px 20px 0px 20px; margin: 0 0 20px 0; 
+	background: #117CA3;
+	border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+	font-family: sans-serif; font-size: 16px; color: #f2f2f2; 
+}
+
+textarea::-webkit-input-placeholder  
+{
+	color: #fff;
+}
+
+textarea:-moz-placeholder 
+{
+	color: #fff; 
+}
+	
+input:focus, textarea:focus 
+{
+	background: #6BCEFC;
+	color: #117CA3;
+}
+
+input[type=submit] 
+{
+	width: 185px; height: 42px; float: right; padding: 10px 15px; margin: 0 15px 0 0;
+	border: 2px solid #fff;
+background: #117CA3;
+	cursor: pointer;
+}
+
+#debug
+	{
+	background-color: black;
+	color: #6ACEFC;
+	position: absolute;
+	bottom: 0;
+	left:0;
+	width: 100%;
+	text-align: left;
+	font-size: 1.1em;
+	}
+
+#debug h2
+	{
+	text-align:left;
+	color: #6ACEFC;
+	font-size: 1.1em;
+	font-weight: 700;
+	margin: 2em 0 .25em;
+	}
+
+p.comment
+{
+	clear:both;
+	padding-top: 22px;
+	color:#999;
+	text-align:center;
+	font-size:11px;
+}

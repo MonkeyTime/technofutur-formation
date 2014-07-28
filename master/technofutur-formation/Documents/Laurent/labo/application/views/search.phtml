@@ -1,0 +1,36 @@
+<section id="home">
+
+	<h1><?php echo $lang['the_big_search_h1'] ?></h1>
+
+	<div class="m0a u66">
+        
+        <p class="alert alert-info"><?php echo $lang['result_search']; ?> &hellip; <?php echo $search; ?> &hellip;</p>
+
+        <?php
+        if(isset($results) and !empty($results)) {
+            
+            $content = '';
+
+            foreach($results as $key => $result) {
+                
+                foreach($result as $k => $res) {
+
+                    if($k == 'title') {
+						$content .= '<article><h2 class="whi title">' . $res . '</h2>';
+                    } else {
+						$content .= '<p class="bg-whi p3">' . $res . '<p><article>';
+					}
+                }
+            }
+
+            echo $content; 
+
+        } else {
+
+            echo '<p class="alert alert-error">' . $lang['alert']['6'] . '</p>';
+        }
+        ?>
+    
+    </div>
+    
+</section>

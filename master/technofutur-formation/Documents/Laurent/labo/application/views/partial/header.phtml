@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"><!--manifest="cache.manifest"-->
+    
+    <head>
+        
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="initial-scale=1.0">
+        
+        <title><?php echo $lang['route'] . ' - ' . $lang['description']; ?></title>
+
+        <meta name="description" content="<?php echo $lang['route'] . ' - ' . $lang['description']; ?>">
+        
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic">
+        
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300,100,100italic,300italic,400italic,700,700italic">
+                
+        <link rel="stylesheet" type="text/css" href="/css/main.css" media="all">
+        
+        <script src="/js/html5.js" type="text/javascript"></script>
+        
+    </head>
+
+     <body>
+
+        <header id="header">
+        
+        	<div class="language"><a href="/fr"><img src="/img/fr.gif" /></a><a href="/"><img src="/img/gb.gif" /></a></div>
+            
+            <div class="row wrap30">
+
+                <div class="box u10"><a href="/<?php echo $language != 'en' ? $language : ''; ?>" class="home-title pt2">Artisticker</a></div>
+                
+                <nav class="box u90 txtr hidden-phone hidden-tablet">
+                
+                    <ul id="navigation" class="menu">
+                    
+                        <li><a href="/<?php echo $language != 'en' ? $language : ''; ?>"><?php echo $lang['home']; ?></a></li>
+                        
+                        <li><a href="/<?php echo $language; ?>/admin/artist"><?php echo $lang['add_artist']; ?></a></li>
+                        
+                        <li><a href="/<?php echo $language; ?>/admin/album"><?php echo $lang['add_album']; ?></a></li>
+                        <li><a href="/<?php echo $language; ?>/admin/artist/list"><?php echo $lang['list_artist']; ?></a></li>
+                        
+                        <li><a href="/<?php echo $language; ?>/admin/album/list"><?php echo $lang['list_album']; ?></a></li>
+                        <?php 
+						
+						if(isset($admin)) {
+						?>
+                        	<li class="whi mr2">|</li>
+                            
+                            <li class="whi connected">Hello admin</li>
+                            
+                            <li><a class="blu" href="/<?php echo $language; ?>/logoff"><i class="fa fa-power-off"></i></a></li>
+                        <?php 
+						} else {
+						?>
+                        	<li class="whi">|</li>
+                            
+                            <li><a href="/<?php echo $language; ?>/login"><?php echo $lang['login']; ?></a></li>
+                        <?php 
+						} 
+						?>
+                    </ul>
+                   
+                </nav>
+
+                <nav class="box u90 txtr visible-phone visible-tablet">
+                    
+                    <a href="#" class="whi display"><i class="fa fa-bars fa-lg whi"></i></a>
+                    
+                    <ul id="navigation" class="menu phone hidden">
+                        
+                        <li><a href="/<?php echo isset($language) ? $language : ''; ?>"><?php echo $lang['home']; ?></a></li>
+                        
+                        <li><a href="/<?php echo $language; ?>/admin/artist"><?php echo $lang['add_artist']; ?></a></li>
+                        
+                        <li><a href="/<?php echo $language; ?>/admin/album"><?php echo $lang['add_album']; ?></a></li>
+                        <li><a href="/<?php echo $language; ?>/admin/artist/list"><?php echo $lang['list_artist']; ?></a></li>
+                        
+                        <li><a href="/<?php echo $language; ?>/admin/album/list"><?php echo $lang['list_album']; ?></a></li>
+                        <?php
+						
+						if(isset($admin)) { 
+						?>
+                        	<li class="whi connected">Hello admin <a href="/<?php echo $language; ?>/logoff"><i class="fa fa-power-off"></i></a></li> 
+                        <?php 
+						} else {
+						?>
+                        	<li><a href="/<?php echo $language; ?>/login"><?php echo $lang['login']; ?></a></li>
+                        <?php 
+						} 
+						?>
+                        
+                    </ul>
+                    
+                </nav>
+
+            </div>
+
+        </header>

@@ -1,0 +1,42 @@
+<section id="album_list">
+
+	<h1><?php echo $lang['album_list_h1'] ?></h1>
+
+	<table class="table mt3" style="width:100%">
+		<thead>
+	        <tr>
+	            <th>ID</th>
+	            <th><?php echo $lang['album_name']; ?></th>
+	            <th class="hidden-phone"><?php echo $lang['album_description']; ?></th>
+	            <th><?php echo $lang['album_released']; ?></th>
+	            <th><?php echo $lang['action']; ?></th>
+	        </tr>
+	    </thead>
+
+	    <tbody>
+
+	<?php
+	
+	for($i = 0; $i < $count; $i++) {
+
+		if($i % 2 == 0) {
+			echo '<tr class="odd">';
+		} else {
+			echo '<tr>';
+		}
+
+		$album = $albums[$i];
+		echo '<td>' . $album['id'] . '</td>';
+		echo '<td>' . $album['name'] . '</td>';
+		echo '<td class="hidden-phone">' . $album['description'] . '</td>';
+		echo '<td>' . $album['released'] . '</td>';
+		echo '<td><a class="btn btn-primary" href="/' . $language . '/admin/artist/profile?id=' . $album['artiste_id'] . '">' . $lang['view_artist'] . '</a></td>';
+
+		echo '</tr>';
+	}
+	?>
+
+		</tbody>
+	</table>
+
+</section>

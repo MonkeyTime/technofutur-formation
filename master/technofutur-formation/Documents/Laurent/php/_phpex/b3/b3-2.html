@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Exercice B3</title>
+<link href="design/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+	<div id="banner"><a href="../filhebdo/index.html"><img src="design/img/logo.png" /></a></div>
+	<div id="content">
+	<h1>Envoyez-nous votre CV</h1>
+	<form enctype="multipart/form-data" action="b3-2.php" method="post">
+		<input type="hidden" name="MAX_FILE_SIZE" value="300000" />
+		<div class="label">Votre nom : </div>
+		<div class="content">
+		<input type="text" name="nom">
+		</div>
+		<div class="label">Votre parcours :</div>
+		<div class="content">
+		<textarea name="parcours" cols="50" rows="18"></textarea><br />
+		</div>
+		<div class="label">Votre photo : </div>
+		<div class="content">
+		<input name="photo" type="file" />
+		</div>
+		<div class="label"></div>
+		<div class="content">
+		<input type="submit" value="envoyer" />
+		</div>
+	</form>
+	</div>
+
+</body>
+</html>

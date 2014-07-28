@@ -1,0 +1,9 @@
+P:\Laurent-B\algorithmique\ConsoleApplication19\ConsoleApplication19\bin\Debug\ConsoleApplication19.exe.config
+P:\Laurent-B\algorithmique\ConsoleApplication19\ConsoleApplication19\bin\Debug\ConsoleApplication19.exe
+P:\Laurent-B\algorithmique\ConsoleApplication19\ConsoleApplication19\bin\Debug\ConsoleApplication19.pdb
+P:\Laurent-B\algorithmique\ConsoleApplication19\ConsoleApplication19\obj\Debug\ConsoleApplication19.csprojResolveAssemblyReference.cache
+P:\Laurent-B\algorithmique\ConsoleApplication19\ConsoleApplication19\obj\Debug\ConsoleApplication19.exe
+P:\Laurent-B\algorithmique\ConsoleApplication19\ConsoleApplication19\obj\Debug\ConsoleApplication19.pdb
+C:\Users\Laurent\hubiC\Documents\Laurent\algorithmique\ConsoleApplication19\ConsoleApplication19\bin\Debug\ConsoleApplication19.exe.config
+C:\Users\Laurent\hubiC\Documents\Laurent\algorithmique\ConsoleApplication19\ConsoleApplication19\obj\Debug\ConsoleApplication19.exe
+C:\Users\Laurent\hubiC\Documents\Laurent\algorithmique\ConsoleApplication19\ConsoleApplication19\obj\Debug\ConsoleApplication19.pdb

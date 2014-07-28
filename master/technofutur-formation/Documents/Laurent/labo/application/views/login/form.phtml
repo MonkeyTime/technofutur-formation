@@ -1,0 +1,19 @@
+<section id="login">
+
+	<form class="form u66" action="" method="post">
+    
+    	<h1><?php echo $lang['login']; ?></h1>
+            
+		<label for="login"><?php echo $lang['login']; ?></label>
+		<input class="u33" type="text" name="login" placeholder="<?php echo $lang['login']; ?>" required="">
+
+		<label for="pass"><?php echo $lang['pass']; ?></label>
+		<input type="password" name="pass" placeholder="<?php echo $lang['pass']; ?>" required="">
+        
+        <label class="hide">&nbsp;</label>
+         <input type="hidden" name="loginForm" value="<?php echo $token; ?>" />
+        <input type="submit" class="btn btn-primary" value="<?php echo $lang['btnSubmit']; ?>"> 
+
+	</form>
+    
+</section>

@@ -1,0 +1,6 @@
+P:\Laurent-B\perso\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+P:\Laurent-B\perso\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+P:\Laurent-B\perso\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+P:\Laurent-B\perso\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+P:\Laurent-B\perso\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+P:\Laurent-B\perso\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

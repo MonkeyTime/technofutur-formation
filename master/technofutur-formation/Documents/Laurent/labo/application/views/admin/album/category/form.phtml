@@ -1,0 +1,24 @@
+<section id="admin">
+
+	<form class="form u66" action="" method="post">
+    
+    	<h1><?php echo $lang['album_category_h1']; ?></h1>
+        
+        <?php
+		if(isset($_GET['ok'])) {
+			echo '<p class="alert alert-success">'. $lang['alert'][htmlentities($_GET['ok'])].'</p>';
+		}
+		?>
+        
+		<label for="name"><?php echo $lang['album_category_name']; ?></label>
+		<input class="u33" type="text" name="name" placeholder="<?php echo $lang['category_name']; ?> &hellip;" required />
+        
+		<label for="description"><?php echo $lang['category_description']; ?></label>
+		<textarea name="description" placeholder="<?php echo $lang['category_description']; ?> &hellip;"></textarea>
+
+		<label class="hide">&nbsp;</label>
+		<input type="submit" class="btn btn-primary" value="<?php echo $lang['btnSubmit']; ?>" />
+
+	</form>
+
+</section>

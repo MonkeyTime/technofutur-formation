@@ -1,0 +1,182 @@
+
+
+
+
+-- ---
+-- Globals
+-- ---
+
+-- SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+-- SET FOREIGN_KEY_CHECKS=0;
+
+-- ---
+-- Table 'artistes'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `artistes`;
+    
+CREATE TABLE `artistes` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `firstname` VARCHAR(255) NOT NULL,
+  `lastname` VARCHAR(255) NOT NULL,
+  `nickname` VARCHAR(255) NOT NULL,
+  `birthdate` DATE NOT NULL,
+  `birthplace` VARCHAR(255) NOT NULL,
+  `biography` MEDIUMTEXT NULL DEFAULT NULL,
+  `website` VARCHAR(255) NULL DEFAULT NULL,
+  `image` VARCHAR(255) NULL DEFAULT NULL,
+  `nationality` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+-- ---
+-- Table 'categories'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `categories`;
+    
+CREATE TABLE `categories` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  `description` MEDIUMTEXT NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+-- ---
+-- Table 'albums'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `albums`;
+    
+CREATE TABLE `albums` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  `description` MEDIUMTEXT NULL DEFAULT NULL,
+  `released` DATE NOT NULL,
+  `artiste_id` INT NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+-- ---
+-- Table 'rewards'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `rewards`;
+    
+CREATE TABLE `rewards` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  `description` MEDIUMTEXT NULL DEFAULT NULL,
+  `obtained` DATE NOT NULL,
+  `artiste_id` INT NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+-- ---
+-- Table 'artiste_cats'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `artiste_cats`;
+    
+CREATE TABLE `artiste_cats` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `category_id` INT NOT NULL,
+  `artiste_id` INT NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+-- ---
+-- Table 'articles'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `articles`;
+    
+CREATE TABLE `articles` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(255) NOT NULL,
+  `resume` MEDIUMTEXT NULL DEFAULT NULL,
+  `url` MEDIUMTEXT NOT NULL,
+  `artiste_id` INT NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+-- ---
+-- Table 'albums_categories'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `albums_categories`;
+    
+CREATE TABLE `albums_categories` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  `description` MEDIUMTEXT NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+-- ---
+-- Table 'album_cats'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `album_cats`;
+    
+CREATE TABLE `album_cats` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `album_id` INT NOT NULL,
+  `category_id` INT NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+-- ---
+-- Foreign Keys 
+-- ---
+
+ALTER TABLE `albums` ADD FOREIGN KEY (artiste_id) REFERENCES `artistes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `rewards` ADD FOREIGN KEY (artiste_id) REFERENCES `artistes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `artiste_cats` ADD FOREIGN KEY (category_id) REFERENCES `categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `artiste_cats` ADD FOREIGN KEY (artiste_id) REFERENCES `artistes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `articles` ADD FOREIGN KEY (artiste_id) REFERENCES `artistes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `album_cats` ADD FOREIGN KEY (album_id) REFERENCES `albums` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `album_cats` ADD FOREIGN KEY (category_id) REFERENCES `albums_categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- ---
+-- Table Properties
+-- ---
+
+-- ALTER TABLE `artistes` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `categories` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `albums` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `rewards` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `artiste_cats` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `articles` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `albums_categories` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `album_cats` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ---
+-- Test Data
+-- ---
+
+-- INSERT INTO `artistes` (`id`,`firstname`,`lastname`,`nickname`,`birthdate`,`birthplace`,`biography`,`website`,`image`,`nationality`) VALUES
+-- ('','','','','','','','','','');
+-- INSERT INTO `categories` (`id`,`name`,`description`) VALUES
+-- ('','','');
+-- INSERT INTO `albums` (`id`,`name`,`description`,`released`,`artiste_id`) VALUES
+-- ('','','','','');
+-- INSERT INTO `rewards` (`id`,`name`,`description`,`obtained`,`artiste_id`) VALUES
+-- ('','','','','');
+-- INSERT INTO `artiste_cats` (`id`,`category_id`,`artiste_id`) VALUES
+-- ('','','');
+-- INSERT INTO `articles` (`id`,`title`,`resume`,`url`,`artiste_id`) VALUES
+-- ('','','','','');
+-- INSERT INTO `albums_categories` (`id`,`name`,`description`) VALUES
+-- ('','','');
+-- INSERT INTO `album_cats` (`id`,`album_id`,`category_id`) VALUES
+-- ('','','');
+

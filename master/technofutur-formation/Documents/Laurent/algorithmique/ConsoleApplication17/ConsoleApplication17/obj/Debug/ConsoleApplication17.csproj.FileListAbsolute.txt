@@ -1,0 +1,6 @@
+P:\Laurent-B\algorithmique\ConsoleApplication17\ConsoleApplication17\bin\Debug\ConsoleApplication17.exe.config
+P:\Laurent-B\algorithmique\ConsoleApplication17\ConsoleApplication17\obj\Debug\ConsoleApplication17.csprojResolveAssemblyReference.cache
+P:\Laurent-B\algorithmique\ConsoleApplication17\ConsoleApplication17\bin\Debug\ConsoleApplication17.exe
+P:\Laurent-B\algorithmique\ConsoleApplication17\ConsoleApplication17\bin\Debug\ConsoleApplication17.pdb
+P:\Laurent-B\algorithmique\ConsoleApplication17\ConsoleApplication17\obj\Debug\ConsoleApplication17.exe
+P:\Laurent-B\algorithmique\ConsoleApplication17\ConsoleApplication17\obj\Debug\ConsoleApplication17.pdb

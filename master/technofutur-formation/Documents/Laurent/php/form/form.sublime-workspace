@@ -1,0 +1,404 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"border-co",
+				"border-color"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"padding",
+				"padding"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"c",
+				"center"
+			],
+			[
+				"paddi",
+				"padding"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"inli",
+				"inline"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"no",
+				"normal"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"st",
+				"style	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<?php\n    $firstname = isset($_POST['firstname']) ? htmlentities($_POST['firstname'], ENT_QUOTES) : '';\n    $lastname = isset($_POST['lastname']) ? htmlentities($_POST['lastname'], ENT_QUOTES) : '';\n    $birthday = isset($_POST['birthday']) ? htmlentities($_POST['birthday'], ENT_QUOTES) : '';\n    $gender = isset($_POST['gender']) ? htmlentities($_POST['gender'], ENT_QUOTES) == \"M\" ? \"masculin\" : \"féminin\" : '';\n\n    //exit(var_dump($birthday));\n\n    if(!$firstname or !$lastname or !$birthday or !$gender) {\n        header('Location: ./index.php?alert=incomplete');\n    }\n\n    if(!preg_match('#^[0-9]{4}-[0-1][0-9]-[0-3][0-9]$#', $birthday)) {\n        header('Location: ./index.php?alert=birthdate_format');\n    }\n?>\n\n<!DOCTYPE html>\n<html lang=\"en\">\n    \n    <head>\n        \n        <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"initial-scale=1.0\">\n        \n        <title>some test</title>\n\n        <meta name=\"description\" content=\"form description\">\n\n        <link rel=\"stylesheet\" type=\"text/css\" href=\"css/main.css\" media=\"all\">\n        \n    </head>\n\n     <body>\n\n        <header id=\"header\">\n            \n            <div class=\"row wrap30 txtc\">\n\n                <h1>FilHebdo inscription</h1>\n\n                <form class=\"form\" method=\"post\" action=\"traitment.php\">\n\n                    <?php echo (isset($_GET['alert']) and $_GET['alert'] == 'incomplete') ? '<p class=\"alert alert-error\">Merci de remplir tous les champs du formulaire</p>' : '' ?>\n                    <?php echo (isset($_GET['alert']) and $_GET['alert'] == 'birthdate_format') ? '<p class=\"alert alert-error\">Le format de la date n\\'est pas un format valide</p>' : '' ?>\n                    \n                    <label>Prénom</label>\n                    <input type=\"text\" name=\"firstname\" placeholder=\"Votre prénom...\" />\n                    <label>Nom</label>\n                    <input type=\"text\" name=\"lastname\" placeholder=\"Votre nom...\" />\n                    <label>Date de naissance</label>\n                    <input type=\"date\" name=\"birthday\" />\n                    <label>Sexe</label>\n                    <input type=\"radio\" name=\"gender\" value=\"M\" /> masculin\n                    <input type=\"radio\" name=\"gender\" value=\"F\" /> féminim\n                    <label>&nbsp;</label>\n                    <input type=\"submit\" value=\"Valider\" />\n                </form>\n\n            </div>\n\n        </header>\n\n    </body>\n\n</html>\n",
+			"file": "index.php",
+			"file_size": 1763,
+			"file_write_time": 130498133041583252,
+			"settings":
+			{
+				"buffer_size": 2433,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/main.css",
+			"settings":
+			{
+				"buffer_size": 46585,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "traitment.php",
+			"settings":
+			{
+				"buffer_size": 1576,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 380.0,
+		"selected_items":
+		[
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 153.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/wamp/www/php/form/index.html",
+		"/C/wamp/www/php/form/traitment.php",
+		"/C/wamp/www/exercice/index.html",
+		"/C/wamp/www/php/form/css/main.css",
+		"/C/wamp/www/exercice/css/main.css",
+		"/C/wamp/www/exercice/js/jquery.min.js",
+		"/C/wamp/www/exercice/js/smoothscroll.js",
+		"/C/Users/forma1211/Downloads/smoothscroll.js",
+		"/C/wamp/www/exercice/css/font-awesome.css",
+		"/C/wamp/www/exercice/css/font-awesome.min.css",
+		"/C/wamp/www/exercice/fonts/fontawesome-webfont.svg",
+		"/C/wamp/www/exercice/fonts/fontawesome-webfont.woff",
+		"/C/wamp/www/exercice/fonts/FontAwesome.otf",
+		"/C/Users/forma1211/Downloads/df_smooth_scroll/df_smooth_scroll/smooth-src-comments.js",
+		"/C/Users/forma1211/Downloads/df_smooth_scroll/df_smooth_scroll/df_smooth_scroll.html",
+		"/C/Users/forma1211/Downloads/df_smooth_scroll/df_smooth_scroll/smooth.pack.js",
+		"/S/Laurent/html-css/exercice/index.html",
+		"/C/wamp/www/mySite/css/main.css",
+		"/C/wamp/www/mySite/index.html",
+		"/P/Laurent/html-css/mySite/index.html",
+		"/P/Laurent/html-css/mySite/css/main.css",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/P/Laurent/html-css/mySite/lien.html",
+		"/P/Laurent/html-css/mySite/Lien/lien.html"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"}\n",
+			"#home{padding-top: 123px !important}",
+			"img{width: 50%}",
+			"µ",
+			"wrap30 ",
+			"left",
+			"m",
+			"wrap15",
+			" {",
+			"body {\n			\n		}",
+			"body {\n		\n		}",
+			"body \\{*\\}",
+			"body {(*)}",
+			"body {*}",
+			"body {(.+)}",
+			"background",
+			".pure-",
+			"background: #(.+)",
+			" ",
+			".form ",
+			".table ",
+			"pure-",
+			" !important"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"right",
+			"l",
+			"wrap30",
+			"{",
+			"",
+			"color",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2433,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								720,
+								720
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "css/main.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 46585,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								46304,
+								46304
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 18895.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "traitment.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1576,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								708,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 100.0
+	},
+	"project": "form.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"css\\main.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

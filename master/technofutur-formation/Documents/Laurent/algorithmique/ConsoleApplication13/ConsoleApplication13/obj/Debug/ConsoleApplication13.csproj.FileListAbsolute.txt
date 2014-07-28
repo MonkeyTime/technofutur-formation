@@ -1,0 +1,6 @@
+P:\Laurent-B\algorithmique\ConsoleApplication13\ConsoleApplication13\bin\Debug\ConsoleApplication13.exe.config
+P:\Laurent-B\algorithmique\ConsoleApplication13\ConsoleApplication13\bin\Debug\ConsoleApplication13.exe
+P:\Laurent-B\algorithmique\ConsoleApplication13\ConsoleApplication13\bin\Debug\ConsoleApplication13.pdb
+P:\Laurent-B\algorithmique\ConsoleApplication13\ConsoleApplication13\obj\Debug\ConsoleApplication13.csprojResolveAssemblyReference.cache
+P:\Laurent-B\algorithmique\ConsoleApplication13\ConsoleApplication13\obj\Debug\ConsoleApplication13.exe
+P:\Laurent-B\algorithmique\ConsoleApplication13\ConsoleApplication13\obj\Debug\ConsoleApplication13.pdb

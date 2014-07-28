@@ -1,0 +1,9 @@
+P:\OO\Exercices\ConsoleApplication7\ConsoleApplication7\bin\Debug\ConsoleApplication7.exe.config
+P:\OO\Exercices\ConsoleApplication7\ConsoleApplication7\bin\Debug\ConsoleApplication7.exe
+P:\OO\Exercices\ConsoleApplication7\ConsoleApplication7\bin\Debug\ConsoleApplication7.pdb
+P:\OO\Exercices\ConsoleApplication7\ConsoleApplication7\obj\Debug\ConsoleApplication7.csprojResolveAssemblyReference.cache
+P:\OO\Exercices\ConsoleApplication7\ConsoleApplication7\obj\Debug\ConsoleApplication7.exe
+P:\OO\Exercices\ConsoleApplication7\ConsoleApplication7\obj\Debug\ConsoleApplication7.pdb
+P:\Laurent-B\algorithmique\ConsoleApplication7\ConsoleApplication7\bin\Debug\ConsoleApplication7.exe.config
+P:\Laurent-B\algorithmique\ConsoleApplication7\ConsoleApplication7\obj\Debug\ConsoleApplication7.exe
+P:\Laurent-B\algorithmique\ConsoleApplication7\ConsoleApplication7\obj\Debug\ConsoleApplication7.pdb

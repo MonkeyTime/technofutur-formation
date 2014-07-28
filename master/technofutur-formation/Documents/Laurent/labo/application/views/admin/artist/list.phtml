@@ -1,0 +1,56 @@
+<section id="artist_list">
+
+	<h1><?php echo $lang['artist_list_h1'] ?></h1>
+    
+    <?php if(isset($_GET['choose'])) { echo '<p class="alert alert-info">' . $lang['alert']['5']. '</p>'; } ?>
+
+	<table class="table mt3" style="width:100%">
+		<thead>
+	        <tr>
+	            <th><?php echo $lang['id'] ?></th>
+	            <th class="hidden-phone"><?php echo $lang['firstname'] ?></th>
+	            <th class="hidden-phone"><?php echo $lang['lastname'] ?></th>
+	            <th><?php echo $lang['nickname'] ?></th>
+	            <th><?php echo $lang['birthdate'] ?></th>
+	            <th class="hidden-phone hidden-tablet"><?php echo $lang['birthplace'] ?></th>
+	            <th class="hidden-phone hidden-tablet"><?php echo $lang['biography'] ?></th>
+	            <th class="hidden-phone hidden-tablet"><?php echo $lang['website'] ?></th>
+	            <th class="hidden-phone hidden-tablet"><?php echo $lang['image'] ?></th>
+	            <th class="hidden-phone hidden-tablet"><?php echo $lang['nationality'] ?></th>
+	            <th><?php echo $lang['action'] ?></th>
+	        </tr>
+	    </thead>
+
+	    <tbody>
+
+	<?php
+	
+	for($i = 0; $i < $count; $i++) {
+
+		if($i % 2 == 0) {
+			echo '<tr class="odd">';
+		} else {
+			echo '<tr>';
+		}
+
+		$artist = $artists[$i];
+		echo '<td>' . $artist['id'] . '</td>';
+		echo '<td class="hidden-phone">' . $artist['firstname'] . '</td>';
+		echo '<td class="hidden-phone">' . $artist['lastname'] . '</td>';
+		echo '<td>' . $artist['nickname'] . '</td>';
+		echo '<td>' . $artist['birthdate'] . '</td>';
+		echo '<td class="hidden-phone hidden-tablet">' . $artist['birthplace'] . '</td>';
+		echo '<td class="hidden-phone hidden-tablet">' . substr($artist['biography'], 0, 30) . ' &hellip;</td>';
+		echo '<td class="hidden-phone hidden-tablet">' . $artist['website'] . '</td>';
+		echo '<td class="hidden-phone hidden-tablet">' . $artist['image'] . '</td>';
+		echo '<td class="hidden-phone hidden-tablet">' . $artist['nationality'] . '</td>';
+		echo '<td><a class="btn btn-primary" href="/' . $language . '/admin/album?id=' . $artist['id'] . '">' . $lang['add_album'] . '</a><br>&nbsp;<br><a class="btn btn-primary" href="/' . $language . '/admin/artist/profile?id=' . $artist['id'] . '">' . $lang['view_profile'] . '</a></td>';
+
+		echo '</tr>';
+	}
+	?>
+
+		</tbody>
+	</table>
+
+</section>

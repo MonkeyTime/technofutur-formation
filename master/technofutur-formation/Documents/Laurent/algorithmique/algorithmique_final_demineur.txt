@@ -1,0 +1,304 @@
+ALGODEMINEUR:
+
+CONST 	TAILLE = 10, NBBOMBE = 20
+VAR   	TERRAIN[TAILLE, TAILLE] DE ENTIER 
+	CHOIXPOSI, CHOIXPOSJ : ENTIER
+	PERDU : BOLEEN
+
+
+PROCEDURE INIT :
+	 
+	VAR I, RAND1, RAND2 : ENTIER
+	
+	DEBUT 
+		
+		I <- 0
+		
+		REPETER
+			
+			RAND1 <- RANDOM(1,TAILLE);
+
+			RAND2 <- RANDOM(1, TAILLE);
+			
+			SI TERRAIN[RAND1][RAND2] <> -1
+
+				PLACERBOMBE(RAND1, RAND2)
+
+				I <- I + 1
+			FINSI
+
+		JUSQU'A I = NBBOMBE
+		
+		FINALISERTERRAIN
+		 
+	FIN
+
+
+PROCEDURE PLACERBOMBE(RAND1 : ENTIER, RAND2 : ENTIER)
+	
+	DEBUT 
+
+		TERRAIN[RAND1][RAND2] <- -1
+
+	FIN
+
+
+PROCEDURE FINALISERTERRAIN
+	
+	VAR I, J : ENTIER
+
+	DEBUT 
+
+		POUR I ALLANT DE 1 A TAILLE ALORS
+
+			POUR J ALLANT DE 1 A TAILLE ALORS
+
+				SI TERRAIN[I][J] <> -1 ALORS
+
+					TERRAIN[I][J] <- CALCULERNBBOMBESAUTOUR(I, J)
+
+				FINSI
+
+			FINPOUR
+
+		FINPOUR
+
+	FIN
+
+
+FONCTION CALCULERNBBOMBESAUTOUR(I : ENTIER, J : ENTIER) : ENTIER
+
+	VAR NB : ENTIER
+
+	DEBUT
+
+		NB <- 0
+		
+		SI I > 1 ET J > 1 ET I < TAILLE ET J < TAILLE ALORS //Std case around
+
+			SI TERRAIN[I - 1][J - 1] = - 1 //top-left
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I][J - 1] = - 1 //top-center
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I + 1][J - 1] = - 1 //top-right
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I + 1][J] = - 1 //right-center
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I + 1][J + 1] = - 1 //bottom-right
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I][J + 1] = - 1 //bottom-center
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I - 1][J + 1] = - 1 //bottom-left
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I - 1][J] = - 1 //left-center
+				NB <- NB + 1
+			FINSI
+	
+		SINON SI I = 1 ET J = 1 ALORS //corner top-left around
+		
+			SI TERRAIN[I + 1][J] = - 1 //right-center
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I + 1][J + 1] = - 1 //bottom-right
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I][J + 1] = - 1 //bottom-center
+				NB <- NB + 1
+			FINSI
+
+		SINON SI I = TAILLE ET J = 1 ALORS //corner top-right around
+		
+			SI TERRAIN[I][J + 1] = - 1 //bottom-center
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I - 1][J + 1] = - 1 //bottom-left
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I - 1][J] = - 1 //left-center
+				NB <- NB + 1
+			FINSI
+
+		SINON SI I = TAILLE ET J = TAILLE ALORS //corner bottom-right around
+		
+			SI TERRAIN[I - 1][J - 1] = - 1 //top-left
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I][J - 1] = - 1 //top-center
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I - 1][J] = - 1 //left-center
+				NB <- NB + 1
+			FINSI
+
+		SINON SI I = 1 ET J = TAILLE ALORS //corner bottom-left around
+		
+			SI TERRAIN[I][J - 1] = - 1 //top-center
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I + 1][J - 1] = - 1 //top-right
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I + 1][J] = - 1 //right-center
+				NB <- NB + 1
+			FINSI
+
+		SINON SI I < TAILLE ET J = 1 ALORS // top line arround without corner
+		
+			SI TERRAIN[I + 1][J] = - 1 //right-center
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I + 1][J + 1] = - 1 //bottom-right
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I][J + 1] = - 1 //bottom-center
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I - 1][J + 1] = - 1 //bottom-left
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I - 1][J] = - 1 //left-center
+				NB <- NB + 1
+			FINSI
+
+		SINON SI I = TAILLE ET J > 1 ALORS // right line arround without corner
+		
+			SI TERRAIN[I - 1][J - 1] = - 1 //top-left
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I][J - 1] = - 1 //top-center
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I][J + 1] = - 1 //bottom-center
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I - 1][J + 1] = - 1 //bottom-left
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I - 1][J] = - 1 //left-center
+				NB <- NB + 1
+			FINSI
+
+		SINON SI I > 1 ET J = TAILLE ALORS // bottom line arround without corner
+		
+			SI TERRAIN[I - 1][J - 1] = - 1 //top-left
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I][J - 1] = - 1 //top-center
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I + 1][J - 1] = - 1 //top-right
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I + 1][J] = - 1 //right-center
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I - 1][J] = - 1 //left-center
+				NB <- NB + 1
+			FINSI
+
+		SINON SI I = 1 ET J < TAILLE ALORS // left line arround without corner
+		
+			SI TERRAIN[I][J - 1] = - 1 //top-center
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I + 1][J - 1] = - 1 //top-right
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I + 1][J] = - 1 //right-center
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I + 1][J + 1] = - 1 //bottom-right
+				NB <- NB + 1
+			FINSI
+			SI TERRAIN[I - 1][J] = - 1 //left-center
+				NB <- NB + 1
+			FINSI
+
+		FINSI
+		
+		RETOURNER NB
+
+	FIN
+
+
+PROCEDURE DEMARRERJEUX
+
+	VAR AFFICHER[TAILLE, TAILLE] DE ENTIER
+	    I, J : ENTIER
+
+	DEBUT
+
+		POUR I ALLANT DE 1 A TAILLE ALORS
+
+			POUR J ALLANT DE 1 A TAILLE ALORS
+
+				AFFICHER[I][J] <- FAUX	
+				
+			FINPOUR
+
+		FINPOUR
+		
+	FIN
+
+
+PROCEDURE AFFICHERTERRAIN
+
+	VAR, I, J : ENTIER
+	
+	DEBUT
+
+		POUR I ALLANT DE 1 A TAILLE ALORS
+
+			POUR J ALLANT DE 1 A TAILLE ALORS
+
+				SI AFFICHER[I][J] ALORS
+					
+					ECRIRE(TERRAIN[I][J])
+
+				FINSI
+
+			FINPOUR
+
+		FINPOUR				
+		
+	FIN
+
+
+//Algo demineur start...
+
+DEBUT
+	
+	INIT
+
+	DEMARRERJEUX
+
+	PERDU <- FAUX
+	
+	FAIRE 
+
+		AFFICHERTERRAIN
+
+		LIRE(CHOIXPOSI)
+		LIRE(CHOIXPOSJ)
+		
+		SI TERRAIN[CHOIXPOSI][CHOIXPOSJ] = -1 ALORS 
+			
+			ECRIRE("PERDU !")
+			PERDU <- VRAI	
+
+		SINON
+		
+			AFFICHER[I][J] <- VRAI
+
+		FINSI	
+
+	TANTQUE NON PERDU
+	
+FIN

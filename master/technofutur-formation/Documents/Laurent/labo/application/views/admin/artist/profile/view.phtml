@@ -1,0 +1,99 @@
+<section id="profile">
+
+	<h1 class="mt3 m0a u66 row"><?php echo $lang['profile_list_h1']; ?></h1>
+
+	<div class="mt3 m0a u66 row">
+		
+		<div class="box u33">
+			<h2>
+				<?php echo $lang['id']; ?>
+			</h2>
+			<p><?php echo $profile['id']; ?></p>
+		</div>
+		<div class="box u33">
+			<h2>
+				<?php echo $lang['firstname']; ?>
+			</h2>
+			<p><?php echo $profile['firstname'];?></p>
+		</div>
+		<div class="box u33">
+			<h2>
+				<?php echo $lang['lastname']; ?>
+			</h2>
+			<p><?php echo $profile['lastname']; ?></p>
+		</div>
+
+	</div>
+
+	<div class="mt3 m0a u66 row">
+
+		<div class="box u33">
+			<h2>
+				<?php echo $lang['nickname']; ?>
+			</h2>
+			<p><?php echo $profile['nickname'];?></p>
+		</div>
+		<div class="box u33">
+			<h2>
+				<?php echo $lang['birthdate'] ?>
+			</h2>
+			<p><?php echo $profile['birthdate'];?></p>
+		</div>
+	    <div class="box u33">
+			<h2>
+				<?php echo $lang['birthplace']; ?>
+			</h2>
+			<p><?php echo $profile['birthplace'];?></p>
+		</div>
+
+	</div>
+
+	<div class="mt3 m0a u66 row">
+
+	    <div class="box u100">
+			<h2>
+				<?php echo $lang['biography']; ?>
+			</h2>
+			<p><?php echo $profile['biography'];?></p>
+		</div>
+
+	</div>
+
+	<div class="mt3 m0a u66 row">
+	    
+	    <div class="box u100">
+			<h2>
+				<?php echo $lang['website']; ?>
+			</h2>
+			<p><a href="<?php echo $profile['website'];?>"><?php echo $profile['website'];?></a></p>
+		</div>
+
+	</div>
+
+	<div class="mt3 m0a u66 row">
+
+	    <div class="box u33">
+			<h2>
+				<?php echo $lang['nationality']; ?>
+			</h2>
+			<p><?php echo $profile['nationality'];?></p>
+		</div>
+	    <div class="box u33">
+			<h2>
+				<?php echo $lang['categorized']; ?>
+			</h2>
+			<p><?php echo implode(', ', $profile['categories']); ?></p>
+		</div>
+	    <div class="box u33">
+			<h2>
+				<?php echo $lang['action']; ?>
+			</h2>
+			<p>
+				<a class="btn btn-primary mt2" href="/<?php echo $language; ?>/admin/album?id=<?php echo $profile['id']; ?>"><?php echo $lang['add_album']; ?></a>
+				<a class="btn btn-primary mt2" href="/<?php echo $language; ?>/admin/artist/profile/delete?id=<?php echo $profile['id']; ?>" onclick="confirm('<?php echo $lang['delete_artist_confirm']; ?>') ? self.location.href='/<?php echo $language; ?>/admin/artist/profile/delete?id=<?php echo $profile['id']; ?>' : ''; return false;"><?php echo $lang['delete_profile']; ?></a>
+			</p>
+		</div>
+
+	</div>
+
+</section>

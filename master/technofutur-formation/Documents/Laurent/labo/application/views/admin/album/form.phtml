@@ -1,0 +1,48 @@
+<section id="admin">
+
+	<form class="form u66" action="" method="post">
+    
+    	<h1><?php echo $lang['album_h1']; ?></h1>
+        
+        <?php
+		if(isset($_GET['ok'])) {
+			echo '<p class="alert alert-success">'. $lang['alert'][htmlentities($_GET['ok'])].'</p>';
+		}
+		?>
+
+		<?php 
+		if (!isset($categories) or (isset($categories) and empty($categories))) {
+			echo '<p class="alert alert-error">' . $lang['alert']['3'] . ' <a href="/'. $language .'/admin/album/category">' . $lang['createFirst'] . '</a></p>';
+		}?>
+        
+		<label for="name"><?php echo $lang['album_name']; ?></label>
+		<input class="u33" type="text" name="name" placeholder="<?php echo $lang['album_name']; ?> &hellip;" required />
+        
+		<label for="description"><?php echo $lang['album_description']; ?></label>
+		<textarea name="description" placeholder="<?php echo $lang['album_description']; ?> &hellip;"></textarea>
+
+		<label for="released"><?php echo $lang['album_released']; ?></label>
+		<input type="date" name="released" required />
+
+		<input type="hidden" name="artiste_id" value="<?php echo isset($_GET['id']) ? htmlentities($_GET['id']) : ''; ?>" />
+		
+		<?php 
+		if (isset($categories) and !empty($categories)) {
+			
+			echo '<label for="category">' . $lang['category_name'] . '</label>';
+			echo '<select name="category">';
+			
+			foreach($categories as $category) {
+				echo '	<option value="' . $category['id'] . '">' . $category['name'] . '</option>';
+			}
+			
+			echo '</select> <a class="btn btn-primary" href="/' . $language . '/admin/album/category">'. $lang['btnAddCat'].'</a>';
+			
+			echo '<label class="hide">&nbsp;</label>';
+			echo '<input type="submit" class="btn btn-primary" value="' . $lang['btnSubmit'] . '" />';
+		
+		} 
+		?>
+	</form>
+
+</section>

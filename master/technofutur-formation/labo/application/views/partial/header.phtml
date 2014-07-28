@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><!--manifest="cache.manifest"-->
+<html lang="<?php echo substr(htmlentities($_SERVER['REQUEST_URI']), 1, 2); ?>">
     
     <head>
         
@@ -25,7 +25,7 @@
 
         <header id="header">
         
-        	<div class="language"><a href="/fr"><img src="/img/fr.gif" /></a><a href="/"><img src="/img/gb.gif" /></a></div>
+        	<div class="language"><a href="/fr<?php echo ($uri = substr(htmlentities($_SERVER['REQUEST_URI']), 3)); ?>"><img src="/img/fr.gif" /></a><a href="<?php echo $uri == '' ? '/' : '/en' . $uri; ?>"><img src="/img/gb.gif" /></a></div>
             
             <div class="row wrap30">
 
@@ -40,6 +40,7 @@
                         <li><a href="/<?php echo $language; ?>/admin/artist"><?php echo $lang['add_artist']; ?></a></li>
                         
                         <li><a href="/<?php echo $language; ?>/admin/album"><?php echo $lang['add_album']; ?></a></li>
+
                         <li><a href="/<?php echo $language; ?>/admin/artist/list"><?php echo $lang['list_artist']; ?></a></li>
                         
                         <li><a href="/<?php echo $language; ?>/admin/album/list"><?php echo $lang['list_album']; ?></a></li>

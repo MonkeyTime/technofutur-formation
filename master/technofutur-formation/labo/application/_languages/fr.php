@@ -66,6 +66,6 @@ return array(
 	'login' => 'Login',
 	'pass' => 'Password',
 	'result_search' => 'Resultat(s) pour votre recherche:',
-	'edit_album' => 'Modif album',
+	'edit_album' => 'Modifier album',
 	'album_edit_h1' => 'Edition de l\' album'
 );

@@ -116,6 +116,7 @@
 	},
 	"file_history":
 	[
+		"/C/wamp/www/labo/application/_classes/Session.php",
 		"/C/wamp/www/labo/application/models/admin/Album.php",
 		"/C/wamp/www/labo/application/dispatcher.php",
 		"/C/wamp/www/labo/application/views/admin/album/edit.phtml",
@@ -137,7 +138,6 @@
 		"/C/wamp/www/labo/public/index.php",
 		"/C/wamp/www/labo/application/controllers/login/Post.php",
 		"/C/wamp/www/labo/application/autoload.php",
-		"/C/wamp/www/labo/application/_classes/Session.php",
 		"/C/wamp/www/labo/application/views/partial/footer.phtml",
 		"/C/wamp/www/labo/application/views/partial/header.phtml",
 		"/C/wamp/www/labo/application/_conf/config.php",

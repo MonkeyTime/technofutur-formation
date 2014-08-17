@@ -1,0 +1,10 @@
+Des clubs de foot désirent créer ensemble une application pour gérer leurs matchs et sorties.
+Chaque club est composé de ses fans, de son coach, des joueurs et du président.
+L'application doit pouvoir enregistrer leurs noms et leurs ages respectifs. 
+Pour chaque match, le club attribue un identifiant number unique, la date du match, la durée, 
+le score final, et si le club a été absent (forfait) ou non (=attendance???). 
+Nos fans suivent chaque match. Chaque fan supporte une et une seule équipe.
+Nous devons pouvoir enregistrer pour chaque match, le stade où le match est joué, son nom, 
+son lieu et le nombre de place qu'il contient pour les supporters 
+ainsi que chaque date de chaque rencontre à venir et à quel stade à lieu cette rencontre.
+Le stade accueil aussi les entrainements, on retiendra la date.

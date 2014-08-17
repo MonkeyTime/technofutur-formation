@@ -1,0 +1,17 @@
+opérateurs
+----------
+
+
+"is" : renvoie 'true' si un objet correspond au type, 'false' sinon (ex. : "if (compte is Courant) { ...")
+"typeof" : renvoie le 'Type' de l'objet (voir MSDN)
+
+
+
+transformation
+--------------
+
+
+cast avec exception : tente de convertir l'objet et lance une exception si la conversion échoue 
+	(ex. : "Courant compte2 = (Courant)compte;")
+cast avec 'null' : tente de convertir l'objet et renvoie 'null' si la conversion échoue
+	(ex. : "Courant compte2 = compte as Courant;")

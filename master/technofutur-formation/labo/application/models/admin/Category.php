@@ -9,9 +9,11 @@ function post_category($post, $pdo) {
 	
 	$post['description'] = nl2br($post['description']);
 	$req->bindParam(':name', $post['name'], PDO::PARAM_STR, 255);
-	$req->bindParam(':description', nl2br($post['description']), PDO::PARAM_STR);
+	$req->bindParam(':description', $post['description'], PDO::PARAM_STR);
 	
 	if($req->execute()) {
+		
+		$req->closeCursor();
 		
 		return true;
 	}

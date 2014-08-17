@@ -1,0 +1,6 @@
+C:\Users\Laurent\Documents\_vsexpress-working-copy\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe.config
+C:\Users\Laurent\Documents\_vsexpress-working-copy\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.csprojResolveAssemblyReference.cache
+C:\Users\Laurent\Documents\_vsexpress-working-copy\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe
+C:\Users\Laurent\Documents\_vsexpress-working-copy\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.pdb
+C:\Users\Laurent\Documents\_vsexpress-working-copy\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.exe
+C:\Users\Laurent\Documents\_vsexpress-working-copy\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb

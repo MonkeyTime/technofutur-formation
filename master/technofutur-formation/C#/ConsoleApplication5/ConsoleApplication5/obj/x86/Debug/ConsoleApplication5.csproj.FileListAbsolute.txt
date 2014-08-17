@@ -1,0 +1,10 @@
+P:\Laurent\C#\ConsoleApplication5\ConsoleApplication5\bin\Debug\ConsoleApplication5.exe
+P:\Laurent\C#\ConsoleApplication5\ConsoleApplication5\bin\Debug\ConsoleApplication5.pdb
+P:\Laurent\C#\ConsoleApplication5\ConsoleApplication5\obj\x86\Debug\ConsoleApplication5.exe
+P:\Laurent\C#\ConsoleApplication5\ConsoleApplication5\obj\x86\Debug\ConsoleApplication5.pdb
+C:\Users\Laurent\hubiC\Documents\Laurent\C#\ConsoleApplication5\ConsoleApplication5\obj\x86\Debug\ConsoleApplication5.exe
+C:\Users\Laurent\hubiC\Documents\Laurent\C#\ConsoleApplication5\ConsoleApplication5\obj\x86\Debug\ConsoleApplication5.pdb
+C:\Users\Laurent\hubiC\Documents\Laurent\C#\ConsoleApplication5\ConsoleApplication5\obj\x86\Debug\ConsoleApplication5.csprojResolveAssemblyReference.cache
+C:\Users\Laurent\hubiC\Documents\Laurent\C#\ConsoleApplication5\ConsoleApplication5\bin\Debug\ConsoleApplication5.exe
+C:\Users\Laurent\hubiC\Documents\Laurent\C#\ConsoleApplication5\ConsoleApplication5\bin\Debug\ConsoleApplication5.pdb
+P:\Laurent\C#\ConsoleApplication5\ConsoleApplication5\obj\x86\Debug\ConsoleApplication5.csprojResolveAssemblyReference.cache

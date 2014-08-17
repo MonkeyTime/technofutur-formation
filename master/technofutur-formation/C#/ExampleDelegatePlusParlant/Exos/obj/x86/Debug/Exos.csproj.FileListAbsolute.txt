@@ -1,0 +1,27 @@
+C:\Users\forma1200\documents\visual studio 2010\Projects\Exos\Exos\bin\Debug\Exos.exe
+C:\Users\forma1200\documents\visual studio 2010\Projects\Exos\Exos\bin\Debug\Exos.pdb
+C:\Users\forma1200\documents\visual studio 2010\Projects\Exos\Exos\obj\x86\Debug\Exos.csprojResolveAssemblyReference.cache
+C:\Users\forma1200\documents\visual studio 2010\Projects\Exos\Exos\obj\x86\Debug\Exos.exe
+C:\Users\forma1200\documents\visual studio 2010\Projects\Exos\Exos\obj\x86\Debug\Exos.pdb
+P:\Laurent\C#\Exos\Exos\obj\x86\Debug\Exos.exe
+P:\Laurent\C#\Exos\Exos\obj\x86\Debug\Exos.pdb
+P:\Laurent\C#\Exos\Exos\bin\Debug\Exos.exe
+P:\Laurent\C#\Exos\Exos\bin\Debug\Exos.pdb
+P:\Laurent\C#\Exos\Exos\obj\x86\Debug\Exos.csprojResolveAssemblyReference.cache
+P:\Laurent\C#\ExosLolo\Exos\obj\x86\Debug\Exos.exe
+P:\Laurent\C#\ExosLolo\Exos\obj\x86\Debug\Exos.pdb
+P:\Laurent\C#\ExampleDelegate\Exos\obj\x86\Debug\Exos.exe
+P:\Laurent\C#\ExampleDelegate\Exos\obj\x86\Debug\Exos.pdb
+P:\Laurent\C#\ExampleDelegate\Exos\bin\Debug\Exos.exe
+P:\Laurent\C#\ExampleDelegate\Exos\bin\Debug\Exos.pdb
+P:\Laurent\C#\ExampleDelegate\Exos\obj\x86\Debug\Exos.csprojResolveAssemblyReference.cache
+P:\Laurent\C#\ExampleDelegatePlusParlant\Exos\obj\x86\Debug\Exos.exe
+P:\Laurent\C#\ExampleDelegatePlusParlant\Exos\obj\x86\Debug\Exos.pdb
+P:\Laurent\C#\ExampleDelegatePlusParlant\Exos\bin\Debug\Exos.exe
+P:\Laurent\C#\ExampleDelegatePlusParlant\Exos\bin\Debug\Exos.pdb
+P:\Laurent\C#\ExampleDelegatePlusParlant\Exos\obj\x86\Debug\Exos.csprojResolveAssemblyReference.cache
+C:\Users\Laurent\hubiC\Documents\Laurent\C#\ExampleDelegatePlusParlant\Exos\obj\x86\Debug\Exos.exe
+C:\Users\Laurent\hubiC\Documents\Laurent\C#\ExampleDelegatePlusParlant\Exos\obj\x86\Debug\Exos.pdb
+C:\Users\Laurent\hubiC\Documents\Laurent\C#\ExampleDelegatePlusParlant\Exos\bin\Debug\Exos.exe
+C:\Users\Laurent\hubiC\Documents\Laurent\C#\ExampleDelegatePlusParlant\Exos\bin\Debug\Exos.pdb
+C:\Users\Laurent\hubiC\Documents\Laurent\C#\ExampleDelegatePlusParlant\Exos\obj\x86\Debug\Exos.csprojResolveAssemblyReference.cache

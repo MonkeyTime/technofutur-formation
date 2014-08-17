@@ -1,0 +1,6 @@
+P:\Laurent\C#\ConsoleApplication6\ConsoleApplication6\bin\Debug\ConsoleApplication6.exe
+P:\Laurent\C#\ConsoleApplication6\ConsoleApplication6\bin\Debug\ConsoleApplication6.pdb
+P:\Laurent\C#\ConsoleApplication6\ConsoleApplication6\obj\x86\Debug\ConsoleApplication6.exe
+P:\Laurent\C#\ConsoleApplication6\ConsoleApplication6\obj\x86\Debug\ConsoleApplication6.pdb
+C:\Users\Laurent\hubiC\Documents\Laurent\C#\ConsoleApplication6\ConsoleApplication6\obj\x86\Debug\ConsoleApplication6.exe
+C:\Users\Laurent\hubiC\Documents\Laurent\C#\ConsoleApplication6\ConsoleApplication6\obj\x86\Debug\ConsoleApplication6.pdb

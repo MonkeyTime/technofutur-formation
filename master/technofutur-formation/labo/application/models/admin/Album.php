@@ -23,10 +23,14 @@ function post_album($post, $pdo) {
 		$req->bindParam(':category_id', $post['category'], PDO::PARAM_INT);
 
 		if($req->execute()) {
+			
+			$req->closeCursor();
 
 			return true;
 		}
-
+		
+		$req->closeCursor();
+		
 		return false;
 	}
 
@@ -49,6 +53,8 @@ function update_album($post, $pdo) {
 	$req->bindParam(':category', $post['category'], PDO::PARAM_INT);
 	
 	if($req->execute()) {
+		
+		$req->closeCursor();
 
 		return true;
 	}
@@ -72,8 +78,12 @@ function artist_exist($id, $pdo) {
 
 		if(count($arr) > 0) {
 			
+			$req->closeCursor();
+			
 			return true;
 		}
+		
+		$req->closeCursor();
 
 		return false;
 	}
@@ -94,6 +104,8 @@ function album_exist($id, $pdo) {
 		$arr = $req->fetchAll(PDO::FETCH_ASSOC);
 
 		if(count($arr) > 0) {
+			
+			$req->closeCursor();
 			
 			return true;
 		}
@@ -140,6 +152,8 @@ function post_category($post, $pdo) {
 	$req->bindParam(':description', $post['description'], PDO::PARAM_STR);
 	
 	if($req->execute()) {
+		
+		$req->closeCursor();
 
 		return true;
 	}

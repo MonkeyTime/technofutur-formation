@@ -1,0 +1,38 @@
+récapitulatif
+-------------
+
+thème : gestion d'un zoo
+
+
+élements : 
+	- classe 'Zoo' qui contiendra l'ensemble
+	- interface 'IAnimal'
+	- différentes classes héritant de 'IAnimal' et représentant différents animaux (lions, crocodiles, singes,...)
+	- classe 'Enclos' qui contient un type d'animaux
+	- ...
+
+objectifs : 
+	- afficher la liste des enclos et des animaux
+	- ajouter / supprimer des enclos et des animaux
+	- (avancé) s'occuper des animaux : manger, boire, vie, reproduction (Random),...
+
+
+
+avancé
+------
+
+thème : liste générique
+
+
+éléments : 
+	- classe générique qui agit comme une liste
+	- chaînage
+	- indexeur
+	- méthodes utiles (tri, filtre,...)
+
+objectifs : 
+	- ajouter / supprimer des objets dans la liste dynamiquement
+	- nombre d'objets
+	- rendre possible un foreach (IEnumerable)
+	- implémenter les méthodes utiles
+	- ...

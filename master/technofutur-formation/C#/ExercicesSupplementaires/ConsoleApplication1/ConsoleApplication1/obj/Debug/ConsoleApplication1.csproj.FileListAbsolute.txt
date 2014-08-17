@@ -1,0 +1,12 @@
+C:\Users\Laurent\Documents\_vsexpress-working-copy\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Laurent\Documents\_vsexpress-working-copy\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Laurent\Documents\_vsexpress-working-copy\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Laurent\Documents\_vsexpress-working-copy\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Laurent\Documents\_vsexpress-working-copy\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Laurent\Documents\_vsexpress-working-copy\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\Laurent\hubiC\Documents\Laurent\C#\ExercicesSupplementaires\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Laurent\hubiC\Documents\Laurent\C#\ExercicesSupplementaires\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Laurent\hubiC\Documents\Laurent\C#\ExercicesSupplementaires\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\Laurent\hubiC\Documents\Laurent\C#\ExercicesSupplementaires\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Laurent\hubiC\Documents\Laurent\C#\ExercicesSupplementaires\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Laurent\hubiC\Documents\Laurent\C#\ExercicesSupplementaires\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache

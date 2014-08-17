@@ -1,0 +1,5 @@
+P:\Laurent\C#\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe
+P:\Laurent\C#\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.pdb
+P:\Laurent\C#\ConsoleApplication3\ConsoleApplication3\obj\x86\Debug\ConsoleApplication3.exe
+P:\Laurent\C#\ConsoleApplication3\ConsoleApplication3\obj\x86\Debug\ConsoleApplication3.pdb
+P:\Laurent\C#\ConsoleApplication3\ConsoleApplication3\obj\x86\Debug\ConsoleApplication3.csprojResolveAssemblyReference.cache

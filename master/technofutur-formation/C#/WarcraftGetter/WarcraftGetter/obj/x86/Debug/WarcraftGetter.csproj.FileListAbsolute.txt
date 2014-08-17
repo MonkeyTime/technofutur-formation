@@ -1,0 +1,11 @@
+P:\Laurent\C#\WarcraftGetter\WarcraftGetter\bin\Debug\WarcraftGetter.exe
+P:\Laurent\C#\WarcraftGetter\WarcraftGetter\bin\Debug\WarcraftGetter.pdb
+P:\Laurent\C#\WarcraftGetter\WarcraftGetter\obj\x86\Debug\MainWindow.baml
+P:\Laurent\C#\WarcraftGetter\WarcraftGetter\obj\x86\Debug\MainWindow.g.cs
+P:\Laurent\C#\WarcraftGetter\WarcraftGetter\obj\x86\Debug\App.g.cs
+P:\Laurent\C#\WarcraftGetter\WarcraftGetter\obj\x86\Debug\WarcraftGetter_MarkupCompile.cache
+P:\Laurent\C#\WarcraftGetter\WarcraftGetter\obj\x86\Debug\WarcraftGetter.g.resources
+P:\Laurent\C#\WarcraftGetter\WarcraftGetter\obj\x86\Debug\WarcraftGetter.Properties.Resources.resources
+P:\Laurent\C#\WarcraftGetter\WarcraftGetter\obj\x86\Debug\WarcraftGetter.csproj.GenerateResource.Cache
+P:\Laurent\C#\WarcraftGetter\WarcraftGetter\obj\x86\Debug\WarcraftGetter.exe
+P:\Laurent\C#\WarcraftGetter\WarcraftGetter\obj\x86\Debug\WarcraftGetter.pdb

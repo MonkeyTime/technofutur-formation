@@ -12,7 +12,7 @@ namespace ConsoleApplication8
             string rebuild = "", secret = "";
             int type, essai = 0;
 
-            Personne person = new Personne("Laurent", "Bertrand", DateTime.Parse("27/11/1977"));
+            Personne person = new Personne("Laurent", "Bertrand", DateTime.Parse("02/02/1978"));
             Courant account = new Courant(person, "123456789", 1000);
             Epargne epargne = new Epargne(person, "234567890");
             Banque bank = new Banque();

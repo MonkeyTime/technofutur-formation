@@ -8,3 +8,5 @@ C:\Users\Laurent\hubiC\Documents\Laurent\C#\ConsoleApplication8\ConsoleApplicati
 C:\Users\Laurent\hubiC\Documents\Laurent\C#\ConsoleApplication8\ConsoleApplication8\bin\Debug\ConsoleApplication8.pdb
 C:\Users\Laurent\hubiC\Documents\Laurent\C#\ConsoleApplication8\ConsoleApplication8\obj\x86\Debug\ConsoleApplication8.csprojResolveAssemblyReference.cache
 P:\Laurent\C#\ConsoleApplication8\ConsoleApplication8\obj\x86\Debug\ConsoleApplication8.csprojResolveAssemblyReference.cache
+C:\Users\Laurent\Documents\GitHub\technofutur-formation\master\technofutur-formation\C#\ConsoleApplication8\ConsoleApplication8\obj\x86\Debug\ConsoleApplication8.exe
+C:\Users\Laurent\Documents\GitHub\technofutur-formation\master\technofutur-formation\C#\ConsoleApplication8\ConsoleApplication8\obj\x86\Debug\ConsoleApplication8.pdb

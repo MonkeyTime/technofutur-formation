@@ -31,13 +31,12 @@ namespace ConsoleApplication3
             {
                 list.Add(num);
                 this.latest = num;
-                Console.WriteLine(animal.name + " fait partie de la famille des " + animal.familly + " et a un poid de " + animal.weight + " kg, son espérance de vie médian est encore de " + animal.lifetime + " ans et a l'enclos des crocodiles numéro " + this.latest + "\n");
+                Console.WriteLine(animal.name + " fait partie de la famille des " + animal.familly + " et a un poid de " + animal.weight + " kg, son espérance de vie médian est encore de " + animal.lifetime + " ans et a l'enclos des singes numéro " + this.latest + "\n");
             }
             else
             {
                 Console.WriteLine("L'enclos des singes numéro " + num + " est déjà occupé, veuillez en choisir un autre pour " + animal.name);
-            }
-            
+            } 
         }
     }
 }

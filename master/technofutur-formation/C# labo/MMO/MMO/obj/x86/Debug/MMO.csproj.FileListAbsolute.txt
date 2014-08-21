@@ -1,0 +1,14 @@
+P:\Laurent\C#\MMO\MMO\bin\Debug\MMO.exe
+P:\Laurent\C#\MMO\MMO\bin\Debug\MMO.pdb
+P:\Laurent\C#\MMO\MMO\obj\x86\Debug\MMO.exe
+P:\Laurent\C#\MMO\MMO\obj\x86\Debug\MMO.pdb
+P:\Laurent\C# labo\MMO\MMO\obj\x86\Debug\MMO.exe
+P:\Laurent\C# labo\MMO\MMO\obj\x86\Debug\MMO.pdb
+P:\Laurent\C# labo\MMO\MMO\bin\Debug\MMO.exe
+P:\Laurent\C# labo\MMO\MMO\bin\Debug\MMO.pdb
+P:\Laurent\C# labo\MMO\MMO\obj\x86\Debug\MMO.csprojResolveAssemblyReference.cache
+S:\Laurent\C# labo\MMO\MMO\obj\x86\Debug\MMO.exe
+S:\Laurent\C# labo\MMO\MMO\obj\x86\Debug\MMO.pdb
+S:\Laurent\C# labo\MMO\MMO\obj\x86\Debug\MMO.csprojResolveAssemblyReference.cache
+S:\Laurent\C# labo\MMO\MMO\bin\Debug\MMO.exe
+S:\Laurent\C# labo\MMO\MMO\bin\Debug\MMO.pdb

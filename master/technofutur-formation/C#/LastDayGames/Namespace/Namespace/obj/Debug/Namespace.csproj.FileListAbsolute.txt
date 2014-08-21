@@ -1,0 +1,5 @@
+P:\Laurent\C#\LastDayGames\Namespace\Namespace\bin\Debug\Namespace.exe.config
+P:\Laurent\C#\LastDayGames\Namespace\Namespace\bin\Debug\Namespace.exe
+P:\Laurent\C#\LastDayGames\Namespace\Namespace\bin\Debug\Namespace.pdb
+P:\Laurent\C#\LastDayGames\Namespace\Namespace\obj\Debug\Namespace.exe
+P:\Laurent\C#\LastDayGames\Namespace\Namespace\obj\Debug\Namespace.pdb

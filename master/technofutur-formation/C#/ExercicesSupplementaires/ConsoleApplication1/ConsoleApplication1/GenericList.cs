@@ -83,7 +83,7 @@ namespace ConsoleApplication1
          * 
          * Overload of local Method Add to add multi items to a GenericList
          * 
-         * @params U:T[]   Items to add (params chained)
+         * @params U:T[]   Items to add (params chained) || array of items
          * 
          * @return void
          * 
@@ -101,7 +101,7 @@ namespace ConsoleApplication1
          * 
          * Overload of local Method Remove to remove multi items from a GenericList
          * 
-         * @params U:T[]   Items to remove (params chained)
+         * @params U:T[]   Items to remove (params chained) || array of items
          * 
          * @return void
          * 

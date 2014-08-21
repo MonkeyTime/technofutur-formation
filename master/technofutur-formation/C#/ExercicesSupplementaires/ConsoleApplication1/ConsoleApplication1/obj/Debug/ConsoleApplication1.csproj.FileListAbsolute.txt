@@ -10,3 +10,9 @@ C:\Users\Laurent\hubiC\Documents\Laurent\C#\ExercicesSupplementaires\ConsoleAppl
 C:\Users\Laurent\hubiC\Documents\Laurent\C#\ExercicesSupplementaires\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
 C:\Users\Laurent\hubiC\Documents\Laurent\C#\ExercicesSupplementaires\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
 C:\Users\Laurent\hubiC\Documents\Laurent\C#\ExercicesSupplementaires\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+P:\Laurent\C#\ExercicesSupplementaires\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+P:\Laurent\C#\ExercicesSupplementaires\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+P:\Laurent\C#\ExercicesSupplementaires\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+P:\Laurent\C#\ExercicesSupplementaires\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+P:\Laurent\C#\ExercicesSupplementaires\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+P:\Laurent\C#\ExercicesSupplementaires\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache

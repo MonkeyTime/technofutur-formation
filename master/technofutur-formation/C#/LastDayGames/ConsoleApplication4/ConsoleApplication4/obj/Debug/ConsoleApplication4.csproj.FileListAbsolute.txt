@@ -1,0 +1,6 @@
+P:\Laurent\C#\LastDayGames\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe.config
+P:\Laurent\C#\LastDayGames\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe
+P:\Laurent\C#\LastDayGames\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.pdb
+P:\Laurent\C#\LastDayGames\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.csprojResolveAssemblyReference.cache
+P:\Laurent\C#\LastDayGames\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.exe
+P:\Laurent\C#\LastDayGames\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.pdb

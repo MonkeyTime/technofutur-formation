@@ -4,3 +4,9 @@ C:\Users\Laurent\Documents\_vsexpress-working-copy\ConsoleApplication3\ConsoleAp
 C:\Users\Laurent\Documents\_vsexpress-working-copy\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.pdb
 C:\Users\Laurent\Documents\_vsexpress-working-copy\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.exe
 C:\Users\Laurent\Documents\_vsexpress-working-copy\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb
+P:\Laurent\C#\ExercicesSupplementaires\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe.config
+P:\Laurent\C#\ExercicesSupplementaires\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.exe
+P:\Laurent\C#\ExercicesSupplementaires\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb
+P:\Laurent\C#\ExercicesSupplementaires\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe
+P:\Laurent\C#\ExercicesSupplementaires\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.pdb
+P:\Laurent\C#\ExercicesSupplementaires\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.csprojResolveAssemblyReference.cache

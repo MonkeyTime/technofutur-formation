@@ -11,7 +11,7 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             //Test on a first GenericList T type with <string> param
-            GenericList<string> myList1 = new GenericList<string>();
+            GenericList<string> myList1 = new GenericList<string>(); //normally with List all is object => casting mendatory, now all in a GenericList of string are string...
             
             //Add method
             myList1.Add("Hello");
@@ -63,7 +63,7 @@ namespace ConsoleApplication1
             }
 
             //Test on a second GenericList T type with <int> param
-            GenericList<int> myList2 = new GenericList<int>();
+            GenericList<int> myList2 = new GenericList<int>(); //normally with new List all is object => casting mendatory, now all in a GenericList of int are int...
             
             //Add method
             myList2.Add(123);
@@ -116,7 +116,7 @@ namespace ConsoleApplication1
             }
 
             Console.WriteLine("\n--------------------------------------------------------------------------------"+
-                "\nNavigate thru 1 Cities, 2 numbers:\n----------------------------------\n");
+                "\nNavigate through 1 Cities, 2 numbers:\n-------------------------------------\n");
 
             switch (Console.ReadLine())
             {

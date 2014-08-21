@@ -69,7 +69,7 @@ namespace ConsoleApplication3
             }
             else
             {
-                Console.WriteLine("Votre singe " + this._name + " a fait un long voyage pour arriver dans votre zoo mais son taux de repos est encore suffisant (" + this._repose + "%). Son hydratation est cependant bonne (" + this._hydration * 100 + "%) et a sa capacité d'assimilation à (" + this._assimilation * 100 + "%)\n");
+                Console.WriteLine("Votre singe " + this._name + " a fait un long voyage pour arriver dans votre zoo mais son taux de repos est encore suffisant (" + this._repose * 100 + "%). Son hydratation est cependant bonne (" + this._hydration * 100 + "%) et a sa capacité d'assimilation à (" + this._assimilation * 100 + "%)\n");
             }
         }
 

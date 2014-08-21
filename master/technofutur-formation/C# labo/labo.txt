@@ -1,0 +1,25 @@
+Labo .NET
+---------
+
+thème : combats au tour à tour
+
+objectif principal : réaliser un mini jeu de combat au tour à tour (humain - monstre) style rpg
+
+éléments (par ordre d'importance) : 
+	- humain
+	- monstre
+	- arme(s) (interface)
+	- défense(s) (interface)
+	- esquive
+	- soin(s)
+	- aide(s)
+	- drop de nouveaux objets après le combat (random)
+	- choix de l'équipement
+	- choix des "mouvements" durant un combat
+	- (argent et magasin ?)
+	- (caractéristiques et niveaux ?)
+	- (zones de combat et monstres plus ou moins puissants ?)
+	- ...
+
+exemple : humain attaque => monstre attaque => humain se soigne => monstre attaque => humain attaque => monstre meurt => humain gagne une épée => ...
+

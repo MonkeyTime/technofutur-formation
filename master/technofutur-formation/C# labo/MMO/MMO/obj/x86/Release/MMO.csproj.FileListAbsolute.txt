@@ -1,0 +1,4 @@
+C:\Users\Laurent\Documents\_vsexpress-working-copy\C# labo\MMO\MMO\bin\Release\MMO.exe
+C:\Users\Laurent\Documents\_vsexpress-working-copy\C# labo\MMO\MMO\bin\Release\MMO.pdb
+C:\Users\Laurent\Documents\_vsexpress-working-copy\C# labo\MMO\MMO\obj\x86\Release\MMO.exe
+C:\Users\Laurent\Documents\_vsexpress-working-copy\C# labo\MMO\MMO\obj\x86\Release\MMO.pdb

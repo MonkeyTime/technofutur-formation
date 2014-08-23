@@ -39,7 +39,7 @@ namespace MMO
             {
                 this.emplacements.Add(arm);
 
-                //Console.WriteLine("\nVous avez encore " + (3 - this.emplacements.Count) + " emplacements libre dans votre sac\n");
+                Console.WriteLine("\nVous avez encore " + (3 - this.emplacements.Count) + " emplacements libre dans votre sac\n");
             }
         }
 

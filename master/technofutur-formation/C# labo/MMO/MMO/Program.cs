@@ -44,6 +44,8 @@ namespace MMO
                         Fight Fight = new Fight(Player, IA);
                         Fight.Start();
 
+                        i++;
+
                     break;
 
                     case "2":
@@ -51,12 +53,16 @@ namespace MMO
                         Vendor Vendor = new Vendor("Brocabancaloucouloss", 0, 1, new Arm("Epée", 15), new Arm("Hache", 15), new Arm("Pugilat", 15));
                         Vendor.Sell(Player);
 
+                        i++;
+
                     break;
 
                     case "3":
                         
                         Bag Bag = new Bag();
                         Bag.Display(Player);
+
+                        i++;
 
                     break;
 
@@ -75,13 +81,14 @@ namespace MMO
                         Fight fight = new Fight(Player, Orc);
                         fight.Start(null);
 
+                        i++;
+
                     break;
 
                     default:
                     break;
-                }
 
-                i++;
+                }
 
             } while(choice != "0");
         }

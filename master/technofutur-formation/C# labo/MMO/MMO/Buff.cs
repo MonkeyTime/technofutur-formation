@@ -10,6 +10,10 @@ namespace MMO
         public string type { get; private set; }
         public int power { get; private set; }
 
+        /**
+         * Constructor
+         * 
+         */
         public Buff(string type, int power)
         {
             this.type = type;

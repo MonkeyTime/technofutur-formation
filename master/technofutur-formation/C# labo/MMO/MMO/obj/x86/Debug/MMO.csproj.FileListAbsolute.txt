@@ -12,3 +12,8 @@ S:\Laurent\C# labo\MMO\MMO\obj\x86\Debug\MMO.pdb
 S:\Laurent\C# labo\MMO\MMO\obj\x86\Debug\MMO.csprojResolveAssemblyReference.cache
 S:\Laurent\C# labo\MMO\MMO\bin\Debug\MMO.exe
 S:\Laurent\C# labo\MMO\MMO\bin\Debug\MMO.pdb
+C:\Users\Laurent\Documents\_vsexpress-working-copy\C# labo\MMO\MMO\obj\x86\Debug\MMO.exe
+C:\Users\Laurent\Documents\_vsexpress-working-copy\C# labo\MMO\MMO\obj\x86\Debug\MMO.pdb
+C:\Users\Laurent\Documents\_vsexpress-working-copy\C# labo\MMO\MMO\bin\Debug\MMO.exe
+C:\Users\Laurent\Documents\_vsexpress-working-copy\C# labo\MMO\MMO\bin\Debug\MMO.pdb
+C:\Users\Laurent\Documents\_vsexpress-working-copy\C# labo\MMO\MMO\obj\x86\Debug\MMO.csprojResolveAssemblyReference.cache

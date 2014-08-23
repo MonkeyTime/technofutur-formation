@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Net.Sockets;
+using System.Threading;
+using System.Net;
 
 namespace MMO
 {
@@ -10,8 +13,13 @@ namespace MMO
         static void Main(string[] args)
         {
             string choice = "";
+            
+            Human Player = new Human("Agila", 1, 0);
+            Arm player_arm = new Arm("Epée", 5);
 
-            Bag Bag = new Bag();
+            Console.WriteLine();
+            
+            int i = 0;
 
             do 
             {
@@ -22,14 +30,15 @@ namespace MMO
                 switch (choice)
                 {
                     case "1":
-                        
-                        Human Player = new Human("Agila", 1, 0);
-                        IA IA = new IA("Anibal", 0, 1);
-                        
-                        Arm player_arm = new Arm("Epée", 5);
-                        Arm ia_arm = new Arm("Hache", 5);
 
-                        Player.Equip(player_arm);
+                        if (i == 0)
+                        {
+                            Player.Equip(player_arm);
+                        }
+
+                        IA IA = new IA("Anibal", 0, 1);
+                        Arm ia_arm = new Arm("Hache", 5);
+                        
                         IA.Equip(ia_arm);
 
                         Fight Fight = new Fight(Player, IA);
@@ -38,21 +47,41 @@ namespace MMO
                     break;
 
                     case "2":
+
+                        Vendor Vendor = new Vendor("Brocabancaloucouloss", 0, 1, new Arm("Epée", 15), new Arm("Hache", 15), new Arm("Pugilat", 15));
+                        Vendor.Sell(Player);
+
                     break;
 
                     case "3":
-
-                        Bag.Display();
+                        
+                        Bag Bag = new Bag();
+                        Bag.Display(Player);
 
                     break;
 
                     case "4":
+
+                        if (i == 0)
+                        {
+                            Player.Equip(player_arm);
+                        }
+
+                        Orc Orc = new Orc("Anibal", 0, 1);
+                        Arm orc_arm = new Arm("Hache", 5);
+                        
+                        Orc.Equip(orc_arm);
+
+                        Fight fight = new Fight(Player, Orc);
+                        fight.Start(null);
+
                     break;
 
                     default:
                     break;
                 }
 
+                i++;
 
             } while(choice != "0");
         }

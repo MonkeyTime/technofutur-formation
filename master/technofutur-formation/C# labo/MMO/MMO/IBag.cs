@@ -9,6 +9,6 @@ namespace MMO
     {
         List<Arm> emplacements { get; }
 
-        void Display();
+        void Display(Character player);
     }
 }

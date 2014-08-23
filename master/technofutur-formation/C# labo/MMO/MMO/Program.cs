@@ -68,10 +68,7 @@ namespace MMO
 
                     case "4":
 
-                        if (i == 0)
-                        {
-                            Player.Equip(player_arm);
-                        }
+                        Player.Equip(player_arm);
 
                         Orc Orc = new Orc("Anibal", 0, 1);
                         Arm orc_arm = new Arm("Hache", 5);

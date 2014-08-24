@@ -20,7 +20,7 @@ namespace MMO
         {
             foreach (Arm item in items)
             {
-                this.bag.Push(item);
+                this.bag.Push(item, false);
             }
         }
         
@@ -58,7 +58,7 @@ namespace MMO
 
                 if (player.gold > 0)
                 {
-                    player.bag.Push(this.bag.emplacements.ElementAt(selected));
+                    player.bag.Push(this.bag.emplacements.ElementAtOrDefault(selected));
                     player.gold--;
                 }
                 else

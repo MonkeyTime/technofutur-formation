@@ -117,12 +117,26 @@ namespace MMO
 
                         } while (choice == "2");
                     }
-                    else 
+
+                    else if (this._player.power >= 36 && this._player.life > 80)
+                    {
+                        choice = "1";
+                    }
+
+                    else if (this._player.power >= 36 && this._player.life < 80)
+                    {
+                        do
+                        {
+                            choice = rand.Next(1, 4).ToString();
+
+                        } while (choice == "3");
+                    }
+                    else
                     {
                         choice = rand.Next(1, 4).ToString();
                     }
 
-                    System.Threading.Thread.Sleep(newRand.Next(2000, 4500));
+                    System.Threading.Thread.Sleep(newRand.Next(2000, 4000));
                     Console.WriteLine("\n" + choice);
 
                     switch (choice)

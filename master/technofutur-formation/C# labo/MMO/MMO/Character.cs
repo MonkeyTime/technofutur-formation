@@ -18,9 +18,6 @@ namespace MMO
         public int critic_chance { get; private set; }
         public int miss_chance { get; private set; }
 
-        public int gold { get; set; }
-        public int xp { get; set; }
-
         //IClasse
         public int classe_id { get; private set; }
         public string classe_name { get; private set; }
@@ -35,6 +32,9 @@ namespace MMO
 
         public Bag bag { get; private set; }
         public Arm _arm { get; private set; }
+
+        public int gold { get; set; }
+        public int xp { get; set; }
 
         /**
          * Constructor
@@ -53,7 +53,7 @@ namespace MMO
             this.race_id = race_id;
             this.race_name = _race_name[race_id];
             this.classe_name = _classe_name[classe_id];
-            this.max_life = 100;
+            this.max_life = 120;
             this.life = this.max_life;
             this.level = 1;
             this.dodge_chance = 20;
@@ -123,6 +123,8 @@ namespace MMO
 
                     this.power = this.std_power + this._arm.power;
                     this.life = this.max_life;
+
+                    character.power = character.std_power + character._arm.power;
 
                     character.Dispose();
                 }
@@ -281,6 +283,19 @@ namespace MMO
             this.power -= arm.power;
             this._arm = null;
             Console.Write("\n* " + this.name + " a enlever son arme "); ConsoleColor color = ConsoleColor.DarkMagenta; Console.ForegroundColor = color; Console.Write(arm.type + ": +" + arm.power); Console.ResetColor(); Console.Write(". Son total de puissance d'attaque est maintenant de " + this.power + "\n");
+        }
+
+        /**
+         * Prepare
+         * 
+         * Prepare before match
+         * 
+         * @return void
+         * 
+         */
+        public void Prepare()
+        {
+            this.life = this.max_life;
         }
     }
 }

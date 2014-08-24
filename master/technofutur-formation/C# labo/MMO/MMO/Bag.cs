@@ -29,17 +29,23 @@ namespace MMO
          * @return void
          * 
          */
-        public void Push(Arm arm)
+        public void Push(Arm arm, bool mess = true)
         {
             if (this.emplacements.Count == 3)
             {
-                Console.WriteLine("Votre sac est plein.\n");
+                if (mess != false)
+                {
+                    Console.WriteLine("Votre sac est plein.\n");
+                }
             }
             else
             {
                 this.emplacements.Add(arm);
 
-                Console.WriteLine("\nVous avez encore " + (3 - this.emplacements.Count) + " emplacements libre dans votre sac\n");
+                if (mess != false)
+                {
+                    Console.WriteLine("\nVous avez encore " + (3 - this.emplacements.Count) + " emplacements libre dans votre sac\n");
+                }
             }
         }
 
@@ -55,9 +61,16 @@ namespace MMO
          */
         public void Remove(Arm arm)
         {
-            this.emplacements.Remove(arm);
+            if (arm != null)
+            {
+                this.emplacements.Remove(arm);
 
-            Console.WriteLine("\nVous avez encore " + (3 - this.emplacements.Count) + " emplacements libre dans votre sac\n");
+                Console.WriteLine("\nVous avez encore " + (3 - this.emplacements.Count) + " emplacements libre dans votre sac\n");
+            }
+            else
+            {
+                Console.WriteLine("\nRien n'a été supprimé, cet emplacement de sac est vide\n");
+            }
         }
 
         /**
@@ -134,8 +147,7 @@ namespace MMO
                          {
                              selected = 2;
                          }
-
-                         player.bag.Remove(player.bag.emplacements.ElementAt(selected));
+                         player.bag.Remove(player.bag.emplacements.ElementAtOrDefault(selected));
                      }
 
                  } while (choice != "0" && choice != "1" && choice != "2" && choice != "3" && choice != "S1" && choice != "S2" && choice != "S3");

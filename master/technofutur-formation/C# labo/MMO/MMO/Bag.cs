@@ -25,7 +25,7 @@ namespace MMO
          * Method to push an arm in the bag
          * 
          * @param Arm   The arm to push in the bag
-         * @param bool  (optional) true|false, default: true, display message or not
+         * @param bool  Display bag emplacements message or not
          * 
          * @return void
          * 

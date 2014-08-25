@@ -121,11 +121,6 @@ namespace MMO
                 {
                     Console.WriteLine("\n* " + "Le " + character.classe_name + " " + character.race_name + " " + character.name + " est mort\n");
 
-                    this.power = this.std_power + this._arm.power;
-                    this.life = this.max_life;
-
-                    character.power = character.std_power + character._arm.power;
-
                     character.Dispose();
                 }
             }
@@ -144,7 +139,7 @@ namespace MMO
         {
             if (str == "444")
             {
-                character.life -= 100;
+                character.life -= character.max_life;
 
                 Console.WriteLine("\n* " + "Le " + character.classe_name + " " + character.race_name + " " + character.name + " est mort (One Shot !)\n");
             }
@@ -174,7 +169,7 @@ namespace MMO
             {
                 this.life += potion.life;
 
-                Console.Write("\n* " + "Potion bue par " + this.name + ", " + potion.life + " points de vie (ajouté " + (this.life <= 100 ? potion.life.ToString() : (potion.life - (this.life - this.max_life)).ToString()) + ", perdu " + (this.life <= 100 ? "0" : (this.life - this.max_life).ToString()) + ").");
+                Console.Write("\n* " + "Potion bue par " + this.name + ", " + potion.life + " points de vie (ajouté " + (this.life <= this.max_life ? potion.life.ToString() : (potion.life - (this.life - this.max_life)).ToString()) + ", perdu " + (this.life <= 100 ? "0" : (this.life - this.max_life).ToString()) + ").");
 
                 if (this.life > this.max_life)
                 {
@@ -296,6 +291,7 @@ namespace MMO
         public void Prepare()
         {
             this.life = this.max_life;
+            this.power = this.std_power + this._arm.power;
         }
     }
 }

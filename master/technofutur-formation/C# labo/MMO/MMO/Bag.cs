@@ -25,6 +25,7 @@ namespace MMO
          * Method to push an arm in the bag
          * 
          * @param Arm   The arm to push in the bag
+         * @param bool  (optional) true|false, default: true, display message or not
          * 
          * @return void
          * 
@@ -44,7 +45,7 @@ namespace MMO
 
                 if (mess != false)
                 {
-                    Console.WriteLine("\nVous avez encore " + (3 - this.emplacements.Count) + " emplacements libre dans votre sac\n");
+                    Console.WriteLine("\nVous avez encore " + (3 - this.emplacements.Count) + " emplacement" + (3 - this.emplacements.Count > 1 ? "s" : "") + " libre dans votre sac\n");
                 }
             }
         }
@@ -65,7 +66,7 @@ namespace MMO
             {
                 this.emplacements.Remove(arm);
 
-                Console.WriteLine("\nVous avez encore " + (3 - this.emplacements.Count) + " emplacements libre dans votre sac\n");
+                Console.WriteLine("\nVous avez encore " + (3 - this.emplacements.Count) + " emplacement" + (3 - this.emplacements.Count > 1 ? "s" : "") + " libre dans votre sac\n");
             }
             else
             {

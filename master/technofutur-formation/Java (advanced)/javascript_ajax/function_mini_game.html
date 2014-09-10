@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+	
+    <head>
+        
+        <meta charset="UTF-8">
+        
+        <title>javascript function</title>
+
+        <script type="text/javascript">
+
+        function init() {
+
+            var number = Math.floor(Math.random() * 100) + 1,
+            el         = document.getElementById('result'),
+            maxCount   = 10;
+
+            //console.log(el);
+
+            while(maxCount != -1) {
+
+                var prop = parseInt(window.prompt("Choisissez un nombre"));
+
+                if(prop < number && maxCount > 0) 
+                {
+                    el.innerHTML += '<p>Mon nombre est plus grand que ' + prop + '</p>';
+                    maxCount--;
+                }
+                else if(prop > number && maxCount > 0)
+                {
+                    el.innerHTML += '<p>Mon nombre est plus petit que ' + prop + '</p>';
+                    maxCount--;
+                }
+                else if(maxCount > 0)
+                {
+                    el.innerHTML += '<p>Gagné ! Le nombre a trouver était bien ' + prop + '</p>';
+
+                    break;
+                }
+                else
+                {
+                    el.innerHTML += '<p>Perdu ! Le nombre a trouver était ' + number + '</p>';
+                    maxCount--;
+                }
+            }
+        }
+
+        //console.log(number);
+
+        </script>
+        
+    </head>
+    
+    <body>
+
+    <h1>Devinette numérique</h1>
+
+    <p>J'ai un nombre entre 1 et 100, pouvez-vous le deviner en moins de 10 essais ?</p>
+
+    <div id="result"></div>
+
+    <script type="text/javascript">init();</script>
+
+    </body>
+    
+</html>

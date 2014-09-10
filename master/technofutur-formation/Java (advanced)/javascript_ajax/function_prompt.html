@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+	
+    <head>
+        
+        <meta charset="UTF-8">
+        
+        <title>javascript function exercice 1</title>
+
+        <script type="text/javascript">
+
+        function squared() {
+            
+            return (val = parseInt(window.prompt("Entrez une valeur"))) * val;
+        }
+
+        function squaredMath() {
+            
+            return Math.pow(parseInt(window.prompt("Entrez une valeur")), 2);
+        }
+
+        function cubicMath() {
+            
+            return Math.pow(parseInt(window.prompt("Entrez une valeur")), 3);
+        }
+
+        </script>
+        
+    </head>
+    
+    <body>
+
+        <script type="text/javascript">
+
+            document.write(squared() + '<br>' + squaredMath() + '<br>' + cubicMath());
+
+        </script>
+    </body>
+    
+</html>

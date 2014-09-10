@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+	
+    <head>
+        
+        <meta charset="UTF-8">
+        
+        <title>javascript function</title>
+
+        <script type="text/javascript">
+
+        function initAndListenClicks() {
+            
+            var elems = document.getElementsByTagName('button');
+
+            for(var i = 0; i < elems.length; i++) {
+                
+                elems[i].onclick = function() {
+                    
+                    //We get the digit/operation/operande
+                    var op = this.id,
+                    //We get the display element
+                    el = document.getElementById('result');
+
+                    //remove zero when it's necessary (onclick events). 0 is necessary for NaN or undefined error displaying when hit any operation without 0 defined
+                    if(el.value == '0' && (op != '³' && op != '²' && op != '+' && op != '-' && op != '*' && op != '/' && op != '=')) {
+                        
+                        el.value = '';
+
+                    }
+
+                    //if operation different of equal(=) key and reset (c) key and not x² key and not x³ key, 
+                    //it's a number/operande or operator => we concatenate the content and simply display it without math operation.
+                    //else if is equal(=) || ² || ³ key hit by the user, we eval the entire input content.
+                    //else if is reset (c) key hit by the user, we erase the entire input.
+                    //One line of code for calculator operation.
+                    el.value = (op != '=' && op != 'C' && op != '²' && op != '³') ? (el.value + op) : (op == 'C') ? '0' : (op == '²') ? Math.pow(eval(el.value), 2) : (op == '³') ? Math.pow(eval(el.value), 3) : eval(el.value);
+                }
+            }
+        }
+
+        </script>
+
+        <style type="text/css" media="all">
+
+        button {
+            min-width: 35px;
+            min-height: 20px
+        }
+
+        #calculator {
+            width: 127px;
+            padding: 10px;
+            background: #ccc;
+            border: 1px solid #fff;
+            box-shadow: 0 0 3px #000
+        }
+            
+        #result {
+            width: 117px; 
+            text-align: right; 
+            color: #333; 
+            font-family: Serif; 
+            letter-spacing: 0.1em; 
+            font-size: 16px; 
+            height:25px; 
+            border-radius: 5px; 
+            border: 1px solid #ccc; 
+            padding: 3px; 
+            margin-bottom: 10px
+        }
+        </style>
+    </head>
+    
+    <body onload="initAndListenClicks();">
+
+        <div id="calculator">
+            <input id="result" type="text" value="0" />
+            <br>
+            <button id="1">1</button>
+            <button id="2">2</button>
+            <button id="3">3</button>
+            <br>
+            <button id="4">4</button>
+            <button id="5">5</button>
+            <button id="6">6</button>
+            <br>
+            <button id="7">7</button>
+            <button id="8">8</button>
+            <button id="9">9</button>
+            <br>
+            <button id="0">0</button>
+            <button id="+">+</button>
+            <button id="=">=</button>
+            <br>
+            <button id="-">-</button>
+            <button id="*">*</button>
+            <button id="/">/</button>
+            <br>
+            <button id="3.1416">~&pi;</button>
+            <button id="²">x²</button>
+            <button id="³">x³</button>
+            <button id="C">c</button>
+        </div>
+    </body>
+    
+</html>

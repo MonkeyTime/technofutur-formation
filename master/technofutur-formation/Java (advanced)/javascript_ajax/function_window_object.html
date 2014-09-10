@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+	
+    <head>
+        
+        <meta charset="UTF-8">
+        
+        <title>javascript function</title>
+
+        <script type="text/javascript">
+
+        function next() {
+            this.location = "function_window_object2.html";
+        }
+
+        function nextPopUp() {
+            window.open("function_window_object2.html", "function 2", "");
+        }
+
+        function nextClose() {
+            window.open("", "function 2").close();
+        }
+
+        </script>
+        
+    </head>
+    
+    <body>
+
+    <button onclick="next();">Next page</button>
+    <button onclick="nextPopUp();">Next Pop up</button>
+    <button onclick="nextClose();">Next Close</button>
+
+    </body>
+    
+</html>

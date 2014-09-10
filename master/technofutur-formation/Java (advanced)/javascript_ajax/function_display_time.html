@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+	
+    <head>
+        
+        <meta charset="UTF-8">
+        
+        <title>javascript function</title>
+
+        <script type="text/javascript">
+
+        function startAnimationTime() {
+        
+            var today = new Date();
+            var local = new Date(today);
+            
+            document.getElementById('time').value = local;
+            
+            setTimeout(function() {
+                startAnimationTime();
+            }, 1000);
+        }
+
+        </script>
+        
+    </head>
+    
+    <body onload="startAnimationTime();">
+
+    <input id="time" type="text" value="" style="width: 600px; text-align:center; color: #333; font-family: Serif; letter-spacing: 0.1em; font-size: 16px; height:38px; border-radius: 5px; border: 1px solid #ccc; padding: 3px" />
+
+    </body>
+    
+</html>

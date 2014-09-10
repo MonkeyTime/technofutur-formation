@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+	
+    <head>
+        
+        <meta charset="UTF-8">
+        
+        <title>javascript function</title>
+
+        <script type="text/javascript">
+
+        function initButtonValue() {
+
+	        if(window.opener != null) {
+
+	    		var el = document.getElementById('button');
+	    		el.value = 'Close';
+
+	    	} else {
+
+	    		var el = document.getElementById('button');
+	    		el.value = 'History back';
+	    	}
+	    }
+
+        function Return() {
+
+        	if(window.opener != null) {
+
+        		window.close();
+        		window.opener = null;
+
+        	} else {
+
+        		window.location = 'function_window_object.html';
+        	}
+        }
+
+        //console.log(this.opener.location);
+        </script>
+        
+    </head>
+    
+    <body onload="initButtonValue();">
+
+        <input id="button" type="button" onclick="Return();" value="" />
+
+    </body>
+    
+</html>

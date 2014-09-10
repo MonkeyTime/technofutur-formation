@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+	
+    <head>
+        
+        <meta charset="UTF-8">
+        
+        <title>javascript function</title>
+
+        <script type="text/javascript">
+
+        function Car(mark, model, color, registry) {
+            
+            this.mark = mark;
+            this.model = model;
+            this.color = color;
+            this.registry = registry;
+            this.display = display;
+        }
+
+        
+        function display() {
+            document.write(this.mark + " " + this.model + " " + this.color + " " + this.registry);
+        }
+
+        </script>
+        
+    </head>
+    
+    <body>
+
+    <button onclick="Auto = new Car(window.prompt('Marque'), window.prompt('Modèle'), window.prompt('Couleur'), window.prompt('Immatriculation'));">Create</button>
+
+    <button onclick="(typeof Auto != 'undefined') ? Auto.display() : document.write('merci de définir votre voiture');">Display</button>
+
+    </body>
+    
+</html>

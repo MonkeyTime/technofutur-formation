@@ -1,0 +1,56 @@
+<HTML>
+<HEAD><TITLE>Exemple 30</TITLE>
+<script langage=javascript>
+<!--
+    function setString(str) {
+        var i=str.indexOf(" ");
+        while (i>=0) {
+            str=str.substr(0,i)+str.substr(i+1);
+            i=str.indexOf(" ");
+        }
+        return str.toUpperCase();;
+    }
+
+    function verifyUsername() {
+        document.form1.txtUsername.value=setString(document.form1.txtUsername.value);
+        if (document.form1.txtUsername.value=="") {
+            alert("Vous devez donner un nom d\'utilisateur");
+            document.form1.txtUsername.focus();
+            return false;
+        }
+        return true;
+    }
+    
+    function verifyPassword() {
+        //document.form1.txtPassword.value=setString(document.form1.txtPassword.value);
+        if (document.form1.txtPassword.value=="") {
+            alert("Vous devez donner un mot de passe");
+            document.form1.txtPassword.focus();
+            return false;
+        }
+        return true;
+    }
+    
+    function verifyAll() {
+        var ok=verifyUsername();
+        if (ok)
+            ok=verifyPassword();
+        return true;
+    }
+//-->
+</script>
+</HEAD>
+<BODY>
+<h1>Exemple 30</h1>
+
+<form action="Ex29_bis.htm" method=get name=form1>
+<br><br>
+<hr>
+Nom d'utilisateur: <input type=text name=txtUsername onChange="verifyUsername();">
+<br><br>
+Mot de passe: <input type=password name=txtPassword onChange="verifyPassword();">
+<hr>
+<input type=submit name="btnLogin" value="Login" onClick="return verifyAll();">
+</form>
+</BODY></HTML>
+

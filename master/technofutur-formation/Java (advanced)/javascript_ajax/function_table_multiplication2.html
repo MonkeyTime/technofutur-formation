@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+	
+    <head>
+        
+        <meta charset="UTF-8">
+        
+        <title>javascript function</title>
+
+        <script type="text/javascript">
+
+        JS = {};
+        
+        var d = document;
+
+        JS.render = function(htmlID, str) {
+            
+            var el = d.getElementById(htmlID);
+            
+            el.innerHTML = str;
+            el.style.display = 'block';
+        }
+
+        JS.multiplicationTable = function() {
+
+            var prop =  isNaN(prop = parseInt(window.prompt("Entrez un nombre"))) 
+                        ? 
+                        parseInt(window.prompt("Merci d'entrez un nombre.")) 
+                        : 
+                        prop;
+            
+            var until = isNaN(until = parseInt(window.prompt("Table multiplication jusqu'à ?"))) 
+                        ? 
+                        parseInt(window.prompt("Merci d'entrez un nombre.")) 
+                        : 
+                        until;
+            
+            if(prop && until) {
+
+                var str = "";
+
+                for(i = 1; i <= until; i++) {
+
+                    str += (i + " * " + prop + " = " + (prop * i) + "<br>");
+                }
+
+                JS.render('content', str);
+
+                return;
+            }
+
+            JS.render('alert', 'Caractères autorisés 0-9 et ne peut être vide.');
+
+            return;
+        }
+
+
+        </script>
+        
+    </head>
+    
+    <body onload="JS.multiplicationTable();">
+
+    <p id="alert" style="display: none; background: red; color: white; border: 1px solid pink; border-radius: 5px; padding: 8px"></p>
+
+    <p id="content"></p>
+
+    </body>
+    
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+	
+	<head>
+		<meta charset="utf-8">
+
+		<title>Page title</title>
+
+		<style type="text/css">
+
+		p[title ^= "ess"] {
+			background: #000;
+			color: #fff
+		}
+		div:nth-child(2) > p[title $= "ai"] {
+			background: #00f;
+			color: #fff
+		}
+		div:nth-child(2) > p[title $= "on"] {
+			background: #fff;
+			color: #000
+		}
+		p[title *= "val"] {
+			background: #f00;
+			color: #fff
+		}
+
+		</style>
+
+	</head>
+
+	<body>
+
+	<div>
+		<h1>[attr^="stringValue"]</h1>
+		<p> je n'ai pas d'attribut title</p>
+		<p title="comment"> j'ai un attribut title mais il ne commence pas par "ess"</p>
+		<p title="essai"> j'ai un attribut title commençant par "ess"</p>
+		<p title="esson"> j'ai un attribut title commençant par "ess" également</p>
+	</div>
+	<div>
+		<h1>[attr$="stringValue"]</h1>
+		<p> je n'ai pas d'attribut title</p>
+		<p title="comment"> j'ai un attribut title mais il ne commence pas par "ess"</p>
+		<p title="essai"> j'ai un attribut title commençant par "ess"</p>
+		<p title="esson"> j'ai un attribut title commençant par "ess" également</p>
+	</div>
+	<div>
+		<h1>[attr*="stringValue"] </h1>
+		<p> je n'ai pas d'attribut title</p>
+		<p title="comment"> j'ai un attribut title mais il ne contient pas "val"</p>
+		<p title="val"> j'ai un attribut title contenant au moins "val"</p>
+		<p title="evaluer"> j'ai un attribut title contenant au moins "val" également</p>
+		<p title="eval"> j'ai un attribut title contenant au moins "val" également</p>
+	</div>
+
+	</body>
+
+</html>

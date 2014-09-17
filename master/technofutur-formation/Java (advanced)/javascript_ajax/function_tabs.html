@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+	
+    <head>
+        
+        <meta charset="UTF-8">
+        
+        <title>javascript function</title>
+
+        <script type="text/javascript">
+
+        function init() {
+
+            var elems = document.getElementById('menu').getElementsByTagName('a');
+            var spans = document.getElementById('menu').getElementsByTagName('span');
+            var divs  = document.getElementById('content').getElementsByTagName('div');
+
+            for (var i = 0; i < elems.length; i++) {
+
+                //Anonymous function executed (the ending with ()) each time when "for" passed trought here. Param is i. All this because context of addEventListener.
+                (function(i) {
+
+                    //listener for div
+                    elems[i].addEventListener('mouseover', function() { display(divs[i]); }, false);
+                    elems[i].addEventListener('mouseout', function() { hide(divs[i]); }, false);
+
+                    //listener for span
+                    elems[i].addEventListener('mouseover', function() { display(spans[i]); }, false);
+                    elems[i].addEventListener('mouseout', function() { hide(spans[i]); }, false);
+
+                })(i);
+            }
+        }
+
+        function display(obj) {
+            obj.className = 'visible';
+        }
+
+        function hide(obj) {
+            obj.className = 'hidden';
+        }
+
+        </script>
+
+        <style type="text/css" media="all">
+
+        #menu {
+            float: left
+        }
+
+        #menu span {
+            width: 16px;
+            display: none;
+            float: left;
+            background: url('./img/arrow.gif') no-repeat bottom center;
+        }
+
+        #menu a {
+            width: 60px;
+            margin-left: 16px;
+            display: block
+        }
+
+        #content {
+            float: left;
+            background: #ccc;
+            padding: 0 30px;
+            margin: 0 50px
+        }
+
+        #content div {
+            font-size: 100px;
+            display: none
+        }
+
+        .hidden {
+            display: none !important
+        }
+
+        .visible {
+            display: block !important
+        }
+        
+        </style>
+
+    </head>
+    
+    <body onload="init();">
+
+        <div id="menu">
+            <span>&nbsp;</span> <a href="#">tab 1</a>
+            <span>&nbsp;</span> <a href="#">tab 2</a>
+            <span>&nbsp;</span> <a href="#">tab 3</a>
+            <span>&nbsp;</span> <a href="#">tab 4</a>
+            <span>&nbsp;</span> <a href="#">tab 5</a>
+        </div>
+
+        <div id="content">
+            <div>lorem ipsum 1</div>
+            <div>lorem ipsum 2</div>
+            <div>lorem ipsum 3</div>
+            <div>lorem ipsum 4</div>
+            <div>lorem ipsum 5</div>
+        </div>
+    </body>
+    
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+	
+    <head>
+        
+        <meta charset="UTF-8">
+        
+        <title>javascript function</title>
+
+        <script type="text/javascript">
+
+        function init() {
+
+            var elem = document.getElementById('ref');
+            var elem2 = document.getElementById('ref2');
+
+            //Attached to the event an anonymous function.
+            elem2.onclick = function() { 
+                
+                alert('onclick');
+
+                return false;
+            }
+
+            //Attached to the event an anonymous function.
+            elem.onmouseover = function() {
+                alert('onmouseover');
+            }
+
+            //Attached to the event an anonymous function.
+            elem.onmouseout = function() { 
+                alert('onmouseout');
+            }
+        }
+
+        </script>
+
+        <style type="text/css" media="all">
+        
+        </style>
+
+    </head>
+    
+    <body onload="init();">
+
+        <a id="ref" href="#">Ref 1</a>
+        <a id="ref2" href="#">Ref 2</a>
+
+    </body>
+    
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+	
+	<head>
+		
+		<meta charset="utf-8">
+
+		<title>Page title</title>
+
+		<style type="text/css">
+		
+		.form > label {display: block; width: 25% }
+		.form > label > span:first-child {display: inline-block; min-width: 70px}
+		.form > label > input {background: #fff; padding: 8px; margin: 4px 2px; border: 1px solid #ccc; border-radius: 4px; box-shadow: inset 0 0 1px #888}
+		.form > label > input[type="range"] {border: none; box-shadow: none; vertical-align: bottom}
+		.form > label > input:focus {box-shadow: inset 0 0 1px blue}
+		.form > label > input[type="range"]:focus {box-shadow: none}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<h1>HTML5 new input</h1>
+
+		<section class="form">
+
+			<label><span>Url:</span> <input type="url" autofocus> <span>Autofocus</span></label>
+			<label><span>Search:</span> <input type="search" placeholder="Rechercher"></label>
+			<label><span>E-mail:</span> <input type="email" required><span>* Obligatoire</span></label>
+			<label><span>Phone:</span> <input type="tel"></label>
+			<label><span>Range:</span> <input type="range"></label>
+			<label><span>Number:</span> <input type="number"></label>
+			<label><span>Color:</span> <input type="color"></label>
+			<label><span>Date:</span> <input type="date"></label>
+			<label><span>Datetime:</span> <input type="date"><input type="time"> <span>UTC</span></label>
+			<label><span>Datetime:</span> <input type="datetime"> <span>UTC</span></label>
+			<label><span>&nbsp;</span> <input type="submit" value="Envoyer"></label>
+
+		</section>
+
+	</body>
+</html>

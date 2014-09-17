@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+	
+	<head>
+		
+		<meta charset="utf-8">
+
+		<title>Page title</title>
+
+		<style type="text/css">
+
+		div {margin: 20px; min-height: 50px; padding: 10px; text-align: center}
+
+		.inset {
+			border: 1px solid #000;
+			box-shadow: inset 0 0 8px #666
+		}
+
+		.radius {
+			border: 1px solid #000;
+			border-radius: 15px
+		}
+
+		.box-shadow {
+			border: 1px solid #000;
+			box-shadow: 10px 10px 8px #666
+		}
+
+		.with-img {
+			/*border: 1px solid #000;*/
+			border-image: url("img/bordered.jpg") 27 27 27 27 round round;
+		}
+
+		</style>
+
+	</head>
+
+	<body>
+
+	<div class="inset">Ceci est une box avec bordure dégradée intérieure</div>
+
+	<div class="radius">Ceci est une box au coin arrondi</div>
+
+	<div class="box-shadow">Ceci est une box avec ombre portée</div>
+
+	<div class="with-img">Ceci est une box avec image en bordures</div>
+
+	</body>
+
+</html>

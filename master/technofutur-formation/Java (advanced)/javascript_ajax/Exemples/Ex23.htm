@@ -1,0 +1,28 @@
+<HTML><HEAD><TITLE>Exemple 23</TITLE>
+</HEAD>
+<BODY>
+<h1>Exemple 23</h1>
+<Script language="Javascript">
+<!--
+
+function Livres(auteur, titre, date) {
+   this.auteur = auteur;
+   this.titre = titre;
+   this.date = date;
+   this.afficher = livAfficherLivre
+}
+
+function livAfficherLivre() {
+   document.write("<b>"+this.titre+"</b>, <i>"+this.auteur+"</i>, "+this.date);
+   document.write("<br>");
+}
+
+Livre1 = new Livres("Dupont","Les mémoires de dupont", 1999);
+Livre2 = new Livres("Alphonse Daudet","Les lettres de mon moulin", 1866);
+
+Livre1.afficher();
+Livre2.afficher();
+
+//-->
+</script>
+</BODY></HTML>

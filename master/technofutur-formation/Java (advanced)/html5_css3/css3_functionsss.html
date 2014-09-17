@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+	
+	<head>
+		<meta charset="utf-8">
+
+		<title>Page title</title>
+
+		<style type="text/css">
+
+		body {
+			text-align: center;
+		}
+
+
+		@-webkit-keyframes hover {
+			from {
+				width: 400px;
+				transform: rotate(0deg);
+			}
+			to {
+				width: 800px;
+				transform: rotate(20deg);
+			}
+		}
+
+		@-webkit-keyframes unhover {
+			from {
+				width: 800px;
+				transform: rotate(20deg);
+			}
+			to {
+				width: 400px;
+				transform: rotate(0deg);
+			}
+		}
+
+		video {
+			margin: 200px auto;
+			padding: 100px;
+		}
+
+		video:hover {
+			-webkit-animation: hover 0.8s linear;
+		}
+
+		</style>
+	</head>
+
+	<body>
+
+		<video width="400" autobuffer autoloop loop controls>
+			<source src="http://download.blender.org/peach/trailer/trailer_1080p.ogg" type="video/ogg">
+			Your browser does not support HTML5 video.
+		</video>
+
+	</body>
+</html>

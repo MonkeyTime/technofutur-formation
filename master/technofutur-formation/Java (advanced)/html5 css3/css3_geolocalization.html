@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    
+	<script type="text/javascript">
+
+    function init() {
+    	
+    	if(navigator.geolocation) {	
+    		
+    		navigator.geolocation.getCurrentPosition(function(position) { 
+
+	    		var map;
+
+	    		var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+				var mapOptions = {
+				    zoom: 10,
+				    center: pos
+				};
+				  
+				map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+				new google.maps.InfoWindow({
+			        map: map,
+			        position: pos,
+			        content: "Here with HTML5 Geolocation Api"
+			    });
+		    });
+		}
+	}
+
+    </script>
+
+  </head>
+  
+  <body onload="init();">
+    
+    	<div id="map-canvas"></div>
+
+  </body>
+
+</html>

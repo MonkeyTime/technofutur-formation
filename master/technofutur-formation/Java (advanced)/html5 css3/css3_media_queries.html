@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Page title</title>
+
+		<style type="text/css">
+
+			@media (max-width: 640px) {
+
+				.max640 {
+					background: blue;
+					color: white
+				}
+				
+			}
+
+			@media (max-width: 800px) {
+
+				.max800 {
+					background: blue;
+					color: white
+				}
+				
+			}
+
+			@media (min-width: 1024px) and (max-width: 1280px) {
+
+				.min1024max1280 {
+					background: blue;
+					color: white
+				}
+				
+			}
+
+			@media (max-width: 480px) {
+
+				.max480 {
+					background: blue;
+					color: white
+				}
+				
+			}
+
+			@media (orientation: portrait) {
+				.portrait {
+					background: blue;
+					color: white
+				}
+			}
+
+			@media (orientation: landscape) {
+				.landscape {
+					background: blue;
+					color: white
+				}
+			}
+		</style>
+
+	</head>
+	<body>
+
+	<div class="max640">Cette div change de couleur en max 640px</div>
+	<div class="max800">Cette div change de couleur en max 800px</div>
+	<div class="min1024max1280">Cette div change de couleur entre min 1024 et max 1280px</div>
+	<div class="max480">Cette div change de couleur en max 480px</div>
+	<div class="portrait">Cette div change de couleur en portrait</div>
+	<div class="landscape">Cette div change de couleur en landscape</div>
+	</body>
+</html>

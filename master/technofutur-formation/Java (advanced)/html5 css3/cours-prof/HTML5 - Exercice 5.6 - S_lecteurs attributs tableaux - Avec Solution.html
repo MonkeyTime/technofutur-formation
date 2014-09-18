@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Page title</title>
+  <link rel="stylesheet" href="style.css"> 
+
+  
+  <style type="text/css">
+ 
+	body{
+		font-family: arial;
+		font-size:0.8em;
+	}
+	div {
+		margin:10px auto 10px;
+	}
+	code{
+		background-color:#ddd;
+		margin:5px 0;
+		padding:5px;
+		font-size: 1.1em;
+		display:block;
+		width:50%;
+	}
+	h1{
+		margin:0px;
+		padding:10px;
+		padding-left:40px;
+		font-family: Trebuchet MS, arial;
+		font-size:24px;
+		font-style:italic;
+		font-weight: normal;
+		color:#444;
+	}
+	
+	.exampleTable{
+		width:100%;
+		border:1px solid #444;
+	}
+	.exampleTable tr:nth-child(even){ /*tous les enfants aux numéros pairs*/
+		background:#999999;
+		text-shadow: 2px 2px 5px #111;
+		color:#fff;
+	}
+	.exampleTable tr:nth-child(odd){ /*tous les enfants aux numéros impairs*/
+		background:#990000;
+		color:#fff;
+	}
+	.exampleTable tr:nth-child(3n){ /*tous les 3 enfants*/
+		background:#045FB4;
+		color:#fff;
+	}
+	.exampleTable tr:nth-child(7){ /*l'enfant numéro 7*/
+		background:#006400;
+		text-shadow: 2px 2px 2px #fff;
+		color:#000;
+	}
+	.exampleTable2{
+		width:100%;
+		border:1px solid #444;
+	}
+	.exampleTable2 tr:nth-last-child(odd){ /*tous les enfants aux numéros impairs depuis la fin.*/
+		background:#990000;
+		color:#fff;
+	}
+	.exampleTable2 tr:nth-last-child(-n+2){ /*les 2 derniers enfants.*/
+		background:#045FB4;
+		color:#fff;
+	}
+	.exampleTable2 tr:nth-last-child(7){ /*l'enfant numéro 7 en partant de la fin donc la 2ème ligne du tableau.*/
+		background:#006400;
+		text-shadow: 2px 2px 2px #fff;
+		color:#000;
+	}
+  </style>
+
+</head>
+
+<body id="index">
+
+	<div id="nth-child">
+		<h1>:nth-child(expression)</h1>
+		<code>
+			.exampleTable{<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;width:100%;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;border:1px solid #444;<br />
+			}<br />
+			.exampleTable tr:nth-child(even){ <strong><em>/*tous les enfants aux numéros pairs*/</em></strong><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;background:#999999;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;text-shadow: 2px 2px 5px #111;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;color:#fff;<br />
+			}<br />
+			.exampleTable tr:nth-child(odd){ <strong><em>/*tous les enfants aux numéros impairs*/</em></strong><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;background:#990000;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;color:#fff;<br />
+			}<br />
+			.exampleTable tr:nth-child(3n){ <strong><em>/*tous les 3 enfants*/</em></strong><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;background:#045FB4;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;color:#fff;<br />
+			}<br />
+			.exampleTable tr:nth-child(7){ <strong><em>/*l'enfant numéro 7*/</em></strong><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;background:#006400;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;text-shadow: 2px 2px 2px #fff;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;color:#000;<br />
+			}
+		</code>
+		<code>
+			&lt;table class="exampleTable"><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>1ere ligne&lt;/td><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>2eme ligne&lt;/td><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>3eme ligne&lt;/td><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>4eme ligne&lt;/td><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>5ere ligne&lt;/td><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>6eme ligne&lt;/td><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>7eme ligne&lt;/td><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>8eme ligne&lt;/td><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br />
+			&lt;/table><br />
+		</code>
+		<table class="exampleTable">
+			<tr>
+				<td>1ere ligne</td>
+			</tr>
+			<tr>
+				<td>2eme ligne</td>
+			</tr>
+			<tr>
+				<td>3eme ligne</td>
+			</tr>
+			<tr>
+				<td>4eme ligne</td>
+			</tr>
+			<tr>
+				<td>5ere ligne</td>
+			</tr>
+			<tr>
+				<td>6eme ligne</td>
+			</tr>
+			<tr>
+				<td>7eme ligne</td>
+			</tr>
+			<tr>
+				<td>8eme ligne</td>
+			</tr>
+		</table>
+	</div>
+	<div id="nth-last-child">
+		<h1>:nth-last-child(expression)</h1>
+		<code>
+			.exampleTable2{<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;width:100%;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;border:1px solid #444;<br />
+			}<br />
+			.exampleTable2 tr:nth-last-child(odd){ <strong><em>/*tous les enfants aux numéros impairs depuis la fin*/</em></strong>.<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;background:#990000;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;color:#fff;<br />
+			}<br />
+			.exampleTable2 tr:nth-last-child(-n+2){ <strong><em>/*les 2 derniers enfants*/</em></strong><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;background:#045FB4;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;color:#fff;<br />
+			}<br />
+			.exampleTable2 tr:nth-last-child(7){ <strong><em>/*l'enfant numero 7 en partant de la fin donc la 2eme ligne du tableau*/</em></strong><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;background:#006400;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;text-shadow: 2px 2px 2px #fff;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;color:#000;<br />
+			}
+		</code>
+		<code>
+			&lt;table class="exampleTable2"><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>1ere ligne&lt;/td><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>2eme ligne&lt;/td><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>3eme ligne&lt;/td><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>4eme ligne&lt;/td><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>5ere ligne&lt;/td><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>6eme ligne&lt;/td><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>7eme ligne&lt;/td><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td>8eme ligne&lt;/td><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br />
+			&lt;/table><br />
+		</code>
+		<table class="exampleTable2">
+			<tr>
+				<td>1ere ligne</td>
+			</tr>
+			<tr>
+				<td>2eme ligne</td>
+			</tr>
+			<tr>
+				<td>3eme ligne</td>
+			</tr>
+			<tr>
+				<td>4eme ligne</td>
+			</tr>
+			<tr>
+				<td>5ere ligne</td>
+			</tr>
+			<tr>
+				<td>6eme ligne</td>
+			</tr>
+			<tr>
+				<td>7eme ligne</td>
+			</tr>
+			<tr>
+				<td>8eme ligne</td>
+			</tr>
+		</table>
+	</div>
+
+</body>
+</html>

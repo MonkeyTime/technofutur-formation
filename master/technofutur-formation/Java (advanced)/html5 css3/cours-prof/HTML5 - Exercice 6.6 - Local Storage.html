@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset=utf-8 />
+<script>
+
+	function Save() {
+	  
+	  window.sessionStorage.setItem('texte', document.getElementById('texte').value);
+	  window.sessionStorage.setItem('timestamp', (new Date()).getTime());
+	  alert('Enregistré !');
+
+	};
+
+	function Load() {
+	  
+	  document.getElementById('texte2').value = window.sessionStorage.getItem('texte');
+	 
+
+	};
+
+</script>
+    
+</head>
+
+<body> 
+  
+	<header><h1>Stockage local (navigateur)</h1></header>
+
+	<article>
+
+		<h2>Ecriture</h2>
+
+		<h3>
+			<input type="text" id="texte" />
+			<input type="button" value="Enregistrer !" id="save" onclick="Save()"/>
+		</h3>
+
+		<h2>Lecture</h2>
+
+		<h3>
+			<input type="text" id="texte2" />
+			<input type="button" value="Lire !" id="load" onclick="Load()"/>
+		</h3>
+	  
+		<p>Pour vérifier le contenu enregistré sur le navigateur, il faut utiliser les outils de développpents (click droit -> Procéder à l'inspection du document) de Google Chrome puis sur l'onglet 'Ressources', ouvrir 'Local Storage'.</p> 
+
+	</article>
+      
+</body>
+      
+</html>

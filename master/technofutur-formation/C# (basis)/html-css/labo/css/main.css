@@ -1021,29 +1021,7 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="re
   /**
     * explicit unit
     */
-  .u100{width: 100%}
-  .u95{width: 100%}
-  .u90{width: 100%}
-  .u85{width: 100%}
-  .u80{width: 100%}
-  .u75{width: 100%}
-  .u70{width: 100%}
-  .u66{width: 100%}
-  .u65{width: 100%}
-  .u60{width: 100%}
-  .u55{width: 100%}
-  .u50{width: 100%}
-  .u45{width: 100%}
-  .u40{width: 100%}
-  .u35{width: 100%}
-  .u33{width: 100%}
-  .u30{width: 100%}
-  .u25{width: 100%}
-  .u20{width: 100%}
-  .u16{width: 100%}
-  .u10{width: 100%}
-  .u5{width: 100%}
-  .u0{width: 100%}
+  .u100, .u95, .u90, .u85, .u80, .u75, .u70, .u66, .u65, .u60, .u55, .u50, .u45, .u40, .u35, .u33, .u30, .u25, .u20, .u16, .u10, .u5, .u0{width: 100%}
   
   .txtl, .txtr{text-align: center}
   .visible-tablet{display: block}
@@ -1117,29 +1095,7 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="re
   /**
     * explicit unit
     */
-  .u100{width: 100%}
-  .u95{width: 100%}
-  .u90{width: 100%}
-  .u85{width: 100%}
-  .u80{width: 100%}
-  .u75{width: 100%}
-  .u70{width: 100%}
-  .u66{width: 100%}
-  .u65{width: 100%}
-  .u60{width: 100%}
-  .u55{width: 100%}
-  .u50{width: 100%}
-  .u45{width: 100%}
-  .u40{width: 100%}
-  .u35{width: 100%}
-  .u33{width: 100%}
-  .u30{width: 100%}
-  .u25{width: 100%}
-  .u20{width: 100%}
-  .u16{width: 100%}
-  .u10{width: 100%}
-  .u5{width: 100%}
-  .u0{width: 100%}
+  .u100, .u95, .u90, .u85, .u80, .u75, .u70, .u66, .u65, .u60, .u55, .u50, .u45, .u40, .u35, .u33, .u30, .u25, .u20, .u16, .u10, .u5, .u0{width: 100%}
   
   .txtl, .txtr{text-align: center}
   .visible-tablet{display: block}
@@ -1214,29 +1170,7 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="re
   /**
     * explicit unit
     */
-  .u100{width: 100%}
-  .u95{width: 100%}
-  .u90{width: 100%}
-  .u85{width: 100%}
-  .u80{width: 100%}
-  .u75{width: 100%}
-  .u70{width: 100%}
-  .u66{width: 100%}
-  .u65{width: 100%}
-  .u60{width: 100%}
-  .u55{width: 100%}
-  .u50{width: 100%}
-  .u45{width: 100%}
-  .u40{width: 100%}
-  .u35{width: 100%}
-  .u33{width: 100%}
-  .u30{width: 100%}
-  .u25{width: 100%}
-  .u20{width: 100%}
-  .u16{width: 100%}
-  .u10{width: 100%}
-  .u5{width: 100%}
-  .u0{width: 100%}
+  .u100, .u95, .u90, .u85, .u80, .u75, .u70, .u66, .u65, .u60, .u55, .u50, .u45, .u40, .u35, .u33, .u30, .u25, .u20, .u16, .u10, .u5, .u0{width: 100%}
   
   .txtl, .txtr{text-align: center}
   .visible-phone{display: block}

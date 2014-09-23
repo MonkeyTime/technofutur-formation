@@ -12,7 +12,7 @@
 
 					<xslt:for-each select="guild/players/player">
 						
-						<div>
+						<div id="{@id}">
 							
 							<p>
 								<strong>
@@ -39,7 +39,7 @@
 									<li><xslt:value-of select="race" /></li>
 									<li><xslt:value-of select="gender" /></li>
 									<li><xslt:value-of select="level" /></li>
-									<li><xslt:value-of select="role" /></li>
+									<xslt:if test="role"><li><xslt:value-of select="role" /></li></xslt:if>
 								</ul>
 
 							</xslt:for-each>

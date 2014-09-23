@@ -31,8 +31,8 @@
 			<xs:element name="name" type="xs:string" />
 			<xs:element name="class" type="xs:string" />
 			<xs:element name="race" type="xs:string" />
-			<xs:element name="level" type="xs:positiveInteger" />
 			<xs:element name="gender" type="xs:string" />
+			<xs:element name="level" type="xs:positiveInteger" />
 			<xs:element name="role" type="xs:string" minOccurs="0" />
 		</xs:sequence>
 		<xs:attribute name="role" type="xs:string" use="required" />

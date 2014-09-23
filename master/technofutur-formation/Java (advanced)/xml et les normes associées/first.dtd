@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!ELEMENT guild (players, bank?)>
+<!ELEMENT players (player)+>
+<!ELEMENT player (firstname, lastname, character*)>
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT character (name, class, race, level, role?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT class (#PCDATA)>
+<!ELEMENT race (#PCDATA)>
+<!ELEMENT level (#PCDATA)>
+<!ELEMENT role (#PCDATA)>
+<!ATTLIST player id NMTOKEN #IMPLIED>
+<!ATTLIST player role CDATA #REQUIRED>
+<!ATTLIST character role CDATA #IMPLIED>

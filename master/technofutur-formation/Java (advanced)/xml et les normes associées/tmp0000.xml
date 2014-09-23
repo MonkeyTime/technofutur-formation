@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--<!DOCTYPE guild SYSTEM "first.dtd">-->
+<guild xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	         xsi:noNamespaceSchemaLocation="scheme.xsd">
+	<players>
+		<player id="001" role="Guild master">
+			<firstname>Laurent</firstname>
+			<lastname>B.</lastname>
+			<character role="main">
+				<name>Agila</name>
+				<class>Chaman</class>
+				<race>Draeïneï</race>
+				<level>90</level>
+				<role>DPS</role>
+			</character>
+			<character role="secondary">
+				<name>Agilaë</name>
+				<class>Paladin</class>
+				<race>Human</race>
+				<level>90</level>
+				<role>Tank</role>
+			</character>
+		</player>
+		<player id="002" role="Bank manager">
+			<firstname>Pascal</firstname>
+			<lastname>C.</lastname>
+			<character role="bank">
+				<name>Banker</name>
+				<class>Hunter</class>
+				<race>Night-elf</race>
+				<level>1</level>
+			</character>
+			<character role="main">
+				<name>Exor</name>
+				<class>Paladin</class>
+				<race>Human</race>
+				<level>90</level>
+				<role>Heal</role>
+			</character>
+			<character role="secondary">
+				<name>Tores</name>
+				<class>Hunter</class>
+				<race>Dwarf</race>
+				<level>90</level>
+				<role>DPS</role>
+			</character>
+		</player>
+		<player id="003" role="Player">
+			<firstname>Bruno</firstname>
+			<lastname>M.</lastname>
+			<character role="main">
+				<name>Bigbad</name>
+				<class>Chaman</class>
+				<race>Draeïneï</race>
+				<level>90</level>
+				<role>Heal</role>
+			</character>
+		</player>
+		<player id="004" role="Player">
+			<firstname>Nancy</firstname>
+			<lastname>D.</lastname>
+			<character role="main">
+				<name>Naty</name>
+				<class>DK</class>
+				<race>Dwarf</race>
+				<level>90</level>
+				<role>Tank</role>
+			</character>
+		</player>
+	</players>
+</guild>

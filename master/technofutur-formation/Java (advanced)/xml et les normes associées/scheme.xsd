@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="guild" type="Guild" />
+
+	<xs:complexType name="Guild">
+		<xs:sequence>
+			<xs:element name="players" type="Players" minOccurs="1" maxOccurs="1" />
+			<xs:element name="bank" type="Bank" minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Players">
+		<xs:choice minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="player" type="Player" />
+		</xs:choice>
+	</xs:complexType>
+
+	<xs:complexType name="Player">
+		<xs:sequence>
+			<xs:element name="firstname" type="xs:string" />
+			<xs:element name="lastname" type="xs:string" />
+			<xs:element name="character" type="Character" minOccurs="0" maxOccurs="10" />
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:positiveInteger" />
+		<xs:attribute name="role" type="xs:string" use="required" />
+	</xs:complexType>
+
+	<xs:complexType name="Character">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="class" type="xs:string" />
+			<xs:element name="race" type="xs:string" />
+			<xs:element name="level" type="xs:positiveInteger" />
+			<xs:element name="role" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+		<xs:attribute name="role" type="xs:string" use="required" />
+	</xs:complexType>
+
+	<xs:complexType name="Bank">
+	</xs:complexType>
+
+</xs:schema>
+
+

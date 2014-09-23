@@ -37,6 +37,7 @@
 									<li><xslt:value-of select="name" /></li>
 									<li><xslt:value-of select="class" /></li>
 									<li><xslt:value-of select="race" /></li>
+									<li><xslt:value-of select="gender" /></li>
 									<li><xslt:value-of select="level" /></li>
 									<li><xslt:value-of select="role" /></li>
 								</ul>

@@ -12,6 +12,7 @@
 				<name>Agila</name>
 				<class>Chaman</class>
 				<race>Draeïneï</race>
+				<gender>male</gender>
 				<level>90</level>
 				<role>DPS</role>
 			</character>
@@ -19,6 +20,7 @@
 				<name>Agilaë</name>
 				<class>Paladin</class>
 				<race>Human</race>
+				<gender>male</gender>
 				<level>90</level>
 				<role>Tank</role>
 			</character>
@@ -30,12 +32,14 @@
 				<name>Banker</name>
 				<class>Hunter</class>
 				<race>Night-elf</race>
+				<gender>male</gender>
 				<level>1</level>
 			</character>
 			<character role="main">
 				<name>Exor</name>
 				<class>Paladin</class>
 				<race>Human</race>
+				<gender>male</gender>
 				<level>90</level>
 				<role>Heal</role>
 			</character>
@@ -43,6 +47,7 @@
 				<name>Tores</name>
 				<class>Hunter</class>
 				<race>Dwarf</race>
+				<gender>male</gender>
 				<level>90</level>
 				<role>DPS</role>
 			</character>
@@ -54,6 +59,7 @@
 				<name>Bigbad</name>
 				<class>Chaman</class>
 				<race>Draeïneï</race>
+				<gender>male</gender>
 				<level>90</level>
 				<role>Heal</role>
 			</character>
@@ -65,6 +71,7 @@
 				<name>Naty</name>
 				<class>DK</class>
 				<race>Dwarf</race>
+				<gender>female</gender>
 				<level>90</level>
 				<role>Tank</role>
 			</character>

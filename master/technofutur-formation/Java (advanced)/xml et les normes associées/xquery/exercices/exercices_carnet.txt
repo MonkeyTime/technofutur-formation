@@ -1,0 +1,248 @@
+Liste des personnes avec leur balise <nom>:
+
+<personnes>
+    <personne>
+        <nom>Bernard</nom>
+    </personne>
+    <personne>
+        <nom>Durand</nom>
+    </personne>
+    <personne>
+        <nom>Gobbe</nom>
+    </personne>
+    <personne>
+        <nom>Gobbe</nom>
+    </personne>
+    ...
+</personnes>
+<personnes>
+{
+  for $p in doc("C:\xquery\carnet\carnet.xml")/carnet/personne/nom
+    return <personne>{$p}</personne>
+}
+</personnes>
+
+
+
+Liste des personnes avec uniquement leur nom:
+
+<personnes>
+    <personne>Bernard</personne>
+    <personne>Durand</personne>
+    <personne>Gobbe</personne>
+    <personne>Gobbe</personne>
+    ...
+</personnes>
+
+<personnes>
+{
+  for $p in doc("C:\xquery\carnet\carnet.xml")/carnet/personne
+    return <personne>{$p/nom/text()}</personne>
+}
+</personnes>
+
+
+
+Liste des personnes avec leurs nom et prénom (utilisez la fonction fn:concat(a, b, c...)):
+
+<personnes>
+    <personne>Bernard John</personne>
+    <personne>Durand Elise</personne>
+    <personne>Gobbe Nathalie</personne>
+    <personne>Gobbe Jean-Luc</personne>
+    ...
+</personnes>
+
+<personnes>
+{
+  for $p in doc("C:\xquery\carnet\carnet.xml")/carnet/personne
+    return <personne>{concat($p/nom/text(), " ", $p/prenom/text())}</personne>
+}
+</personnes>
+
+
+
+Idem, mais uniquement les hommes (titre="M."):
+
+<personnes>
+    <personne>Bernard John</personne>
+    <personne>Albert Marc</personne>
+    <personne>Declerck Serge</personne>
+    <personne>Pireaux Eric</personne>
+</personnes>
+
+<personnes>
+{
+  for $p in doc("C:\xquery\carnet\carnet.xml")/carnet/personne
+  where $p/@titre = "M."
+  return <personne>{concat($p/nom/text(), " ", $p/prenom/text())}</personne>
+}
+</personnes>
+
+
+
+Idem avec leur adresse (utilisez une clause "let" pour créer l'adresse dans une variable):
+
+<personnes>
+    <personne>Bernard John, Rue du canal 2 Ã  1140 Chenois</personne>
+    <personne>Albert Marc, Rue longue 122 Ã  1050 Ixelles</personne>
+    <personne>Declerck Serge, Rue basse 134 Ã  1050 Ixelles</personne>
+    <personne>Pireaux Eric, Rue Jules Blase 432 Ã  6041 Gosselies</personne>
+</personnes>
+
+<personnes>
+{
+  for $p in doc("C:\xquery\carnet\carnet.xml")/carnet/personne
+  where $p/@titre = "M."
+  return <personne>{concat($p/nom/text(), " ", $p/prenom/text(), concat(". ", $p/adresse/rue, " n°", $p/adresse/numero, " ", $p/adresse/zip, " ", $p/adresse/commune))}</personne>
+}
+</personnes>
+
+
+
+Comptez le nombre de personne (utilisez la fonction fn:count(...)):
+
+<total>11</total>
+
+<total>
+{
+  fn:count(doc("C:\xquery\carnet\carnet.xml")/carnet/personne)
+}
+</total>
+
+
+
+Chaque personne avec la liste de ses voisins (qui habitent la même commune):
+
+<personnes>
+    <personne>
+        <nom>Bernard John</nom>
+        <voisins>
+            <voisin>Dumont Julie</voisin>
+        </voisins>
+    </personne>
+    <personne>
+        <nom>Durand Elise</nom>
+        <voisins>
+            <voisin>Bareel ValÃ©rie</voisin>
+            <voisin>Jansens Sophie</voisin>
+        </voisins>
+    </personne>
+    <personne>
+        <nom>Gobbe Nathalie</nom>
+        <voisins>
+            <voisin>Pireaux Eric</voisin>
+            <voisin>Da vinci Martine</voisin>
+        </voisins>
+    </personne>
+    ...
+</personnes>
+
+<personnes>
+{
+  for $p in doc("C:\xquery\carnet\carnet.xml")/carnet/personne  
+  return 
+  <personne>
+    {concat($p/nom/text(), " ", $p/prenom/text())}
+    <voisins>
+    {
+      for $v in doc("C:\xquery\carnet\carnet.xml")/carnet/personne
+      where $p/adresse/commune = $v/adresse/commune and ($p/nom != $v/nom and $p/prenom != $v/prenom)
+      return
+      <voisin>
+        {concat($v/nom/text(), " ", $v/prenom/text())}
+      </voisin>
+    }
+    </voisins>
+  </personne>
+}
+</personnes> 
+
+
+
+Dressez la liste des communes par ordre alphabétique (utilisez la fonction fn:distinct-values(...) et "order by" dans l'instruction FLWOR):
+
+<communes>
+    <commune>Chenois</commune>
+    <commune>Etterbeek</commune>
+    <commune>Gosselies</commune>
+    <commune>Ixelles</commune>
+    <commune>Uccle</commune>
+</communes>
+
+<communes>
+{
+   for $c in fn:distinct-values(doc("C:\xquery\carnet\carnet.xml")/carnet/personne/adresse/commune)
+   order by $c
+   return 
+   <commune>
+     {$c}
+   </commune>
+}
+</communes>
+
+
+Dressez la liste des communes par ordre alphabétique avec la liste de leurs habitants:
+
+<communes>
+    <commune nom="Chenois">
+        <personne>Bernard John</personne>
+        <personne>Dumont Julie</personne>
+    </commune>
+    <commune nom="Etterbeek">
+        <personne>Gobbe Jean-Luc</personne>
+    </commune>
+    <commune nom="Gosselies">
+        <personne>Gobbe Nathalie</personne>
+        <personne>Pireaux Eric</personne>
+        <personne>Da vinci Martine</personne>
+    </commune>
+    <commune nom="Ixelles">
+        <personne>Albert Marc</personne>
+        <personne>Declerck Serge</personne>
+    </commune>
+    <commune nom="Uccle">
+        <personne>Durand Elise</personne>
+        <personne>Bareel ValÃ©rie</personne>
+        <personne>Jansens Sophie</personne>
+    </commune>
+</communes>
+
+<communes>
+{
+   for $c in fn:distinct-values(doc("C:\xquery\carnet\carnet.xml")/carnet/personne/adresse/commune)
+   order by $c
+   return 
+   <commune nom="{$c}">
+   {
+     for $p in doc("C:\xquery\carnet\carnet.xml")/carnet/personne 
+     where $p/adresse/commune = $c
+     return
+     <personne>
+       {concat($p/nom/text(), " ", $p/prenom/text())}
+     </personne>
+   }
+   </commune>
+}
+</communes
+
+
+Dressez la liste des communes avec le nombre de leurs habitants:
+
+<communes>
+    <commune nom="Chenois" habitants="2"/>
+    <commune nom="Etterbeek" habitants="1"/>
+    <commune nom="Gosselies" habitants="3"/>
+    <commune nom="Ixelles" habitants="2"/>
+    <commune nom="Uccle" habitants="3"/>
+</communes>
+
+<communes>
+{
+   for $c in fn:distinct-values(doc("C:\xquery\carnet\carnet.xml")/carnet/personne/adresse/commune)
+   order by $c
+   return <commune nom="{$c}" habitants="{
+     fn:count(doc('C:\xquery\carnet\carnet.xml')/carnet/personne[adresse/commune=$c])
+   }"></commune>
+}
+</communes>

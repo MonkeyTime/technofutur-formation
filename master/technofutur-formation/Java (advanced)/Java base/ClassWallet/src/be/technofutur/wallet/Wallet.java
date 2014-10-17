@@ -85,42 +85,42 @@ public class Wallet {
 		
 		while(rest != 0) {
 				
-			if(fraction >= 50) {
+			if(rest >= 50) {
 				
 				arrMoney[4] += 1;
-				rest = fraction - 50;
+				rest -= 50;
 				
 			}
 				
-			if(fraction >= 40) {
+			if(rest >= 40) {
 				
 				arrMoney[3] += 2;
-				rest = fraction - 40;
+				rest -= 40;
 				
 			}
 			
-			if(fraction >= 20 && fraction < 40) {
+			if(rest >= 20 && rest < 40) {
 				
 				arrMoney[3] += 1;
-				rest = fraction - 20;
+				rest -= 20;
 			}
 			
-			if(fraction >= 10 && fraction < 20) {
+			if(rest >= 10 && rest < 20) {
 				
 				arrMoney[2] += 1;
-				rest = fraction - 10;
+				rest -= 10;
 			}
 			
-			if(fraction >= 5 && fraction < 10) {
+			if(rest >= 5 && rest < 10) {
 				
 				arrMoney[1] += 1;
-				rest = fraction - 5;
+				rest -= 5;
 			}
 			
-			if(fraction >= 1 && fraction < 5) {
+			if(rest >= 1 && rest < 5) {
 				
 				arrMoney[0] += 1;
-				rest = fraction - 1;
+				rest -= 1;
 			}
 		}
 	}

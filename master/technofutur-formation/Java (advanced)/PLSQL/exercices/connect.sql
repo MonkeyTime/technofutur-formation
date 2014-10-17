@@ -1,0 +1,5 @@
+CONNECT sys as sysdba
+
+ALTER PLUGGABLE DATABASE MyOraclePDB2 OPEN;
+
+CONNECT hr/hr@localhost:1521/MyOraclePDB2

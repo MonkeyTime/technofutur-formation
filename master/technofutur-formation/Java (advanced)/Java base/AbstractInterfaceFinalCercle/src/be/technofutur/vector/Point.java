@@ -1,4 +1,4 @@
-package be.technofutur.point;
+package be.technofutur.vector;
 
 public class Point {
 	
@@ -143,6 +143,17 @@ public class Point {
 	public double axiallySymmetry(Point p1, Point p2) {
 		
 		return (this.getDistanceXY(p1, p2) / 2);
-	}	
+	}
+	
+	/**
+	 * clone
+	 * 
+	 * clone the current Point
+	 * 
+	 */
+	public Point clone() {
+		
+		return new Point(this.x, this.y);
+	}
 }
 

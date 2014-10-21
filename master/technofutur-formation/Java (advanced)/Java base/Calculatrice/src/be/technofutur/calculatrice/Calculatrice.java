@@ -33,6 +33,8 @@ public class Calculatrice {
 		System.out.print("Choisissez un nombre:\n");
 		nbr2 = Scan.nextInt();
 		
+		Scan.close();
+		
 		switch(op) {
 		
 			case("+"):

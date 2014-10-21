@@ -23,6 +23,8 @@ public class Tableau {
 			arrayInt[i] = nbr;
 		}
 		
+		Scan.close();
+		
 		for(int i = 0; i < arrayInt.length; i++) {
 			
 			System.out.println(arrayInt[i] + "\n");

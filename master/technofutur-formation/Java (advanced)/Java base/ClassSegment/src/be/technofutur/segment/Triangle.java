@@ -1,5 +1,4 @@
 package be.technofutur.segment;
-import java.math.*;
 
 public class Triangle {
 

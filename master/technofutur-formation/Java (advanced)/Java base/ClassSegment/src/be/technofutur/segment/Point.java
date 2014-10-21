@@ -17,7 +17,7 @@ public class Point {
 		this.x = 0.0;
 		this.y = 0.0;
 		
-		this.count++;
+		count++;
 		
 	}
 	
@@ -32,7 +32,7 @@ public class Point {
 		this.x = x;
 		this.y = y;
 		
-		this.count++;
+		count++;
 	}
 	
 	/**

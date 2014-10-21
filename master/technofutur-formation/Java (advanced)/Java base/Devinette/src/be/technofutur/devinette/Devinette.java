@@ -19,6 +19,7 @@ public class Devinette {
 			System.out.println("Choisissez un nombre entre 1 et 100\n");
 			Scanner Scan = new Scanner(System.in);
 			nbr = Scan.nextInt();
+			Scan.close();
 				
 			if(i != MAX_COUNT) {
 				

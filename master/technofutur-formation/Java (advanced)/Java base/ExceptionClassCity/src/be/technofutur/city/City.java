@@ -76,7 +76,7 @@ public class City {
 			
 			while(this.totalResident == 0) {
 				
-				System.out.println("Choisissez le nombre d'habitant\n");
+				System.out.println("Define total of resident\n");
 				this.totalResident = Scan.nextInt();
 			
 				if((Integer)this.totalResident == null) {

@@ -13,6 +13,7 @@ public abstract class Media {
 	 * 
 	 * @param title
 	 * @param dayPrice
+	 * 
 	 * @throws Exception 
 	 */
 	public Media(String title, double dayPrice) throws Exception {

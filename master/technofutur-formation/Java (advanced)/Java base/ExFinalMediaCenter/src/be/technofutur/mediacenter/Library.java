@@ -15,10 +15,10 @@ public final class Library {
 	/**
 	 * Constructor
 	 * 
-	 * @private
+	 * @protected
 	 * 
 	 */
-	private Library() {}
+	protected Library() {}
 	
 	public Library getInstance() {
 		
@@ -77,7 +77,7 @@ public final class Library {
 	/**
 	 * push
 	 * 
-	 * method to push a media from its instance directly in the library list
+	 * method to push a media directly from its Media instance in the library list
 	 * 
 	 * @param media
 	 * 
@@ -114,7 +114,7 @@ public final class Library {
 		
 		for(int i = 0; i < MAX_MEDIAS; i++) {
 				
-			str.append(medias[i].id + ": " + medias[i].title + " " + "(disponible: " + medias[i].available + ")");
+			str.append(medias[i].id + ": " + medias[i].title + " " + "(availability: " + medias[i].available + ")");
 		}
 		
 		return str.toString();
@@ -135,7 +135,7 @@ public final class Library {
 			
 			if(medias[i].available) {
 				
-				str.append(medias[i].id + ": " + medias[i].title + "(disponible)");
+				str.append(medias[i].id + ": " + medias[i].title + "(available)");
 			}
 		}
 		

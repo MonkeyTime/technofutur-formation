@@ -51,6 +51,7 @@ public final class Member {
 			Library.updateAvailability(media.media);
 			
 			media.price -= media.price * 0.20;
+			
 			rentTable[i] = media;
 			
 			i++;

@@ -6,18 +6,26 @@ public class Location {
 	protected String date;
 	protected int totalDays;
 	protected double price;
-	protected boolean isAvailable;
 	
 	/**
 	 * Constructor
 	 * 
+	 * @throws Exception 
+	 * 
 	 */
-	public Location(Media media, String date, int totalDays) {
+	public Location(Media media, String date, int totalDays) throws Exception {
 	
-		this.media = media;
-		this.date = date;
-		this.totalDays = totalDays;
-		this.price = media.dayPrice * totalDays;
+		if(media.available) {
+			
+			this.media = media;
+			this.date = date;
+			this.totalDays = totalDays;
+			this.price = media.dayPrice * totalDays;
+			
+			return;
+		}
+		
+		throw new Exception("This media " + media.title + " is already in rent.");
 	}
 
 }

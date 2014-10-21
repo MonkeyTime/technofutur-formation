@@ -31,7 +31,7 @@ public class Student {
 	 */
 	public void addCourse(Course course) throws Exception {
 		
-		if(Arrays.binarySearch(courses, course.label) >= 0) {
+		if(Arrays.binarySearch(courses, course) >= 0) {
 			
 			throw new Exception("This course is already added.");
 		}
@@ -54,15 +54,15 @@ public class Student {
 	 * 
 	 * @param index
 	 * 
-	 * @return Course
+	 * @return Course.label
 	 * 
 	 * @throws Exception
 	 */
-	public Course getCourse(int index) throws Exception {
+	public String getCourse(int index) throws Exception {
 		
 		if((index - 1) < 0) {
 			
-			throw new Exception("Human index start to 1");
+			throw new Exception("Human index start at 1");
 		}
 		
 		if((index - 1) >= 10) {
@@ -75,7 +75,7 @@ public class Student {
 			throw new Exception("No course found at this index");
 		}
 		
-		return this.courses[index - 1];
+		return this.courses[index - 1].label;
 	}
 
 }

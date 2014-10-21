@@ -70,12 +70,12 @@ public class Student {
 			throw new Exception("Human index end at 10");
 		}
 		
-		if(this.courses[index] == null) {
+		if(this.courses[index - 1] == null) {
 			
 			throw new Exception("No course found at this index");
 		}
 		
-		return this.courses[index];
+		return this.courses[index - 1];
 	}
 
 }

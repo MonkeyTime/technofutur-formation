@@ -159,4 +159,23 @@ public final class Library {
 		
 		return total;
 	}
+	
+	/**
+	 * updateAvailability
+	 * 
+	 * @param Media 	The media to update availability
+	 */
+	public static void updateAvailability(Media media) {
+		
+		for(int i = 0; i < MAX_MEDIAS; i++) {
+			
+			if(medias[i].equals(media)) {
+				
+				medias[i].available = media.available;
+				
+				break;
+			}
+		}
+		
+	}
 }

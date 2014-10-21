@@ -35,6 +35,8 @@ public final class Member {
 			
 			media.media.available = false;
 			
+			Library.updateAvailability(media.media);
+			
 			rentTable[i] = media;
 			
 			i++;
@@ -45,6 +47,8 @@ public final class Member {
 		if(i >= 0 && i < 5 && media.totalDays >= 7) {
 			
 			media.media.available = false;
+			
+			Library.updateAvailability(media.media);
 			
 			media.price -= media.price * 0.20;
 			rentTable[i] = media;

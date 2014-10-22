@@ -53,21 +53,11 @@ public class Race {
 	 */
 	public void replaceRacer(int rank, String firstName, String lastName) {
 		
-		Cyclist tmpIn = ranking.get(rank);
+		Cyclist tmp = ranking.get(rank);
+		tmp.firstName = firstName;
+		tmp.lastName = lastName;
 		
-		for(int i = 0; i < ranking.size(); i++) {
-			
-			Cyclist tmpOut = ranking.get(i);
-			
-			if(firstName == tmpOut.firstName && lastName == tmpOut.lastName) {
-				
-				ranking.set(rank, tmpOut);
-				
-				ranking.set(i, tmpIn);
-				
-				break;
-			}
-		}
+		ranking.add(rank, tmp);
 	}
 	
 	/**

@@ -7,7 +7,7 @@ public class Race {
 	protected String raceName;
 	protected Map<Integer, Cyclist> ranking = new HashMap<Integer, Cyclist>();
 	
-	/**
+	/**-------------------
 	 * Constructor
 	 * 
 	 * @param raceName
@@ -54,21 +54,11 @@ public class Race {
 	 */
 	public void replaceRacer(int rank, String firstName, String lastName) {
 		
-		Cyclist tmpIn = ranking.get(rank);
+		Cyclist tmp = ranking.get(rank);
+		tmp.firstName = firstName;
+		tmp.lastName = lastName;
 		
-		for(int i = 0; i < ranking.size(); i++) {
-			
-			Cyclist tmpOut = ranking.get(i);
-			
-			if(firstName == tmpOut.firstName && lastName == tmpOut.lastName) {
-				
-				ranking.put(rank, tmpOut);
-				
-				ranking.put(i, tmpIn);
-				
-				break;
-			}
-		}
+		ranking.put(rank, tmp);
 	}
 	
 	/**

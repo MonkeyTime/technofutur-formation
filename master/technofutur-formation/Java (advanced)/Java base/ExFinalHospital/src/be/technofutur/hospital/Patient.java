@@ -36,7 +36,7 @@ public final class Patient extends Person implements IHealth {
 		
 		if(state < 0 || state > 4) {
 			
-			throw new Exception("Health state must be a valid state. Use only TO_DIAGNOSE, TO_OPERATE, IN_TREATMENT, DIED or RECOVERED");
+			throw new Exception("Health state must be a valid state. Use only TO_DIAGNOSE, TO_OPERATE, IN_TREATMENT, DIED or RECOVERED constant");
 		}
 		
 		this.healthState = state;

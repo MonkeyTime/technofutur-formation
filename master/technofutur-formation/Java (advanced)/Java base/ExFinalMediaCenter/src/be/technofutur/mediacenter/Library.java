@@ -20,11 +20,6 @@ public final class Library {
 	 */
 	protected Library() {}
 	
-	public Library getInstance() {
-		
-		return new Library();
-	}
-	
 	/**
 	 * getName
 	 * 

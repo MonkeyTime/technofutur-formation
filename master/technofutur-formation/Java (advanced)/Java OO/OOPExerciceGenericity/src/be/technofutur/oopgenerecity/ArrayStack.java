@@ -16,7 +16,7 @@ public class ArrayStack<T> implements IStack<T> {
 	/**
 	 * Constructor
 	 * 
-	 * @param q 	Quantity of elements
+	 * @param q 	Quantity of elements needed
 	 * 
 	 */
 	public ArrayStack(int q) {

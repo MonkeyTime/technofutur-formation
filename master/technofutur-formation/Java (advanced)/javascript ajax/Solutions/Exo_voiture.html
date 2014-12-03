@@ -1,0 +1,26 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<script type="text/javascript">
+		function voiture(marque,modele,couleur,immatriculation){
+			this.marque=marque;
+			this.modele=modele;
+			this.couleur=couleur;
+			this.immatriculation=immatriculation;
+			
+			this.afficher=afficheVoiture;		
+		}
+		
+		function afficheVoiture(){		
+			document.write('Marque: '+this.marque+'<br/>');
+			document.write('Modèle: '+this.modele+'<br/>');
+			document.write('Couleur: '+this.couleur+'<br/>');
+			document.write('Plaque: '+this.immatriculation+'<br/>');
+		}
+		
+		maVoiture=new voiture('Ferrari','f40','rouge','Vip-842');
+		maVoiture.afficher();
+		</script>
+	</body>
+</html>

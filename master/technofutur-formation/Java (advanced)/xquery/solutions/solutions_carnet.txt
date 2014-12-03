@@ -1,0 +1,97 @@
+<personnes>
+{
+for $p in fn:doc("carnet/carnet.xml")/carnet/personne
+return <personne>{ $p/nom }</personne>
+}
+</personnes>
+
+
+<personnes>
+{
+for $p in fn:doc("carnet/carnet.xml")/carnet/personne
+return <personne>{ $p/nom/text() }</personne>
+}
+</personnes>
+
+
+<personnes>
+{
+for $p in fn:doc("carnet/carnet.xml")/carnet/personne
+return <personne>{ fn:concat($p/nom/text()," ",$p/prenom/text()) }</personne>
+}
+</personnes>
+
+
+<personnes>
+{
+for $p in fn:doc("carnet/carnet.xml")/carnet/personne
+where $p/@titre="M."
+return <personne>{ fn:concat($p/nom/text()," ",$p/prenom/text()) }</personne>
+}
+</personnes>
+
+
+xquery version "1.0" encoding "ISO-8859-1";
+<personnes>
+{
+for $p in fn:doc("carnet/carnet.xml")/carnet/personne
+let $adresse := fn:concat($p/adresse/rue, " ", $p/adresse/numero," à ",$p/adresse/zip," ",$p/adresse/commune)
+where $p/@titre="M."
+return <personne>{ fn:concat($p/nom/text()," ",$p/prenom/text(),", ",$adresse) }</personne>
+}
+</personnes>
+
+
+<total>
+{ fn:count(fn:doc("carnet/carnet.xml")/carnet/personne) }
+</total>
+
+
+<personnes>
+{
+for $p in fn:doc("carnet/carnet.xml")/carnet/personne
+return 
+<personne>
+   <nom>{ fn:concat($p/nom/text()," ",$p/prenom/text()) }</nom>
+   <voisins>
+      {
+      for $v in fn:doc("carnet/carnet.xml")/carnet/personne[adresse/commune = $p/adresse/commune and nom!=$p/nom and prenom!=$p/prenom]
+      return <voisin>{ fn:concat($v/nom/text()," ",$v/prenom/text()) }</voisin>
+      }
+   </voisins>
+</personne>
+}
+</personnes>
+
+
+<communes>
+{
+for $commune in fn:distinct-values(fn:doc("carnet/carnet.xml")/carnet/personne/adresse/commune)
+order by $commune 
+return <commune>{$commune}</commune>
+}
+</communes>
+
+
+<communes>
+{
+for $commune in fn:distinct-values(fn:doc("carnet/carnet.xml")/carnet/personne/adresse/commune)
+order by $commune
+return <commune nom="{$commune}">
+{
+for $p in fn:doc("carnet/carnet.xml")/carnet/personne[adresse/commune = $commune]
+return <personne>{concat($p/nom," ",$p/prenom)}</personne>
+}
+</commune>
+}
+</communes>
+
+
+<communes>
+{
+for $commune in fn:distinct-values(fn:doc("carnet/carnet.xml")/carnet/personne/adresse/commune)
+let $habitants := fn:count(fn:doc("carnet/carnet.xml")/carnet/personne[adresse/commune = $commune])
+order by $commune
+return <commune nom="{$commune}" habitants="{$habitants}"/>
+}
+</communes>

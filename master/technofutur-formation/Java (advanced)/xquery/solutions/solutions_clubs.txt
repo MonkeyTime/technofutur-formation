@@ -1,0 +1,52 @@
+xquery version "1.0" encoding "ISO-8859-1";
+<membres>
+   {
+   for $m in fn:doc("clubs/clubs.xml")/clubs/club/membre,
+       $p in fn:doc("clubs/membres.xml")/membres/membre
+   where $m/text() = $p/@id
+   return <membre>{fn:concat($p/nom/text(), " ", $p/prenom/text() )}</membre>
+   }
+</membres>
+
+
+xquery version "1.0" encoding "ISO-8859-1";
+<membres>
+   {
+   for $m in fn:doc("clubs/clubs.xml")/clubs/club/membre,
+       $p in fn:doc("clubs/membres.xml")/membres/membre
+   where $m/text() = $p/@id
+   return <membre club="{$m/ancestor::club/@nom}">{fn:concat($p/nom/text(), " ", $p/prenom/text() )}</membre>
+   }
+</membres>
+
+
+xquery version "1.0" encoding "ISO-8859-1";
+<membres>
+   {
+   for $c in fn:doc("clubs/clubs.xml")/clubs/club
+   return <club nom="{ $c/@nom }"> 
+           {
+           for $m in $c/membre,
+               $p in fn:doc("clubs/membres.xml")/membres/membre
+           where $m/text() = $p/@id
+           return <membre>{fn:concat($p/nom/text(), " ", $p/prenom/text() )}</membre>
+          }
+        </club>
+   }
+</membres>
+
+
+xquery version "1.0" encoding "ISO-8859-1";
+<membres>
+   {
+   for $p in fn:doc("clubs/membres.xml")/membres/membre
+   return <membre> 
+              {
+              <nom>{fn:concat($p/nom/text(), " ", $p/prenom/text() )}</nom>,
+              for $c in fn:doc("clubs/clubs.xml")/clubs/club
+              where $c/membre/text() = $p/@id
+              return <club>{ $c/@nom }</club>
+              }
+        </membre>
+   }
+</membres>

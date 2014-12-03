@@ -1,0 +1,218 @@
+declare namespace cli = "http://www.samples.com/clients";
+<clients>
+{
+for $cli in fn:doc("commandes/clients.xml")/cli:clients/cli:client
+return <client>{$cli/cli:nom/text()}</client>
+}
+</clients>
+
+
+
+declare namespace cli = "http://www.samples.com/clients";
+<clients>
+{
+for $cli in fn:doc("commandes/clients.xml")/cli:clients/cli:client
+order by $cli/cli:nom
+return <client>{$cli/cli:nom/text()}</client>
+}
+</clients>
+
+
+
+
+xquery version "1.0" encoding "ISO-8859-1";
+declare namespace cli = "http://www.samples.com/clients";
+<clients>
+<sociétés>
+{
+for $cli in fn:doc("commandes/clients.xml")/cli:clients/cli:client[@type="société"]
+order by $cli/cli:nom
+return <client>{$cli/cli:nom/text()}</client>
+}
+</sociétés>
+<indépendants>
+{
+for $cli in fn:doc("commandes/clients.xml")/cli:clients/cli:client[@type="indépendant"]
+order by $cli/cli:nom
+return <client>{$cli/cli:nom/text()}</client>
+}
+</indépendants>
+<privés>
+{
+for $cli in fn:doc("commandes/clients.xml")/cli:clients/cli:client[@type="privé"]
+order by $cli/cli:nom
+return <client>{$cli/cli:nom/text()}</client>
+}
+</privés>
+</clients>
+
+
+
+
+xquery version "1.0" encoding "ISO-8859-1";
+declare namespace cli = "http://www.samples.com/clients";
+<clients>
+{
+for $pays in fn:distinct-values(fn:doc("commandes/clients.xml")/cli:clients/cli:client/cli:adresse-livraison/cli:pays)
+order by $pays
+return 
+element { $pays }
+   {
+   for $client in fn:doc("commandes/clients.xml")/cli:clients/cli:client[cli:adresse-livraison/cli:pays = $pays]
+   return <client>{$client/cli:nom/text()}</client>
+   }
+}
+</clients>
+
+
+
+xquery version "1.0" encoding "ISO-8859-1";
+declare namespace cli = "http://www.samples.com/clients";
+<clients>
+{
+for $pays in fn:distinct-values(fn:doc("commandes/clients.xml")/cli:clients/cli:client/cli:adresse-livraison/cli:pays)
+order by $pays
+return 
+element { $pays }
+   {
+   for $client in fn:doc("commandes/clients.xml")/cli:clients/cli:client[cli:adresse-livraison/cli:pays = $pays]
+   return <client>
+            {
+            if ($client/@type='société' or $client/@type='indépendant') 
+            then attribute tva { $client/cli:tva/text() } else (),
+            $client/cli:nom/text() 
+            }
+          </client>
+   }
+}
+</clients>
+
+
+
+xquery version "1.0" encoding "ISO-8859-1";
+declare namespace pr = "http://www.samples.com/produits";
+<produits>
+{
+for $p in fn:doc("commandes/produits.xml")/pr:catalogue/pr:produit
+order by $p/pr:nom
+return <produit>{$p/pr:nom/text()}</produit>
+
+}
+</produits>
+
+
+xquery version "1.0" encoding "ISO-8859-1";
+declare namespace pr = "http://www.samples.com/produits";
+<produits>
+{
+for $p in fn:doc("commandes/produits.xml")/pr:catalogue/pr:produit
+order by $p/pr:nom
+return <produit code="{$p/@id}">{$p/pr:nom/text()}</produit>
+
+}
+</produits>
+
+
+xquery version "1.0" encoding "ISO-8859-1";
+declare namespace pr = "http://www.samples.com/produits";
+<produits>
+   {
+   for $cat in fn:doc("commandes/categories.xml")/pr:catégories/pr:catégorie
+   order by $cat/pr:nom
+   return
+      <catégorie nom="{$cat/pr:nom/text()}">
+         {
+         for $p in fn:doc("commandes/produits.xml")/pr:catalogue/pr:produit[@catégorie=$cat/@id]
+         order by $p/pr:nom
+         return <produit code="{$p/@id}">{$p/pr:nom/text()}</produit>
+         }
+      </catégorie>
+   }
+</produits>
+
+
+
+xquery version "1.0" encoding "ISO-8859-1";
+declare namespace pr = "http://www.samples.com/produits";
+<produits>
+   {
+   for $cat in fn:doc("commandes/categories.xml")/pr:catégories/pr:catégorie,
+       $p in fn:doc("commandes/produits.xml")/pr:catalogue/pr:produit
+   where $cat/@id = $p/@catégorie
+   order by $cat/pr:nom
+   return <produit code="{$p/@id}">{fn:concat($p/pr:nom/text()," (",$cat/pr:nom/text(),")")}</produit>
+   }
+</produits>
+
+
+
+
+xquery version "1.0" encoding "ISO-8859-1";
+declare namespace pr = "http://www.samples.com/produits";
+declare namespace cmd = "http://www.samples.com/commandes";
+declare variable $listeProduits := 
+<produits>
+   {
+   for $cat in fn:doc("commandes/categories.xml")/pr:catégories/pr:catégorie,
+       $p in fn:doc("commandes/produits.xml")/pr:catalogue/pr:produit
+   where $cat/@id = $p/@catégorie
+   order by $cat/pr:nom
+   return <produit code="{$p/@id}">{fn:concat($p/pr:nom/text()," (",$cat/pr:nom/text(),")")}</produit>
+   }
+</produits>;
+
+<commandes>
+{
+for $commande in fn:doc("commandes/commandes.xml")/cmd:commandes/cmd:commande
+return
+  <commande id="{$commande/@id}">
+    {
+    for $produit in $commande/cmd:produit, 
+        $descr in $listeProduits/produit
+    where $produit/@ref = $descr/@code
+    return <produit quantité="{$produit/@quantité}">{$descr/text()}</produit>
+    }
+  </commande>
+}
+</commandes>
+
+
+
+xquery version "1.0" encoding "ISO-8859-1";
+declare namespace pr = "http://www.samples.com/produits";
+declare namespace cmd = "http://www.samples.com/commandes";
+declare variable $commandes := for $commande in fn:doc("commandes/commandes.xml")/cmd:commandes/cmd:commande
+return 
+<commande id="{$commande/@id}">
+  {
+  for $prCmd in $commande/cmd:produit,
+      $produit in fn:doc("commandes/produits.xml")/pr:catalogue/pr:produit
+  where $prCmd/@ref = $produit/@id
+  return 
+  <produit quantité="{$prCmd/@quantité}">
+     {
+     attribute prix-unitaire { $produit/pr:prix[@quantité<=$prCmd/@quantité][last()]/text() },
+     attribute total { $produit/pr:prix[@quantité<=$prCmd/@quantité][last()]/text() * $prCmd/@quantité},
+     $produit/pr:nom/text()
+     }
+  </produit>
+  }
+</commande>;
+
+<commandes>
+{
+for $cmd in $commandes
+return 
+<commande id="{$cmd/@id}" total="{fn:sum($cmd/produit/@total)}">
+  {
+  for $prCmd in $cmd/produit
+  return 
+  <produit quantité="{$prCmd/@quantité}" prix-unitaire="{$prCmd/@prix-unitaire}" total="{$prCmd/@total}">
+     {
+     $prCmd/text()
+     }
+  </produit>
+  }
+</commande> 
+}
+</commandes>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<version>
+		<name>app_jst</name>
+		<util>1.0</util>
+	</version>
+	<version>
+		<name>app_jst</name>
+		<util>1.1</util>
+	</version>
+	<version>
+		<name>app_xml</name>
+		<util>2.1</util>
+	</version>
+	<version>
+		<name>app_xml</name>
+		<util>2.2</util>
+	</version>
+</root>

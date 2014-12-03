@@ -1,0 +1,59 @@
+<html>
+<head><title>Exemple 25</title>
+<h1>Devinette numérique</h1>
+<p>J'ai un nombre entre 1 et 100 (compris). Pouvez vous le deviner en moins de 10 essais ?</p>
+
+<script type="text/javascript">
+
+nombre = Math.floor(Math.random()*100)+1;
+chances = 10;
+proposition = null;
+
+do
+{
+	propositionText = prompt("Entrez une proposition","");
+	if(propositionText==null )
+	{
+		document.write("<div>Vous avez choisi d'abandonner la partie.</div>");
+	}
+	else if(isNaN(propositionText) )
+	{
+		document.write("<div>\""+propositionText+"\" n'est pas un nombre.</div>");
+	}
+	else if(propositionText=="")
+	{
+		document.write("<div>Veuillez entrer une proposition.</div>");
+	}
+	else
+	{
+		proposition = parseInt(propositionText);
+		chances--;
+		if(proposition > nombre)
+		{
+			document.write("<div>Mon nombre est plus petit que " + proposition + "</div>");
+		}
+		else if(proposition < nombre)
+		{
+			document.write("<div>Mon nombre est plus grand que " + proposition + "</div>");
+		}
+		if(proposition != nombre)
+		{
+			document.write("<div>Il vous reste " + chances + " chances</div>");
+		}
+	}
+}while (chances > 0 && proposition != nombre && propositionText!=null);
+
+if(proposition == nombre)
+{
+	document.write("<div>Félicitation. Vous avez gagné.\nLe nombre était bien " + nombre + "</div>");
+}
+else
+{
+	document.write("<div>Désolé, vous avez perdu.\nLe nombre était " + nombre + "</div>");
+}
+
+</script>
+</head>
+<body>
+
+</body></html>

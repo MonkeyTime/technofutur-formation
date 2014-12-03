@@ -1,0 +1,2 @@
+/Lottoo/lotto.html
+/Lottoo/ServLotto/

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="addressDupont" class="be.technofutur.springinit.Address">
+		<property name="street" value="Rue du Val Blanc" />
+		<property name="number" value="3" />
+		<property name="city" value="Liege" />
+		<property name="region" value="Belgique" />
+		<property name="postalCode" value="4000" />
+	</bean>
+	
+	<bean id="beanEnfant1" class="be.technofutur.springinit.Person">
+		
+			<property name="firstname" value="Valérie" />
+			<property name="lastname" value="Dupont" />
+			<property name="address" ref="addressDupont" />
+			
+    </bean>
+    
+    <bean id="beanEnfant2" class="be.technofutur.springinit.Person">
+		
+			<property name="firstname" value="Angeline" />
+			<property name="lastname" value="Dupont" />
+			<property name="address" ref="addressDupont" />
+			
+    </bean>
+	
+	<bean id="Dupont" class="be.technofutur.springinit.Person">
+		
+		<property name="firstname" value="Cédric" />
+		<property name="lastname" value="Dupont" />
+		
+		<property name="children">
+		<list>
+			<ref="beanEnfant1" />
+			<ref="beanEnfant2" />
+		</list>
+		</property>
+		
+		<property name="address" ref="addressDupont" />
+		
+	</bean>
+
+</beans>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="RemoteEjb">
+        <wb-resource deploy-path="/" source-path="/ejbModule" tag="defaultRootSource"/>
+        <property name="java-output-path" value="/RemoteEjb/build/classes"/>
+        <property name="ClientProject" value="RemoteEjbClient"/>
+        <property name="ClientJARURI" value="RemoteEjbClient.jar"/>
+    </wb-module>
+</project-modules>

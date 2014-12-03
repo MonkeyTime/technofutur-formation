@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <title>Calculatrice basique</title>
+    <style type="text/css">
+   
+    .Button
+    {
+		width: 35px;
+		height:25px;
+		color: blue;
+		margin: 0px 2px 4px 0px;
+    }
+    #expression
+    {
+		width:100%;
+		text-align:right;
+		
+    }
+   
+    </style>
+  </head>
+  <body>
+	<script type="text/javascript">
+	
+	function addExpression(button)
+	{
+		var expression = document.getElementById("expression");
+		if (button.value != "=")
+		{ // élément de calcul
+			expression.value += button.value;
+		}
+		else
+		{ // afficher le résultat
+			try
+			{
+				//alert("Le résultat de l'expression: " + expression.value + " est :" + eval(expression.value));
+				expression.value = eval(expression.value);
+			}
+			catch(exception)
+			{
+				alert("L'évaluation s'est mal passée...");
+			}
+		}
+	}
+	
+	function clearExpression(){
+		document.getElementById("expression").value = "";
+	}	
+	</script>
+	<div style="width:190px;">
+		<input type="text" id="expression" disabled="disabled" /><hr />
+		<div style="width:130px;float:left;">
+			<input type="button" class="Button" value="7" onclick="addExpression(this);" />
+			<input type="button" class="Button" value="8" onclick="addExpression(this);" />
+			<input type="button" class="Button" value="9" onclick="addExpression(this);" />
+			<input type="button" class="Button" value="4" onclick="addExpression(this);" />
+			<input type="button" class="Button" value="5" onclick="addExpression(this);" />
+			<input type="button" class="Button" value="6" onclick="addExpression(this);" />
+			<input type="button" class="Button" value="1" onclick="addExpression(this);" />
+			<input type="button" class="Button" value="2" onclick="addExpression(this);" />
+			<input type="button" class="Button" value="3" onclick="addExpression(this);" />
+			<input type="button" class="Button" value="0" onclick="addExpression(this);" />
+			<input type="button" class="Button" value="C" onclick="clearExpression();" />
+		</div>
+		<div style="margin-left:10px;width:40px;float:left;">
+			<input type="button" class="Button" value="+" onclick="addExpression(this);" />
+			<input type="button" class="Button" value="-" onclick="addExpression(this);" />
+			<input type="button" class="Button" value="*" onclick="addExpression(this);" />
+			<input type="button" class="Button" value="/" onclick="addExpression(this);" />
+			<input type="button" class="Button" value="=" onclick="addExpression(this);" />
+		</div>
+	</div>
+  </body>
+</html>

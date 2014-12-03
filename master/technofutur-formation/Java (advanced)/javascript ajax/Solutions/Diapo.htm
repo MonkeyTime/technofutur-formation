@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+   
+    html, body
+{
+  height:100%;
+  width:100%;
+  margin:0px;
+  padding:0px;
+}
+    #preview
+    {
+        position:absolute;
+        left:0px;
+        top:0px;
+        height:95%;
+	width:100%;
+        background: black no-repeat center ;
+    }
+    #console
+    {
+        position:absolute;
+        left:0px;
+        bottom:0px;
+        height:5%;
+        width:100%;
+        text-align:center;
+        background:black;
+    }
+    img
+    {
+        margin-right:10px;
+        cursor:pointer;
+    }
+    
+    </style>
+</head>
+<body>
+    <div id="preview">&nbsp;</div>
+    <div id="console">
+        <img src="begin.gif" onclick="GoFirst();" /><img src="Previous.gif" onclick="GoPrevious();" /><img src="next.gif" onclick="GoNext();" /><img src="end.gif" onclick="GoLast();" />
+    </div>
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    var images   = ["Blue_hills.jpg", "Sunset.jpg", "Water_lilies.jpg", "Winter.jpg"];
+    var position = 0;
+    function Draw()
+    {
+        document.getElementById("preview").style.backgroundImage = "url(\"" + images[position] + "\")";
+    }
+    function GoFirst()
+    {
+        position = 0;
+        Draw();
+    }
+    function GoNext()
+    {
+        if (position + 1 < images.length)
+        {
+            position++;
+            Draw();
+        }
+    }
+    function GoPrevious()
+    {
+        if (position > 0)
+        {
+            position--;
+            Draw();
+        }
+    }
+    function GoLast()
+    {
+        position = images.length - 1;
+        Draw();
+    }
+    Draw();
+    /*]]>*/
+    </script>
+</body>
+</html>

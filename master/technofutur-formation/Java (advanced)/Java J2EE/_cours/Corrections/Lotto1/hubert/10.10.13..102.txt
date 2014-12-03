@@ -1,0 +1,5 @@
+app/index.html
+app/LottoServlet
+
+
+attention, en choisir 3 parmi les 9

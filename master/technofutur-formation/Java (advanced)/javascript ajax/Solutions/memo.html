@@ -1,0 +1,139 @@
+<html>
+<head>
+<title>Mémo</title>
+<style type="text/css">
+table td
+{
+	height:160px;
+}
+</style>
+</head>
+<body style="text-align:center;">
+<div style="width:800px; margin:auto;">
+<span>score : </span><span id="score"></span><br/>
+essai : <span id="essai"></span><br/>
+temps : <span id="time"></span> secondes
+<table style="width:100%;">
+	<tr>
+		<td><img style="width:150px;" onclick="ShowImg(0);" id="img1" src="point-d-interrogation.jpg"/></td>
+		<td><img style="width:150px;" onclick="ShowImg(1);" id="img2" src="point-d-interrogation.jpg"/></td>
+		<td><img style="width:150px;" onclick="ShowImg(2);" id="img3" src="point-d-interrogation.jpg"/></td>
+		<td><img style="width:150px;" onclick="ShowImg(3);" id="img4" src="point-d-interrogation.jpg"/></td>
+	</tr>
+	<tr>
+		<td><img style="width:150px;" onclick="ShowImg(4);" id="img5" src="point-d-interrogation.jpg"/></td>
+		<td><img style="width:150px;" onclick="ShowImg(5);" id="img6" src="point-d-interrogation.jpg"/></td>
+		<td><img style="width:150px;" onclick="ShowImg(6);" id="img7" src="point-d-interrogation.jpg"/></td>
+		<td><img style="width:150px;" onclick="ShowImg(7);" id="img8" src="point-d-interrogation.jpg"/></td>
+	</tr>
+	<tr>
+		<td><img style="width:150px;" onclick="ShowImg(8);" id="img9" src="point-d-interrogation.jpg"/></td>
+		<td><img style="width:150px;" onclick="ShowImg(9);" id="img10" src="point-d-interrogation.jpg"/></td>
+		<td><img style="width:150px;" onclick="ShowImg(10);" id="img11" src="point-d-interrogation.jpg"/></td>
+		<td><img style="width:150px;" onclick="ShowImg(11);" id="img12" src="point-d-interrogation.jpg"/></td>
+	</tr>
+</table>
+</div>
+<script type="text/javascript">
+// Functions
+function ShowImg(img)
+{	
+	Id='img'+ (img+1);
+	document.getElementById(Id).src=tabCaseContent[img];
+	setTimeout("checkImg("+img+")",1000);	 
+}
+function checkImg(img)
+{		
+	Id='img'+ (img+1);
+	if(currentImg==Id)
+		return false;
+		
+	if(currentImg=="")
+	{
+		currentImg=Id;		
+	}
+	else
+	{
+		essais++;
+		document.getElementById('essai').innerHTML=essais;
+		tabSrc=unescape(document.getElementById(currentImg).src).split('/');
+		if(tabCaseContent[img]==tabSrc[tabSrc.length-1])
+		{
+			score++;
+			
+			document.getElementById('score').innerHTML=score;
+			document.getElementById(currentImg).onclick="";
+			document.getElementById(Id).onclick="";
+			currentImg="";
+		}
+		else
+		{
+			document.getElementById(currentImg).src="point-d-interrogation.jpg";				
+			document.getElementById(Id).src="point-d-interrogation.jpg";
+			currentImg="";			
+		}
+		
+		if(score==6)
+		{
+			clearTimeout(timeout);
+			reponse=confirm("Vous avez remporté la partie! voulez-vous rejouer?");
+			if(reponse)
+				window.location=window.location;
+		}
+	}
+}
+
+// Init variables
+var currentImg="";
+var tabImg=new Array();
+tabImg[0]="Tree.jpg";
+tabImg[1]="Tree.jpg";
+tabImg[2]="Forest.jpg";
+tabImg[3]="Forest.jpg";
+tabImg[4]="Oryx Antelope.jpg";
+tabImg[5]="Oryx Antelope.jpg";
+tabImg[6]="Autumn Leaves.jpg";
+tabImg[7]="Autumn Leaves.jpg";
+tabImg[8]="Waterfall.jpg";
+tabImg[9]="Waterfall.jpg";
+tabImg[10]="Desert Landscape.jpg";
+tabImg[11]="Desert Landscape.jpg";
+
+var tabCaseContent=new Array();
+for(var y=0;y<12;y++)
+{
+	tabCaseContent[y]="";
+}
+
+var essais=0;
+var score=0;
+document.getElementById('score').innerHTML=score;
+document.getElementById('essai').innerHTML=0;
+document.getElementById('time').innerHTML=0
+
+for(x=0;x<12;x++)
+{
+	do{
+		Num=Math.round((Math.random()*100))%12;
+	}while(tabCaseContent[Num]!="")
+		
+	document.getElementById('img'+Num).src=tabImg[x];
+	
+	tabCaseContent[Num]=tabImg[x];
+}
+
+startTime=new Date();
+var timeout;
+function setTime()
+{	
+	Now=new Date();
+	temps=Math.floor((Now-startTime)/1000);
+	document.getElementById('time').innerHTML=temps;
+	timeout=setTimeout('setTime()',1000);	
+}
+setTime();
+</script>
+</body>
+
+
+</html>

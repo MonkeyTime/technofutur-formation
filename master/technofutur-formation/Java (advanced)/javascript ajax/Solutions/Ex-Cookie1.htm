@@ -1,0 +1,77 @@
+<html>
+<HEAD><TITLE>Ex Cookie 1</TITLE>
+</HEAD>
+<body>
+
+<h1>Cookie 1</h1>
+<script src="cookie.js"></script>
+<script>
+<!--
+   
+   function doRegister() {
+      if (document.frmRegister.txtUsername.value!="") {
+         var expire = new Date();
+         // Dix ans plus tard
+         expire.setFullYear(expire.getFullYear() + 10);
+         setCookie("NomUtilisateur", document.frmRegister.txtUsername.value, expire);
+         setCookie("Connected", (new Date()).toGMTString(), expire); 
+         self.location=self.location;
+      } else
+         alert("Vous devez rentrer un nom d'utilisateur!");
+   }
+   
+   function doRemove() {
+      if (confirm("Etes-vous sur de vouloir vous désenregistrer?")==true) {
+         setCookie("NomUtilisateur", "", new Date("Jan 1, 1970"));
+         setCookie("Connected", "", new Date("Jan 1, 1970"));
+         alert("Vous êtes désenregistré");
+      }
+   }
+   
+   var nom = getCookie("NomUtilisateur");
+   if (nom!="") {
+      var LastDate;
+      
+      LastDate= new Date(getCookie("Connected"));
+          
+      document.write("<b>Bonjour "+nom+"</b>, vous êtes venu la dernière fois, le "+
+                        LastDate.getDate()+"/"+(LastDate.getMonth()+1)+" à "+LastDate.getHours()+
+                        ":"+LastDate.getMinutes()+"<br><br>");
+                        
+      LastDate.setTime(LastDate.getTime()+1e11);
+      setCookie("Connected", (new Date()).toGMTString(), LastDate); 
+      
+   }
+   else
+      document.write("Je ne vous connais pas encore, pouvez-vous vous enregister?<br>");
+
+   
+//-->
+</script>
+
+   <table border=1>
+      <tr>
+         <td>
+            Enregistrez-vous : 
+         </td>
+         <td>
+            <form name=frmRegister>
+               <input type=text name=txtUsername value="">
+               <input type=button name=btnRegister value="Register" onclick="doRegister();">
+            </form>
+         </td>
+      </tr>
+      <tr>      
+         <td>
+            Désenregistrez-vous : 
+         </td>
+         <td><form>
+            <input type=button name=btnRemove value="Remove User" onclick="doRemove();"></form>
+         </td>
+      </tr>
+  </table>
+
+   <br>
+   Venez visiter notre deuxième page (<a href="Ex-Cookie2.htm">cliquez ici</a>)
+</body>
+</html>

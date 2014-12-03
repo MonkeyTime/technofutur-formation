@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Example Lotto 4</title>
+</head>
+<body>
+<script type="text/javascript">
+<!--
+var count = 0;
+
+function decrement(){count = count == 0 ? 0 : count - 1 ;}
+
+function increment(){count++;}
+
+function checkCount(checkbox)
+{
+ if(!checkbox.checked)
+ {
+  decrement();
+  return;
+ }
+ if(checkbox.checked && (count < 6))
+ {
+  increment();
+  return;
+ }
+ checkbox.checked = false;
+}
+
+function clearCount()
+{
+ count = 0;
+ return true;
+}
+-->
+</script>
+<hr />
+<h1>Lotto</h1>
+<hr />
+<div align="center">
+<form action="/Lotto4/lotto.jsp" method="post" name="lotto2"
+	onreset="clearCount()">
+<table border="0">
+	<tr align="right">
+		<td><input type="checkbox" name="n1" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>1</td>
+		<td><input type="checkbox" name="n2" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>2</td>
+		<td><input type="checkbox" name="n3" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>3</td>
+		<td><input type="checkbox" name="n4" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>4</td>
+		<td><input type="checkbox" name="n5" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>5</td>
+		<td><input type="checkbox" name="n6" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>6</td>
+		<td><input type="checkbox" name="n7" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>7</td>
+	</tr>
+	<tr align="right">
+		<td><input type="checkbox" name="n8" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>8</td>
+		<td><input type="checkbox" name="n9" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>9</td>
+		<td><input type="checkbox" name="n10" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>10</td>
+		<td><input type="checkbox" name="n11" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>11</td>
+		<td><input type="checkbox" name="n12" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>12</td>
+		<td><input type="checkbox" name="n13" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>13</td>
+		<td><input type="checkbox" name="n14" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>14</td>
+	</tr>
+	<tr align="right">
+		<td><input type="checkbox" name="n15" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>15</td>
+		<td><input type="checkbox" name="n16" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>16</td>
+		<td><input type="checkbox" name="n17" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>17</td>
+		<td><input type="checkbox" name="n18" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>18</td>
+		<td><input type="checkbox" name="n19" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>19</td>
+		<td><input type="checkbox" name="n20" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>20</td>
+		<td><input type="checkbox" name="n21" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>21</td>
+	</tr>
+	<tr align="right">
+		<td><input type="checkbox" name="n22" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>22</td>
+		<td><input type="checkbox" name="n23" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>23</td>
+		<td><input type="checkbox" name="n24" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>24</td>
+		<td><input type="checkbox" name="n25" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>25</td>
+		<td><input type="checkbox" name="n26" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>26</td>
+		<td><input type="checkbox" name="n27" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>27</td>
+		<td><input type="checkbox" name="n28" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>28</td>
+	</tr>
+	<tr align="right">
+		<td><input type="checkbox" name="n29" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>29</td>
+		<td><input type="checkbox" name="n30" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>30</td>
+		<td><input type="checkbox" name="n31" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>31</td>
+		<td><input type="checkbox" name="n32" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>32</td>
+		<td><input type="checkbox" name="n33" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>33</td>
+		<td><input type="checkbox" name="n34" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>34</td>
+		<td><input type="checkbox" name="n5" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>35</td>
+	</tr>
+	<tr align="right">
+		<td><input type="checkbox" name="n36" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>36</td>
+		<td><input type="checkbox" name="n37" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>37</td>
+		<td><input type="checkbox" name="n38" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>38</td>
+		<td><input type="checkbox" name="n39" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>39</td>
+		<td><input type="checkbox" name="n40" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>40</td>
+		<td><input type="checkbox" name="n41" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>41</td>
+		<td><input type="checkbox" name="n41" value="false"
+			onchange="checkCount(this)" /></td>
+		<td>42</td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<td><input type="submit" value="OK"></td>
+		<td><input type="reset"></td>
+	</tr>
+</table>
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+	<head>
+	</head>
+	<body>
+		
+		<input id='Horloge' type='text' size="54">
+		<script type="text/javascript">
+		
+		
+		function Chrono()
+		{
+			document.getElementById('Horloge').value=Date();
+			setTimeout('Chrono()',1000);
+		}
+		
+		Chrono();
+		</script>
+	</body>
+</html>

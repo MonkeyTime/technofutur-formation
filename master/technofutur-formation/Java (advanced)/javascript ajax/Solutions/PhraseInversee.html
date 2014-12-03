@@ -1,0 +1,24 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<script type="text/javascript">
+		function inverser(phrase)
+		{
+			var resultat="";
+		
+			for(var i=0;i<phrase.length;i++)
+			{
+				resultat = phrase.charAt(i)+resultat;
+			}
+			
+			return resultat;
+		}
+		
+		var entree = prompt("Entrez un phrase.");
+		
+		alert(inverser(entree));
+		
+		</script>
+	</body>
+</html>

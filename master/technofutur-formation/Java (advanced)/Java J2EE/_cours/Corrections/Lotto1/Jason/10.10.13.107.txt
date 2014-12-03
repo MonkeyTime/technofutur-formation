@@ -1,0 +1,2 @@
+/test3/lotto.html
+/test3/Lotto

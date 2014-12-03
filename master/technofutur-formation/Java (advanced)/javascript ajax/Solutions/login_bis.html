@@ -1,0 +1,16 @@
+<html>
+<body>
+	<script>
+		
+		var params = location.search.substring(1).split("&");
+		
+		for ( var key in params ){
+			var values = params[key].split("=");
+			if (values.length > 1 && values[1] != ""){
+				alert("Param " + values[0] + " is " + unescape(values[1]));
+			}			
+		}
+		
+	</script>
+</body>
+</html>

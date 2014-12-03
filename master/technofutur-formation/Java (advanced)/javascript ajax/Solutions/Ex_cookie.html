@@ -1,0 +1,64 @@
+﻿<html><head><title>Ex Cookie 1</title></head>
+<body>
+<h1>Cookie 1</h1>
+   <table border="1">
+      <tr><td>Enregistrez-vous :</td><td>
+         <form name="frmRegister">
+            <input type="text" name="txtUsername" value="">
+            <input type="button" name="btnRegister" value="Register" onclick="doRegister();">
+		</form>
+      </td></tr>
+      <tr><td>Désenregistrez-vous : </td><td>
+	  <form>
+		   <input type="button" name="btnRemove" value="Remove User" onclick="doRemove();">
+	</form>
+      </td></tr>
+  </table>
+  
+ 
+  <script>
+    
+	function getCookie(name) {
+	   var p, p2;
+	   p = document.cookie.indexOf(name+"=");
+	   if (p!=-1) {
+		   p = p + name.length + 1;
+		   p2 = document.cookie.indexOf(";", p);
+		   if (p2==-1)
+			 return unescape(document.cookie.substring(p));
+		   else
+			 return unescape(document.cookie.substring(p,p2));
+	   }
+	   return "";
+	}
+	
+	function setCookie(name, value, expire) {
+		document.cookie =  name+"="+escape(value)+"; expires="+expire.toGMTString();
+	}
+	
+	function doRegister() {
+      if (document.frmRegister.txtUsername.value!="") {
+        var expire = new Date();
+        // Dix ans plus tard
+        expire.setFullYear(expire.getFullYear() + 10); 
+		setCookie("nomUtilisateur", document.frmRegister.txtUsername.value, expire);
+        setCookie("connected", new Date(), expire); 
+        window.location = window.location;  
+      } else
+        alert("Vous devez rentrer un nom d'utilisateur!");
+   }
+   
+   function doRemove() {
+      if (confirm("Etes-vous sur?")) {
+        setCookie("nomUtilisateur", "", new Date("Jan 1, 1970"));
+        setCookie("connected", "", new Date("Jan 1, 1970"));
+        alert("Vous êtes désenregistré"); 
+		window.location = window.location;         
+      }
+   }
+
+   alert(getCookie("nomUtilisateur") +  " " + getCookie("connected") );
+
+  </script>
+  </body>
+ </html>

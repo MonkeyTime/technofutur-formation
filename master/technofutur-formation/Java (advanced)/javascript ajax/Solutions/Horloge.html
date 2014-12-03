@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>
+	Exercice 4
+</title>
+
+</head>
+<body>
+<img id='heure2' src=''><img id='heure1' src=''><img id='sep1' src='separator.gif'><img id='minute2' src=''><img id='minute1' src=''><img id='sep2' src='separator.gif'><img id='seconde2' src=''><img id='seconde1' src=''>
+<script type="text/javascript">
+	
+	function Horloge()
+	{
+		madate=new Date();
+		
+		var minutes=String(madate.getMinutes());
+		var heures=String(madate.getHours());
+		var secondes=String(madate.getSeconds());
+		if(heures.length==2)
+		{
+			document.getElementById('heure2').src=heures.charAt(0)+'.gif';
+			document.getElementById('heure1').src=heures.charAt(1)+'.gif';
+		}
+		else
+		{
+			document.getElementById('heure2').src='0.gif';
+			document.getElementById('heure1').src=heures.charAt(0)+'.gif';
+		}
+		
+		if(minutes.length==2)
+		{
+			document.getElementById('minute2').src=minutes.charAt(0)+'.gif';
+			document.getElementById('minute1').src=minutes.charAt(1)+'.gif';
+		}
+		else
+		{
+			document.getElementById('minute2').src='0.gif';
+			document.getElementById('minute1').src=minutes.charAt(0)+'.gif';
+		}
+		
+		if(secondes.length==2)
+		{
+			document.getElementById('seconde2').src=secondes.charAt(0)+'.gif';
+			document.getElementById('seconde1').src=secondes.charAt(1)+'.gif';
+		}
+		else
+		{
+			document.getElementById('seconde2').src='0.gif';
+			document.getElementById('seconde1').src=secondes.charAt(0)+'.gif';
+		}
+		
+	}
+	Horloge();
+	setInterval("Horloge()",1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+/Lotto1/index.html
+/Lotto1/myResult

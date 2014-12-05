@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>labo Forum</display-name>
+  <welcome-file-list>
+    <welcome-file>index.php</welcome-file>
+  </welcome-file-list>
+  
+  <!-- index.do - home land, list all forums -->
+  <servlet>
+    <servlet-name>ForumsList</servlet-name>
+    <servlet-class>be.technofutur.labo.servlets.ForumsList</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ForumsList</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  
+  <!-- subjects list of one forum -->
+  <servlet>
+    <servlet-name>SubjectsList</servlet-name>
+    <servlet-class>be.technofutur.labo.servlets.SubjectsList</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>SubjectsList</servlet-name>
+    <url-pattern>/forum/.*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- display one subject and there responses -->
+  <servlet>
+    <servlet-name>ResponsesList</servlet-name>
+    <servlet-class>be.technofutur.labo.servlets.ResponsesList</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ResponsesList</servlet-name>
+    <url-pattern>/forum/[^/]+/id/.*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- display users -->
+  <servlet>
+    <servlet-name>UsersList</servlet-name>
+    <servlet-class>be.technofutur.labo.servlets.UsersList</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>UsersList</servlet-name>
+    <url-pattern>/users</url-pattern>
+  </servlet-mapping>
+  
+  <!-- admin management access -->
+  <servlet>
+    <servlet-name>AdminAccess</servlet-name>
+    <servlet-class>be.technofutur.labo.admin.servlets.AdminAccess</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>AdminAccess</servlet-name>
+    <url-pattern>/admin/.*</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

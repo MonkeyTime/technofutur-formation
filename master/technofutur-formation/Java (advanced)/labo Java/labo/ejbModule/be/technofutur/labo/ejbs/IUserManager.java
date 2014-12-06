@@ -2,7 +2,6 @@ package be.technofutur.labo.ejbs;
 
 import java.util.List;
 
-import be.technofutur.labo.entities.Topic;
 import be.technofutur.labo.entities.User;
 
 public interface IUserManager {

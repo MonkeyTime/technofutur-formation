@@ -2,7 +2,6 @@ package be.technofutur.labo.ejbs;
 
 import java.util.List;
 
-import be.technofutur.labo.entities.Category;
 import be.technofutur.labo.entities.Forum;
 
 public interface IForumManager {

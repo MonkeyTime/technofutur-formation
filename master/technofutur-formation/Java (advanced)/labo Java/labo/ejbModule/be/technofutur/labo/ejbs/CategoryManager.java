@@ -2,7 +2,7 @@ package be.technofutur.labo.ejbs;
 
 import java.util.List;
 
-import javax.ejb.LocalBean;
+import javax.ejb.Local;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -14,7 +14,7 @@ import be.technofutur.labo.entities.Category;
  * Session Bean implementation class Category
  */
 @Stateless
-@LocalBean
+@Local
 public class CategoryManager implements ICategoryManager {
 
 	@PersistenceContext

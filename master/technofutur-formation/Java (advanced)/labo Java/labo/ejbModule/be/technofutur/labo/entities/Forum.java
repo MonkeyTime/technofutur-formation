@@ -7,11 +7,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
 @Entity
-@Table(name="forum")
+@Table(name="Forum")
 public class Forum implements Serializable {
 
 	/**
@@ -30,13 +32,17 @@ public class Forum implements Serializable {
 	@Column(name="description", nullable = true, length = 255)
     private String description;
 	
-	@Column(name="total_topics", nullable = true)
+	@Column(name="totalTopics", nullable = true)
 	private int totalTopics;
 	
-	@Column(name="total_posts", nullable = true)
+	@Column(name="totalPosts", nullable = true)
 	private int totalPosts;
+	
+	@ManyToOne
+	@JoinColumn(name = "categoryId")
+	private Category category;
 
-    public Forum(){}
+	public Forum() {}
 
 	public int getId() {
 		return id;
@@ -78,5 +84,11 @@ public class Forum implements Serializable {
 		this.totalPosts = totalPosts;
 	}
 
-    
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
 }

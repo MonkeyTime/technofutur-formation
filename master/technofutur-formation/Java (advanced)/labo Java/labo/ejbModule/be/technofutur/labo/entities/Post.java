@@ -8,10 +8,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="post")
+@Table(name="Post")
 public class Post implements Serializable {
 
 	/**
@@ -24,7 +26,7 @@ public class Post implements Serializable {
     @Column(name="id", unique = true, nullable = false)
 	private int id;
 	
-	@Column(name="creation_time")
+	@Column(name="creationTime")
     private Date creationTime;
 	
 	@Column(name="title", nullable = true, length = 255)
@@ -32,6 +34,16 @@ public class Post implements Serializable {
 	
 	@Column(name="message", nullable = false)
     private String message;
+	
+	@ManyToOne
+	@JoinColumn(name = "topicId")
+	private Topic topic;
+	
+	@ManyToOne
+	@JoinColumn(name = "userId")
+	private User user;
+	
+	public Post() {}
 	
 	public int getId() {
 		return id;
@@ -63,5 +75,21 @@ public class Post implements Serializable {
 
 	public void setMessage(String message) {
 		this.message = message;
+	}
+
+	public Topic getTopic() {
+		return topic;
+	}
+
+	public void setTopic(Topic topic) {
+		this.topic = topic;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 }

@@ -1,75 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WEB_APP_labo" version="3.0">
   <display-name>labo Forum</display-name>
   <welcome-file-list>
     <welcome-file>index.do</welcome-file>
   </welcome-file-list>
   
-  <!-- index.do - home land, list all forums -->
+  <!-- / route -->
   <servlet>
-    <servlet-name>ForumsServlet</servlet-name>
-    <servlet-class>be.technofutur.labo.servlets.ForumsServlet</servlet-class>
+    <servlet-name>IndexServlet</servlet-name>
+    <servlet-class>be.technofutur.labo.servlets.IndexServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>ForumsServlet</servlet-name>
+    <servlet-name>IndexServlet</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
   
-  <!-- subjects list of one forum -->
+  <!-- /forum route -->
   <servlet>
-    <servlet-name>TopicsServlet</servlet-name>
-    <servlet-class>be.technofutur.labo.servlets.TopicsServlet</servlet-class>
+    <servlet-name>ForumServlet</servlet-name>
+    <servlet-class>be.technofutur.labo.servlets.ForumServlet</servlet-class>
   </servlet>
-  
+
   <servlet-mapping>
-    <servlet-name>TopicsServlet</servlet-name>
-    <url-pattern>/forum/.*</url-pattern>
+    <servlet-name>ForumServlet</servlet-name>
+    <url-pattern>/forum</url-pattern>
   </servlet-mapping>
-  
-  <!-- display one subject and there responses -->
-  <servlet>
-    <servlet-name>PostsServlet</servlet-name>
-    <servlet-class>be.technofutur.labo.servlets.PostsServlet</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-    <servlet-name>PostsServlet</servlet-name>
-    <url-pattern>/forum/[^/]+/id/.*</url-pattern>
-  </servlet-mapping>
-  
-  <!-- display users -->
-  <servlet>
-    <servlet-name>UsersServlet</servlet-name>
-    <servlet-class>be.technofutur.labo.servlets.UsersServlet</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-    <servlet-name>UsersServlet</servlet-name>
-    <url-pattern>/users</url-pattern>
-  </servlet-mapping>
-  
-  <!-- display categories -->
-  <servlet>
-    <servlet-name>CategoriesServlet</servlet-name>
-    <servlet-class>be.technofutur.labo.servlets.CategoriesServlet</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-    <servlet-name>CategoriesServlet</servlet-name>
-    <url-pattern>/categories</url-pattern>
-  </servlet-mapping>
-  
-  <!-- display roles -->
-  <servlet>
-    <servlet-name>RolesServlet</servlet-name>
-    <servlet-class>be.technofutur.labo.servlets.RolesServlet</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-    <servlet-name>RolesServlet</servlet-name>
-    <url-pattern>/roles</url-pattern>
-  </servlet-mapping>
-  
   
 </web-app>

@@ -2,11 +2,11 @@ package be.technofutur.labo.ejbs;
 
 import java.util.List;
 
-import javax.ejb.LocalBean;
+import javax.ejb.Local;
 
 import be.technofutur.labo.entities.Category;
 
-@LocalBean
+@Local
 public interface ICategoryRepository {
 	
 	List<Category> findAll();

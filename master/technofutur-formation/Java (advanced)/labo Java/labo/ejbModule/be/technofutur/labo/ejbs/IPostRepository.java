@@ -2,11 +2,10 @@ package be.technofutur.labo.ejbs;
 
 import java.util.List;
 
-import javax.ejb.LocalBean;
-
+import javax.ejb.Local;
 import be.technofutur.labo.entities.Post;
 
-@LocalBean
+@Local
 public interface IPostRepository {
 
 	List<Post> findAll();

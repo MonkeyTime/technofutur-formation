@@ -1,11 +1,12 @@
 package be.technofutur.labo.ejbs;
 
 import java.util.List;
-import javax.ejb.LocalBean;
+
+import javax.ejb.Local;
 
 import be.technofutur.labo.entities.Forum;
 
-@LocalBean
+@Local
 public interface IForumRepository {
 
 	List<Forum> findAll();

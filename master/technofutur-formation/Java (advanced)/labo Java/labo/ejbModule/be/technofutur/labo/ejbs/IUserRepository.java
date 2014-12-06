@@ -2,11 +2,11 @@ package be.technofutur.labo.ejbs;
 
 import java.util.List;
 
-import javax.ejb.LocalBean;
+import javax.ejb.Local;
 
 import be.technofutur.labo.entities.User;
 
-@LocalBean
+@Local
 public interface IUserRepository {
 
 	List<User> findAll();

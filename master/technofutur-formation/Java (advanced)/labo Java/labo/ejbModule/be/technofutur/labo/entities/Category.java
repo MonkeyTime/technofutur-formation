@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="category")
+@Table(name="Category")
 public class Category implements Serializable {
 
 	/**
@@ -26,7 +26,7 @@ public class Category implements Serializable {
 	@Column(name="name", nullable = false, length = 50)
     private String name;
 
-    public Category(){}
+    public Category() {}
 
 	public int getId() {
 		return id;

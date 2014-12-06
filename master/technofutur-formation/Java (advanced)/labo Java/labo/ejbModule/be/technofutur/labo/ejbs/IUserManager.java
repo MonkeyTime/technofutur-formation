@@ -2,8 +2,11 @@ package be.technofutur.labo.ejbs;
 
 import java.util.List;
 
+import javax.ejb.Local;
+
 import be.technofutur.labo.entities.User;
 
+@Local
 public interface IUserManager {
 	
 	User create(final User usr);

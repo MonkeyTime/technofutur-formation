@@ -8,10 +8,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="user")
+@Table(name="User")
 public class User implements Serializable {
 
 	/**
@@ -30,23 +32,27 @@ public class User implements Serializable {
 	@Column(name="password", nullable = false, length = 196)
     private String password;
 	
-	@Column(name="first_name", nullable = true, length = 57)
+	@Column(name="firstName", nullable = true, length = 57)
     private String firstName;
 	
-	@Column(name="last_name", nullable = true, length = 57)
+	@Column(name="lastName", nullable = true, length = 57)
     private String lastName;
 	
 	@Column(name="email", nullable = false, length = 255)
     private String email;
 	
-	@Column(name="total_posts", nullable = true)
+	@Column(name="totalPosts", nullable = true)
     private int totalPost;
 	
-	@Column(name="registration_date", nullable = true)
+	@Column(name="registrationDate", nullable = true)
 	private Date registrationDate;
 	
-	@Column(name="last_visit_date", nullable = true)
+	@Column(name="lastVisit", nullable = true)
 	private Date lastVisitDate;
+	
+	@ManyToOne
+	@JoinColumn(name = "roleId")
+	private Role role;
 	
 	public Date getRegistrationDate() {
 		return registrationDate;
@@ -118,5 +124,13 @@ public class User implements Serializable {
 
 	public void setTotalPost(int totalPost) {
 		this.totalPost = totalPost;
+	}
+
+	public Role getRole() {
+		return role;
+	}
+
+	public void setRole(Role role) {
+		this.role = role;
 	}
 }

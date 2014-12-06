@@ -8,10 +8,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="topic")
+@Table(name="Topic")
 public class Topic implements Serializable {
 
 	/**
@@ -27,23 +29,29 @@ public class Topic implements Serializable {
 	@Column(name="title", nullable = false, length = 255)
     private String title;
 	
-	@Column(name="creation_time", nullable = false)
+	@Column(name="creationTime", nullable = false)
 	private Date creationTime;
 	
-	@Column(name="last_post_time", nullable = false)
+	@Column(name="lastPostTime", nullable = false)
 	private Date lastPostTime;
 	
-	@Column(name="total_view", nullable = true)
+	@Column(name="totalViews", nullable = true)
 	private int totalView;
 	
-	@Column(name="total_replies", nullable = true)
+	@Column(name="totalReplies", nullable = true)
 	private int totalReplies;
 	
-	@Column(name="created_by", nullable = false)
+	@Column(name="createdBy", nullable = false)
 	private User createdBy;
 	
-	@Column(name="last_post_by", nullable = false)
+	@Column(name="lastPostBy", nullable = false)
 	private User lastPostBy;
+	
+	@ManyToOne
+	@JoinColumn(name = "forumId")
+	private Forum forum;
+	
+	public Topic() {}
 
 	public int getId() {
 		return id;
@@ -107,5 +115,13 @@ public class Topic implements Serializable {
 
 	public void setLastPostBy(User lastPostBy) {
 		this.lastPostBy = lastPostBy;
+	}
+
+	public Forum getForum() {
+		return forum;
+	}
+
+	public void setForum(Forum forum) {
+		this.forum = forum;
 	}
 }

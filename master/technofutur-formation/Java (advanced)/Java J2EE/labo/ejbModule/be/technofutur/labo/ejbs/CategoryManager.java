@@ -67,7 +67,7 @@ public class CategoryManager implements ICategoryManager {
 	@Override
 	public void delete(int id) {
 		
-		em.remove(em.merge((Category)this.findById(id)));
+		em.remove(em.merge(this.findById(id)));
 	}
 
 }

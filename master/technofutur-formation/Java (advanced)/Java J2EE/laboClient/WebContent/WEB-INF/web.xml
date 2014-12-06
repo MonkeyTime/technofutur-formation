@@ -2,62 +2,74 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>labo Forum</display-name>
   <welcome-file-list>
-    <welcome-file>index.php</welcome-file>
+    <welcome-file>index.do</welcome-file>
   </welcome-file-list>
   
   <!-- index.do - home land, list all forums -->
   <servlet>
-    <servlet-name>ForumsList</servlet-name>
-    <servlet-class>be.technofutur.labo.servlets.ForumsList</servlet-class>
+    <servlet-name>ForumsServlet</servlet-name>
+    <servlet-class>be.technofutur.labo.servlets.ForumsServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>ForumsList</servlet-name>
+    <servlet-name>ForumsServlet</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
   
   <!-- subjects list of one forum -->
   <servlet>
-    <servlet-name>SubjectsList</servlet-name>
-    <servlet-class>be.technofutur.labo.servlets.SubjectsList</servlet-class>
+    <servlet-name>TopicsServlet</servlet-name>
+    <servlet-class>be.technofutur.labo.servlets.TopicsServlet</servlet-class>
   </servlet>
   
   <servlet-mapping>
-    <servlet-name>SubjectsList</servlet-name>
+    <servlet-name>TopicsServlet</servlet-name>
     <url-pattern>/forum/.*</url-pattern>
   </servlet-mapping>
   
   <!-- display one subject and there responses -->
   <servlet>
-    <servlet-name>ResponsesList</servlet-name>
-    <servlet-class>be.technofutur.labo.servlets.ResponsesList</servlet-class>
+    <servlet-name>PostsServlet</servlet-name>
+    <servlet-class>be.technofutur.labo.servlets.PostsServlet</servlet-class>
   </servlet>
   
   <servlet-mapping>
-    <servlet-name>ResponsesList</servlet-name>
+    <servlet-name>PostsServlet</servlet-name>
     <url-pattern>/forum/[^/]+/id/.*</url-pattern>
   </servlet-mapping>
   
   <!-- display users -->
   <servlet>
-    <servlet-name>UsersList</servlet-name>
-    <servlet-class>be.technofutur.labo.servlets.UsersList</servlet-class>
+    <servlet-name>UsersServlet</servlet-name>
+    <servlet-class>be.technofutur.labo.servlets.UsersServlet</servlet-class>
   </servlet>
   
   <servlet-mapping>
-    <servlet-name>UsersList</servlet-name>
+    <servlet-name>UsersServlet</servlet-name>
     <url-pattern>/users</url-pattern>
   </servlet-mapping>
   
-  <!-- admin management access -->
+  <!-- display categories -->
   <servlet>
-    <servlet-name>AdminAccess</servlet-name>
-    <servlet-class>be.technofutur.labo.admin.servlets.AdminAccess</servlet-class>
+    <servlet-name>CategoriesServlet</servlet-name>
+    <servlet-class>be.technofutur.labo.servlets.CategoriesServlet</servlet-class>
   </servlet>
   
   <servlet-mapping>
-    <servlet-name>AdminAccess</servlet-name>
-    <url-pattern>/admin/.*</url-pattern>
+    <servlet-name>CategoriesServlet</servlet-name>
+    <url-pattern>/categories</url-pattern>
   </servlet-mapping>
+  
+  <!-- display roles -->
+  <servlet>
+    <servlet-name>RolesServlet</servlet-name>
+    <servlet-class>be.technofutur.labo.servlets.RolesServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>RolesServlet</servlet-name>
+    <url-pattern>/roles</url-pattern>
+  </servlet-mapping>
+  
   
 </web-app>

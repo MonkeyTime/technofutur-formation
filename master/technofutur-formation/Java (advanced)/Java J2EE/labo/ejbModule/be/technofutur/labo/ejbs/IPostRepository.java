@@ -4,7 +4,6 @@ import java.util.List;
 
 import javax.ejb.LocalBean;
 
-import be.technofutur.labo.entities.Category;
 import be.technofutur.labo.entities.Post;
 
 @LocalBean

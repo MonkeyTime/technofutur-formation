@@ -67,7 +67,7 @@ public class ForumManager implements IForumManager {
 	@Override
 	public void delete(int id) {
 		
-		em.remove(em.merge((Forum)this.findById(id)));
+		em.remove(em.merge(this.findById(id)));
 	}
 
 }

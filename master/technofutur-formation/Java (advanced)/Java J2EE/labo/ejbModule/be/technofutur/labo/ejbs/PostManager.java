@@ -66,7 +66,7 @@ public class PostManager implements IPostManager {
 	
 	public void delete(int id) {
 		
-		em.remove(em.merge((Post)this.findById(id)));
+		em.remove(em.merge(this.findById(id)));
 	}
 
 }

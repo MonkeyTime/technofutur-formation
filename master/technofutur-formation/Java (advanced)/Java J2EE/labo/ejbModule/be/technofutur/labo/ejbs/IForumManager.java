@@ -13,9 +13,9 @@ public interface IForumManager {
 
 	Forum findById(int id);
 
-	Forum save(final Forum cat);
+	Forum save(final Forum forum);
 
-	void delete(final Forum cat);
+	void delete(final Forum forum);
 	
 	void delete(int id);
 }

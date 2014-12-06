@@ -26,7 +26,7 @@ public class UserManager implements IUserManager {
     public UserManager() {}
 
 	@Override
-	public User createUser(User user) {
+	public User create(User user) {
 
 		em.persist(user);
 
@@ -41,17 +41,27 @@ public class UserManager implements IUserManager {
 	}
 
 	@Override
-	public User findByNickname(String nickname) {
+	public User findById(int id) {
 		
-		Query query = em.createQuery("SELECT u FROM user u WHERE u.nickname = :nickname");
+		Query query = em.createQuery("SELECT u FROM user u WHERE u.id = :id");
 		
-		query.setParameter("nickname", nickname);
+		query.setParameter("id", id);
 		
-		return (User)query.getSingleResult();	
+		return (User)query.getSingleResult();
+	}
+	
+	@Override
+	public User findByUsername(String username) {
+		
+		Query query = em.createQuery("SELECT u FROM user u WHERE u.username = :username");
+		
+		query.setParameter("username", username);
+		
+		return (User)query.getSingleResult();
 	}
 
 	@Override
-	public User saveUser(User user) {
+	public User save(User user) {
 		
 		em.merge(user);
 		
@@ -59,9 +69,14 @@ public class UserManager implements IUserManager {
 	}
 
 	@Override
-	public void deleteUser(User user) {
+	public void delete(User user) {
 		
 		em.remove(em.merge(user));
 	}
-
+	
+	@Override
+	public void delete(int id) {
+		
+		em.remove(em.merge(this.findById(id)));
+	}
 }

@@ -1,5 +1,7 @@
 XDOCLETBUILDERACTIVE=true
-XDOCLETHOME=C\:\\Users\\forma1311\\Downloads\\xdoclet-lib-1.2.1\\xdoclet-1.2.1
+XDOCLETHOME=C\:\\xdoclet-lib-1.2.1\\xdoclet-1.2.1
 XDOCLETUSEGLOBAL=true
 XDOCLETVERSION=1.2.1
 eclipse.preferences.version=1
+org.eclipse.jst.j2ee.xdoclet.runtime.internal.server.JBossEjbdocletTaskProvider.defaultSelection=false
+org.eclipse.jst.j2ee.xdoclet.runtime.internal.server.JBossWebdocletTaskProvider.defaultSelection=false

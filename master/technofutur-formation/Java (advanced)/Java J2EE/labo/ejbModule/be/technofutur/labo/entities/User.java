@@ -1,6 +1,7 @@
 package be.technofutur.labo.entities;
 
 import java.io.Serializable;
+import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
@@ -36,6 +37,28 @@ public class User implements Serializable {
 	
 	@Column(name="total_posts", nullable = true)
     private int totalPost;
+	
+	@Column(name="registration_date", nullable = true)
+	private Date registrationDate;
+	
+	@Column(name="last_visit_date", nullable = true)
+	private Date lastVisitDate;
+	
+	public Date getRegistrationDate() {
+		return registrationDate;
+	}
+
+	public void setRegistrationDate(Date registrationDate) {
+		this.registrationDate = registrationDate;
+	}
+
+	public Date getLastVisitDate() {
+		return lastVisitDate;
+	}
+
+	public void setLastVisitDate(Date lastVisitDate) {
+		this.lastVisitDate = lastVisitDate;
+	}
 
 	public int getId() {
 		return id;

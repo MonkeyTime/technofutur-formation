@@ -21,11 +21,25 @@ public class UserRepository implements IUserRepository {
 	}
 
 	@Override
-	public User findByNickname(String name) {
+	public User findById(int id) {
 		
 		for(User user : this.users) {
 			
-			if(user.getNickname() == name) {
+			if(user.getId() == id) {
+				
+				return user;
+			}
+		}
+		
+		return null;
+	}
+	
+	@Override
+	public User findByUsername(String username) {
+		
+		for(User user : this.users) {
+			
+			if(user.getUsername() == username) {
 				
 				return user;
 			}
@@ -35,7 +49,7 @@ public class UserRepository implements IUserRepository {
 	}
 
 	@Override
-	public User saveUser(User user) {
+	public User save(User user) {
 
 		this.users.add(user);
 		
@@ -43,9 +57,15 @@ public class UserRepository implements IUserRepository {
 	}
 
 	@Override
-	public void deleteUser(User user) {
+	public void delete(User user) {
 		
 		this.users.remove(user);
+	}
+	
+	@Override
+	public void delete(int id) {
+		
+		this.users.remove(id);
 	}
 
 }

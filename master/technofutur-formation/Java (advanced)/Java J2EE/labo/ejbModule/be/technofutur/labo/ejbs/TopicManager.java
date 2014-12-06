@@ -67,7 +67,7 @@ public class TopicManager implements ITopicManager {
 	@Override
 	public void delete(int id) {
 		
-		em.remove(em.merge((Topic)this.findById(id)));
+		em.remove(em.merge(this.findById(id)));
 	}
 
 }

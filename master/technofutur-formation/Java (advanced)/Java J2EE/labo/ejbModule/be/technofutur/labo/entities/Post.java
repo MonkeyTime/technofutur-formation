@@ -21,13 +21,13 @@ public class Post implements Serializable {
 	private int id;
 	
 	@Column(name="creation_time")
-    private Date date;
+    private Date creationTime;
 	
 	@Column(name="title", nullable = true, length = 255)
     private String title;
 	
 	@Column(name="message", nullable = false)
-    private String content;
+    private String message;
 	
 	public int getId() {
 		return id;
@@ -37,12 +37,12 @@ public class Post implements Serializable {
 		this.id = id;
 	}
 
-	public Date getDate() {
-		return date;
+	public Date getCreationTime() {
+		return creationTime;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public void setCreationTime(Date creationTime) {
+		this.creationTime = creationTime;
 	}
 
 	public String getTitle() {
@@ -53,11 +53,11 @@ public class Post implements Serializable {
 		this.title = title;
 	}
 
-	public String getContent() {
-		return content;
+	public String getMessage() {
+		return message;
 	}
 
-	public void setContent(String content) {
-		this.content = content;
+	public void setMessage(String message) {
+		this.message = message;
 	}
 }

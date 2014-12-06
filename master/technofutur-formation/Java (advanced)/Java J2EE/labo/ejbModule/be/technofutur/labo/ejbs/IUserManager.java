@@ -1,17 +1,23 @@
 package be.technofutur.labo.ejbs;
 
 import java.util.List;
+
+import be.technofutur.labo.entities.Topic;
 import be.technofutur.labo.entities.User;
 
 public interface IUserManager {
 	
-	User createUser(final User user);
+	User create(final User usr);
 
 	List<User> findAll();
 
-	User findByNickname(final String nickname);
+	User findById(final int id);
+	
+	User findByUsername(final String username);
 
-	User saveUser(final User user);
+	User save(final User usr);
 
-	void deleteUser(final User user);
+	void delete(final User usr);
+	
+	void delete(final int id);
 }

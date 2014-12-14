@@ -38,13 +38,13 @@ public class UserManager implements IUserManager {
 	@Override
 	public List<User> findAll() {
 		
-		return em.createQuery("SELECT u FROM user u").getResultList();
+		return em.createQuery("SELECT u FROM User u").getResultList();
 	}
 
 	@Override
 	public User findById(int id) {
 		
-		Query query = em.createQuery("SELECT u FROM user u WHERE u.id = :id");
+		Query query = em.createQuery("SELECT u FROM User u WHERE u.id = :id");
 		
 		query.setParameter("id", id);
 		
@@ -54,7 +54,7 @@ public class UserManager implements IUserManager {
 	@Override
 	public User findByUsername(String username) {
 		
-		Query query = em.createQuery("SELECT u FROM user u WHERE u.username = :username");
+		Query query = em.createQuery("SELECT u FROM User u WHERE u.userName = :username");
 		
 		query.setParameter("username", username);
 		

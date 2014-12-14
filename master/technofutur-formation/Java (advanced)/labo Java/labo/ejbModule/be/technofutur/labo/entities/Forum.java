@@ -7,8 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
@@ -38,9 +36,8 @@ public class Forum implements Serializable {
 	@Column(name="totalPosts", nullable = true)
 	private int totalPosts;
 	
-	@ManyToOne
-	@JoinColumn(name = "categoryId")
-	private Category category;
+	@Column(name="categoryId", nullable = false)
+	private int categoryId;
 
 	public Forum() {}
 
@@ -84,11 +81,15 @@ public class Forum implements Serializable {
 		this.totalPosts = totalPosts;
 	}
 
-	public Category getCategory() {
-		return category;
+	public int getCategoryId() {
+		return categoryId;
 	}
 
-	public void setCategory(Category category) {
-		this.category = category;
+	public void setCategoryId(int categoryId) {
+		this.categoryId = categoryId;
+	}
+	@Override
+	public String toString() {
+		return "Forum " + id + " - " + name;
 	}
 }

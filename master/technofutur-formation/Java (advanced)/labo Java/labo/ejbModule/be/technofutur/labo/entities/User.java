@@ -8,8 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -50,9 +48,8 @@ public class User implements Serializable {
 	@Column(name="lastVisit", nullable = true)
 	private Date lastVisitDate;
 	
-	@ManyToOne
-	@JoinColumn(name = "roleId")
-	private Role role;
+	@Column(name = "roleId", nullable = false)
+	private int roleId;
 	
 	public Date getRegistrationDate() {
 		return registrationDate;
@@ -126,11 +123,11 @@ public class User implements Serializable {
 		this.totalPost = totalPost;
 	}
 
-	public Role getRole() {
-		return role;
+	public int getRoleId() {
+		return roleId;
 	}
 
-	public void setRole(Role role) {
-		this.role = role;
+	public void setRoleId(int roleId) {
+		this.roleId = roleId;
 	}
 }

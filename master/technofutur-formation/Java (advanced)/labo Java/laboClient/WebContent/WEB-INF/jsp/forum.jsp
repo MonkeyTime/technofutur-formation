@@ -1,52 +1,59 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html lang="en">
-    
-    <head>
-    
-        <meta charset="utf-8">
-        <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
-        <meta name="viewport" content="initial-scale=1.0">
-        
-        <title>Forum "..."</title>
+<%@include file="partial/header.jsp" %>
 
-        <meta content="follow, index" name="robots">
-        <meta name="description" content="Listes des forums">
-        
-        <meta name="author" content="MonkeyTime">
-        <meta name="copyright" content="&copy;MonkeyTime">
-        
-        <link rel="icon" type="image/png" href="/favicon.png" />
-    	<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /><![endif]-->
-    	
-        <link rel="apple-touch-icon" sizes="57x57" href="/touch-icon.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="/touch-icon.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="/touch-retina.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="/touch-retina.png">
-
-        <link rel="stylesheet" type="text/css" href="/css/main.css" media="all">
-        
-        <!--[if lt IE 9]>
-        <script src="/js/html5shiv.js" type="text/javascript"></script>
-        <script src="/js/respond.js" type="text/javascript"></script>
-        <![endif]-->
-        
-    </head>
-
-     <body>
-     	<header>
-	     	<p>Menu</p>
-	 	</header>
-	     <section>
+		<header id="header">
 	     	<div class="row wrap30">
 	     		<div class="box u100">
-	     			forum by parameter id
+	     			<p>Forum <c:out value="${forum.name}"/></p>
+	     		</div>
+		    </div>
+	 	</header>
+	 	
+	     <section id="section">
+	     	<div class="row wrap30">
+	     		<div class="box u100">
+	     			
+	     			<div class="row">
+	     				<div class="box u80"><a href="/laboClient/index.do">Home</a> > <a href="/laboClient/forum.do?id=${forum.id}">Forum <c:out value="${forum.name}"/></a></div><div class="box u20 txtr"><a href="/laboClient/create.do?forum=${forum.id}" class="btn">Create topic</a></div>
+	     			</div>
+	     			
+	     			<table class="table forum-home">
+					    <thead>
+					        <tr>
+					            <th>Subjects</th>
+					            <th>Responses</th>
+					            <th>Author</th>
+					            <th>Views</th>
+					            <th>Latest message</th>
+					        </tr>
+					    </thead>
+					
+					    <tbody>
+					        
+					        <!--  foreach subject from this forum -->
+					        
+					        <c:forEach var="topic" items="${topics}"> 
+					               
+					        <tr>
+					            <td><a href="/laboClient/subject.do?id=${topic.id}&forum=${forum.id}"><c:out value="${topic.title}"/></a></td>
+					            <td>${topic.totalReplies}</td>
+					            <td><c:out value="${topic.createdBy}"/></td>
+					            <td>${topic.totalViews}</td>
+					            <td>${topic.lastPostTime}, <c:out value="${topic.lastPostBy}"/></td>
+					        </tr>
+					        
+					        </c:forEach>
+					        
+							<!--  end foreach -->
+							
+					    </tbody>
+					</table>
+					
+					<div class="row">
+	     				<div class="box u100 txtr mt2"><a href="/laboClient/create.do?forum=${forum.id}" class="btn">Create topic</a></div>
+	     			</div>
+	     			
 	     		</div>
 	     	</div>
 	     </section>
-	     <footer>
-	     	<p>&copy;footer</p>
-	     </footer>
-	</body>
-</html>
+	     
+<%@include file="partial/footer.jsp" %>

@@ -8,8 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -35,13 +33,11 @@ public class Post implements Serializable {
 	@Column(name="message", nullable = false)
     private String message;
 	
-	@ManyToOne
-	@JoinColumn(name = "topicId")
-	private Topic topic;
+	@Column(name = "topicId", nullable = false)
+	private int topicId;
 	
-	@ManyToOne
-	@JoinColumn(name = "userId")
-	private User user;
+	@Column(name = "userName", nullable = false)
+	private String userName;
 	
 	public Post() {}
 	
@@ -77,19 +73,19 @@ public class Post implements Serializable {
 		this.message = message;
 	}
 
-	public Topic getTopic() {
-		return topic;
+	public int getTopicId() {
+		return topicId;
 	}
 
-	public void setTopic(Topic topic) {
-		this.topic = topic;
+	public void setTopicId(int topicId) {
+		this.topicId = topicId;
 	}
 
-	public User getUser() {
-		return user;
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 }

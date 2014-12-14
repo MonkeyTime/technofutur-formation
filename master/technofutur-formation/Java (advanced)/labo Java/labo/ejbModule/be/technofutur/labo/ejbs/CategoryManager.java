@@ -37,13 +37,13 @@ public class CategoryManager implements ICategoryManager {
 	@Override
 	public List<Category> findAll() {
 		
-		return em.createQuery("SELECT c FROM category c").getResultList();
+		return em.createQuery("SELECT c FROM Category c").getResultList();
 	}
 
 	@Override
 	public Category findById(int id) {
 		
-		Query query = em.createQuery("SELECT c FROM category c WHERE c.id = :id");
+		Query query = em.createQuery("SELECT c FROM Category c WHERE c.id = :id");
 		
 		query.setParameter("id", id);
 		

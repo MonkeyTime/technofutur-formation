@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>laboClientEAR</name>
+	<name>laboEAR</name>
 	<comment></comment>
 	<projects>
 		<project>laboClient</project>
+		<project>labo</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

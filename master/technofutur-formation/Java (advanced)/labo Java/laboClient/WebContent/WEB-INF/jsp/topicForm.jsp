@@ -1,52 +1,22 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html lang="en">
-    
-    <head>
-    
-        <meta charset="utf-8">
-        <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
-        <meta name="viewport" content="initial-scale=1.0">
-        
-        <title>Create topic</title>
+<%@include file="partial/header.jsp" %>
 
-        <meta content="follow, index" name="robots">
-        <meta name="description" content="Listes des forums">
-        
-        <meta name="author" content="MonkeyTime">
-        <meta name="copyright" content="&copy;MonkeyTime">
-        
-        <link rel="icon" type="image/png" href="/favicon.png" />
-    	<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /><![endif]-->
-    	
-        <link rel="apple-touch-icon" sizes="57x57" href="/touch-icon.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="/touch-icon.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="/touch-retina.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="/touch-retina.png">
-
-        <link rel="stylesheet" type="text/css" href="/css/main.css" media="all">
-        
-        <!--[if lt IE 9]>
-        <script src="/js/html5shiv.js" type="text/javascript"></script>
-        <script src="/js/respond.js" type="text/javascript"></script>
-        <![endif]-->
-        
-    </head>
-
-     <body>
-     	<header>
-	     	<p>Menu</p>
-	 	</header>
-	     <section>
+     	<header id="header">
 	     	<div class="row wrap30">
 	     		<div class="box u100">
-	     			create topic form
+	     			<p>Create topic in <c:out value="${forum.name}"/></p>
 	     		</div>
+		    </div>
+	 	</header>
+	     
+	    <section id="section">
+	     	<div class="row wrap30">
+	     		<form action="/laboClient/create.do" method="post">
+	     			<input type="text" name="title" class="box u100" placeholder="Your title..." required>
+	     			<textarea name="message"  class="box u100 mt2" placeholder="Your content..." required></textarea>
+	     			<input type="hidden" value="${forum.id}" />
+	     			<input name="topic" class="mt2" type="submit" value="Post topic" />
+	     		</form>
 	     	</div>
-	     </section>
-	     <footer>
-	     	<p>&copy;footer</p>
-	     </footer>
-	</body>
-</html>
+	    </section>
+	     
+<%@include file="partial/footer.jsp" %>

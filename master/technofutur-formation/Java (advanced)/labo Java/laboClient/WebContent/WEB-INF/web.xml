@@ -4,27 +4,68 @@
   <welcome-file-list>
     <welcome-file>index.do</welcome-file>
   </welcome-file-list>
-  
-  <!-- / route -->
+ 
+ <!-- Filter access --> 
+ 
+
+  <filter>
+    <display-name>AccessFilter</display-name>
+    <filter-name>AccessFilter</filter-name>
+    <filter-class>be.technofutur.labo.servlets.AccessFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>AccessFilter</filter-name>
+    <url-pattern>/response.do</url-pattern>
+    <url-pattern>/create.do</url-pattern>
+  </filter-mapping>
+	
+  <!-- app servlets -->
+ 
   <servlet>
     <servlet-name>IndexServlet</servlet-name>
     <servlet-class>be.technofutur.labo.servlets.IndexServlet</servlet-class>
   </servlet>
-
   <servlet-mapping>
     <servlet-name>IndexServlet</servlet-name>
-    <url-pattern>/</url-pattern>
+    <url-pattern>/index.do</url-pattern>
   </servlet-mapping>
-  
-  <!-- /forum route -->
   <servlet>
     <servlet-name>ForumServlet</servlet-name>
     <servlet-class>be.technofutur.labo.servlets.ForumServlet</servlet-class>
   </servlet>
-
   <servlet-mapping>
     <servlet-name>ForumServlet</servlet-name>
-    <url-pattern>/forum</url-pattern>
+    <url-pattern>/forum.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SubjectServlet</servlet-name>
+    <servlet-class>be.technofutur.labo.servlets.SubjectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SubjectServlet</servlet-name>
+    <url-pattern>/subject.do</url-pattern>
   </servlet-mapping>
   
+  <!-- post servlet -->
+  <servlet>
+    <description></description>
+    <display-name>CreateTopicServlet</display-name>
+    <servlet-name>CreateTopicServlet</servlet-name>
+    <servlet-class>be.technofutur.labo.servlets.CreateTopicServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateTopicServlet</servlet-name>
+    <url-pattern>/create.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>PostMessageServlet</display-name>
+    <servlet-name>PostMessageServlet</servlet-name>
+    <servlet-class>be.technofutur.labo.servlets.PostMessageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PostMessageServlet</servlet-name>
+    <url-pattern>/response.do</url-pattern>
+  </servlet-mapping>
 </web-app>

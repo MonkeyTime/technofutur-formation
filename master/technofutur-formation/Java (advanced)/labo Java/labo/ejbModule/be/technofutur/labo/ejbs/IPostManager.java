@@ -20,4 +20,6 @@ public interface IPostManager {
 	void delete(final Post post);
 	
 	void delete(int id);
+
+	List<Post> findByTopicId(int id);
 }

@@ -37,13 +37,13 @@ public class TopicManager implements ITopicManager {
 	@Override
 	public List<Topic> findAll() {
 		
-		return em.createQuery("SELECT t FROM topic t").getResultList();
+		return em.createQuery("SELECT t FROM Topic t").getResultList();
 	}
 
 	@Override
 	public Topic findById(int id) {
 		
-		Query query = em.createQuery("SELECT t FROM topic t WHERE t.id = :id");
+		Query query = em.createQuery("SELECT t FROM Topic t WHERE t.id = :id");
 		
 		query.setParameter("id", id);
 		
@@ -68,6 +68,17 @@ public class TopicManager implements ITopicManager {
 	public void delete(int id) {
 		
 		em.remove(em.merge(this.findById(id)));
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Topic> findByForumId(int forumId) {
+
+		Query query = em.createQuery("SELECT t FROM Topic t WHERE t.forumId = :forumId");
+		
+		query.setParameter("forumId", forumId);
+		
+		return query.getResultList();
 	}
 
 }

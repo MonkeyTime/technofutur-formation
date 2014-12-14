@@ -8,8 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -36,20 +34,19 @@ public class Topic implements Serializable {
 	private Date lastPostTime;
 	
 	@Column(name="totalViews", nullable = true)
-	private int totalView;
+	private int totalViews;
 	
 	@Column(name="totalReplies", nullable = true)
 	private int totalReplies;
 	
 	@Column(name="createdBy", nullable = false)
-	private User createdBy;
+	private String createdBy;
 	
 	@Column(name="lastPostBy", nullable = false)
-	private User lastPostBy;
+	private String lastPostBy;
 	
-	@ManyToOne
-	@JoinColumn(name = "forumId")
-	private Forum forum;
+	@Column(name = "forumId", nullable = false)
+	private int forumId;
 	
 	public Topic() {}
 
@@ -85,12 +82,20 @@ public class Topic implements Serializable {
 		this.lastPostTime = lastPostTime;
 	}
 
-	public int getTotalView() {
-		return totalView;
+	public int getTotalViews() {
+		return totalViews;
 	}
 
-	public void setTotalView(int totalView) {
-		this.totalView = totalView;
+	public void setTotalViews(int totalViews) {
+		this.totalViews = totalViews;
+	}
+
+	public void setCreatedBy(String createdBy) {
+		this.createdBy = createdBy;
+	}
+
+	public void setLastPostBy(String lastPostBy) {
+		this.lastPostBy = lastPostBy;
 	}
 
 	public int getTotalReplies() {
@@ -101,27 +106,27 @@ public class Topic implements Serializable {
 		this.totalReplies = totalReplies;
 	}
 
-	public User getCreatedBy() {
+	public String getCreatedBy() {
 		return createdBy;
 	}
 
 	public void setCreatedBy(User createdBy) {
-		this.createdBy = createdBy;
+		this.createdBy = createdBy.getUsername();
 	}
 
-	public User getLastPostBy() {
+	public String getLastPostBy() {
 		return lastPostBy;
 	}
 
 	public void setLastPostBy(User lastPostBy) {
-		this.lastPostBy = lastPostBy;
+		this.lastPostBy = lastPostBy.getUsername();
 	}
 
-	public Forum getForum() {
-		return forum;
+	public int getForumId() {
+		return forumId;
 	}
 
-	public void setForum(Forum forum) {
-		this.forum = forum;
+	public void setForumId(int forumId) {
+		this.forumId = forumId;
 	}
 }

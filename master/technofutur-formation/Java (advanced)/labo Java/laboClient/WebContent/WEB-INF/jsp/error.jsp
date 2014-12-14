@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
     
@@ -17,36 +18,44 @@
         <meta name="author" content="MonkeyTime">
         <meta name="copyright" content="&copy;MonkeyTime">
         
-        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="icon" type="image/png" href="/laboClient/favicon.png" />
     	<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /><![endif]-->
     	
-        <link rel="apple-touch-icon" sizes="57x57" href="/touch-icon.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="/touch-icon.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="/touch-retina.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="/touch-retina.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="/laboClient/touch-icon.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/laboClient/touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/laboClient/touch-retina.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/laboClient/touch-retina.png">
 
-        <link rel="stylesheet" type="text/css" href="/css/main.css" media="all">
+        <link rel="stylesheet" type="text/css" href="/laboClient/css/main.css" media="all">
         
         <!--[if lt IE 9]>
-        <script src="/js/html5shiv.js" type="text/javascript"></script>
-        <script src="/js/respond.js" type="text/javascript"></script>
+        <script src="/laboClient/js/html5shiv.js" type="text/javascript"></script>
+        <script src="/laboClient/js/respond.js" type="text/javascript"></script>
         <![endif]-->
         
     </head>
 
      <body>
-     	<header>
-	     	<p>Menu</p>
+     	<header id="header">
+	     	<div class="row wrap30">
+	     		<div class="box u100">
+	     			<p>Error</p>
+	     		</div>
+		    </div>
 	 	</header>
-	     <section>
+	     <section id="section">
 	     	<div class="row wrap30">
 	     		<div class="box u100">
 	     			error
 	     		</div>
 	     	</div>
 	     </section>
-	     <footer>
-	     	<p>&copy;footer</p>
+	     <footer id="footer">
+	     	<div class="row wrap30">
+	     		<div class="box u100">
+	     			<p>&copy;footer</p>
+	     		</div>
+	     	</div>
 	     </footer>
 	</body>
 </html>

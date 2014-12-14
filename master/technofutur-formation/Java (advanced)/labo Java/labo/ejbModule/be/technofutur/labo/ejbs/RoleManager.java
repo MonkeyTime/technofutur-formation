@@ -37,13 +37,13 @@ public class RoleManager implements IRoleManager {
 	@Override
 	public List<Role> findAll() {
 		
-		return em.createQuery("SELECT r FROM role r").getResultList();
+		return em.createQuery("SELECT r FROM Role r").getResultList();
 	}
 
 	@Override
 	public Role findById(int id) {
 		
-		Query query = em.createQuery("SELECT r FROM role r WHERE r.id = :id");
+		Query query = em.createQuery("SELECT r FROM Role r WHERE r.id = :id");
 		
 		query.setParameter("id", id);
 		

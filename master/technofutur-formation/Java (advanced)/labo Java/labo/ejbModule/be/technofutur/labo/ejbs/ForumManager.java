@@ -37,13 +37,13 @@ public class ForumManager implements IForumManager {
 	@Override
 	public List<Forum> findAll() {
 		
-		return em.createQuery("SELECT f FROM forum f").getResultList();
+		return em.createQuery("SELECT f FROM Forum f").getResultList();
 	}
 
 	@Override
 	public Forum findById(int id) {
 		
-		Query query = em.createQuery("SELECT f FROM forum f WHERE f.id = :id");
+		Query query = em.createQuery("SELECT f FROM Forum f WHERE f.id = :id");
 		
 		query.setParameter("id", id);
 		

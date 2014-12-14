@@ -37,13 +37,13 @@ public class PostManager implements IPostManager {
 	@Override
 	public List<Post> findAll() {
 		
-		return em.createQuery("SELECT p FROM post p").getResultList();
+		return em.createQuery("SELECT p FROM Post p").getResultList();
 	}
 
 	@Override
 	public Post findById(int id) {
 		
-		Query query = em.createQuery("SELECT p FROM post p WHERE p.id = :id");
+		Query query = em.createQuery("SELECT p FROM Post p WHERE p.id = :id");
 		
 		query.setParameter("id", id);
 		
@@ -67,6 +67,17 @@ public class PostManager implements IPostManager {
 	public void delete(int id) {
 		
 		em.remove(em.merge(this.findById(id)));
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Post> findByTopicId(int topicId) {
+		
+		Query query = em.createQuery("SELECT p FROM Post p WHERE p.topicId = :topicId");
+		
+		query.setParameter("topicId", topicId);
+		
+		return query.getResultList();	
 	}
 
 }

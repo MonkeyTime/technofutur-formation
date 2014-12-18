@@ -46,8 +46,16 @@ public class PostManager implements IPostManager {
 		Query query = em.createQuery("SELECT p FROM Post p WHERE p.id = :id");
 		
 		query.setParameter("id", id);
+
+		@SuppressWarnings("unchecked")
+		List<Post> posts = query.getResultList();
 		
-		return (Post)query.getSingleResult();	
+		if(posts.size() > 0) {
+			
+			return posts.get(0);
+		}
+		
+		return null;	
 	}
 
 	@Override
@@ -73,7 +81,7 @@ public class PostManager implements IPostManager {
 	@Override
 	public List<Post> findByTopicId(int topicId) {
 		
-		Query query = em.createQuery("SELECT p FROM Post p WHERE p.topicId = :topicId");
+		Query query = em.createQuery("SELECT p FROM Post p WHERE p.topic.id = :topicId");
 		
 		query.setParameter("topicId", topicId);
 		

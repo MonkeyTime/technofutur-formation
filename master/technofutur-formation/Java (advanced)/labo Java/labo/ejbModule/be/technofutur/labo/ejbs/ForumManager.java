@@ -47,7 +47,15 @@ public class ForumManager implements IForumManager {
 		
 		query.setParameter("id", id);
 		
-		return (Forum)query.getSingleResult();	
+		@SuppressWarnings("unchecked")
+		List<Forum> forums = query.getResultList();
+		
+		if(forums.size() > 0) {
+			
+			return forums.get(0);
+		}
+		
+		return null;	
 	}
 
 	@Override

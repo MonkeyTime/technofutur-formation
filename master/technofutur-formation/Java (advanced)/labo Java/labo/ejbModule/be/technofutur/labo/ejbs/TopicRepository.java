@@ -33,22 +33,6 @@ public class TopicRepository implements ITopicRepository {
 		
 		return null;
 	}
-	
-	@Override
-	public List<Topic> findByForumId(int id) {
-
-		List<Topic> list = new ArrayList<Topic>();
-		
-		for(Topic topic : this.topics) {
-			
-			if(topic.getForumId() == id) {
-				
-				list.add(topic);
-			}
-		}
-		
-		return list;
-	}
 
 	@Override
 	public Topic save(Topic topic) {

@@ -17,6 +17,22 @@
     <filter-name>AccessFilter</filter-name>
     <url-pattern>/response.do</url-pattern>
     <url-pattern>/create.do</url-pattern>
+    <url-pattern>/endsession.do</url-pattern>
+  </filter-mapping>
+  
+  <!-- Filter statistics --> 
+ 
+
+  <filter>
+    <display-name>StatisticsFilter</display-name>
+    <filter-name>StatisticsFilter</filter-name>
+    <filter-class>be.technofutur.labo.servlets.StatisticsFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>StatisticsFilter</filter-name>
+    <url-pattern>/response.do</url-pattern>
+    <url-pattern>/create.do</url-pattern>
+    <url-pattern>/subject.do</url-pattern>
   </filter-mapping>
 	
   <!-- app servlets -->

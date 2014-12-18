@@ -47,7 +47,15 @@ public class TopicManager implements ITopicManager {
 		
 		query.setParameter("id", id);
 		
-		return (Topic)query.getSingleResult();	
+		@SuppressWarnings("unchecked")
+		List<Topic> topics = query.getResultList();
+		
+		if(topics.size() > 0) {
+			
+			return topics.get(0);
+		}
+		
+		return null;
 	}
 
 	@Override
@@ -69,16 +77,4 @@ public class TopicManager implements ITopicManager {
 		
 		em.remove(em.merge(this.findById(id)));
 	}
-
-	@SuppressWarnings("unchecked")
-	@Override
-	public List<Topic> findByForumId(int forumId) {
-
-		Query query = em.createQuery("SELECT t FROM Topic t WHERE t.forumId = :forumId");
-		
-		query.setParameter("forumId", forumId);
-		
-		return query.getResultList();
-	}
-
 }

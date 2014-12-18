@@ -6,10 +6,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>redirect</title>
 <script>
-window.location = "/laboClient/index.do?s=1";
+window.location = "/laboClient/index.do";
 </script>
 </head>
 <body>
-<a href="/laboClient/index.do?s=1">You must login before continuing</a>
+<a href="/laboClient/index.do">You must login before continuing</a>
 </body>
 </html>

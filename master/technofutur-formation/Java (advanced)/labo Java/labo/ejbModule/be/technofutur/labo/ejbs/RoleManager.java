@@ -47,7 +47,15 @@ public class RoleManager implements IRoleManager {
 		
 		query.setParameter("id", id);
 		
-		return (Role)query.getSingleResult();	
+		@SuppressWarnings("unchecked")
+		List<Role> roles = query.getResultList();
+		
+		if(roles.size() > 0) {
+			
+			return roles.get(0);
+		}
+		
+		return null;
 	}
 
 	@Override

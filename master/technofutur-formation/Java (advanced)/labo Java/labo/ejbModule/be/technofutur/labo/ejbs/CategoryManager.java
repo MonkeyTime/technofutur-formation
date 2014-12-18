@@ -47,7 +47,15 @@ public class CategoryManager implements ICategoryManager {
 		
 		query.setParameter("id", id);
 		
-		return (Category)query.getSingleResult();	
+		@SuppressWarnings("unchecked")
+		List<Category> cats = query.getResultList();
+		
+		if(cats.size() > 0) {
+			
+			return cats.get(0);
+		}
+		
+		return null;	
 	}
 
 	@Override

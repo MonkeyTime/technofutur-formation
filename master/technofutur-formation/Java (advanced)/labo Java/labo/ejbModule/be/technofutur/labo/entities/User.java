@@ -2,12 +2,16 @@ package be.technofutur.labo.entities;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -20,7 +24,7 @@ public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="id", unique = true, nullable = false)
 	private int id;
 	
@@ -48,9 +52,21 @@ public class User implements Serializable {
 	@Column(name="lastVisit", nullable = true)
 	private Date lastVisitDate;
 	
-	@Column(name = "roleId", nullable = false)
-	private int roleId;
+	@ManyToOne()
+	@JoinColumn(name="roleId")
+	private Role role;
 	
+	@OneToMany(mappedBy="user")
+	private List<Post> posts;
+	
+	public List<Post> getPosts() {
+		return posts;
+	}
+
+	public void setPosts(List<Post> posts) {
+		this.posts = posts;
+	}
+
 	public Date getRegistrationDate() {
 		return registrationDate;
 	}
@@ -123,11 +139,11 @@ public class User implements Serializable {
 		this.totalPost = totalPost;
 	}
 
-	public int getRoleId() {
-		return roleId;
+	public Role getRole() {
+		return role;
 	}
 
-	public void setRoleId(int roleId) {
-		this.roleId = roleId;
+	public void setRole(Role role) {
+		this.role = role;
 	}
 }

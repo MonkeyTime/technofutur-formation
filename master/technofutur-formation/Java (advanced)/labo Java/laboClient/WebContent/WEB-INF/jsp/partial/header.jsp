@@ -26,7 +26,7 @@
         <link rel="apple-touch-icon" sizes="72x72" href="/laboClient/touch-retina.png">
         <link rel="apple-touch-icon" sizes="144x144" href="/laboClient/touch-retina.png">
 
-        <link rel="stylesheet" type="text/css" href="/laboClient/css/main.css" media="all">
+        <link rel="stylesheet" type="text/css" href="/laboClient/css/main.min.css" media="all">
         
         <!--[if lt IE 9]>
         <script src="/laboClient/js/html5shiv.js" type="text/javascript"></script>

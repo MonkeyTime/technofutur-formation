@@ -13,7 +13,7 @@
 	
 		<div class="control-group">
         	<label>&nbsp;</label>
-            <input name="login" class="mt2" type="submit" value="Login" /> <input class="mt2" type="reset" value="Clear" />
+            <input name="login" class="mt2" type="submit" value="Login" /> <input class="mt2" type="reset" value="Reset" />
         </div>
 
 	</fieldset>

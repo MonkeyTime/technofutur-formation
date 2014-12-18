@@ -5,14 +5,6 @@ CREATE TABLE `REVINFO` (
   PRIMARY KEY (`id`)
 );
 
-DROP TABLE IF EXISTS `hibernate_sequence`;
-		
-CREATE TABLE `hibernate_sequence` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`id`)
-);
-
-
 -- ---
 -- Globals
 -- ---

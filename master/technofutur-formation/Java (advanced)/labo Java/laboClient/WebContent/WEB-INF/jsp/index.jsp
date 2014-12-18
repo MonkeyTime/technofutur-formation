@@ -2,8 +2,8 @@
 
      	<header id="header">
 	     	<div class="row wrap30">
-	     		<div class="box u100">
-	     			<p>Index forum</p>
+	     		<div class="box u100 row">
+	     			<div class="box u50 hidden-phone hidden-tablet fl"><p>Index forum</p></div> <div class="box u50 txtr fr"><p>${hellotxt} <c:out value="${user.username}" default="visitor"></c:out> <c:if test="${user != null}"><a href="/laboClient/endsession.do" class="nohref whi"><i class="fa fa-times-circle-o"></i></a></c:if></p></div>
 	     		</div>
 		    </div>
 	 	</header>
@@ -16,6 +16,14 @@
 			     	<div class="row wrap30">
 			     		<div class="box u100 txtc">
 			     		<p class="alert error">${message}</p>
+			     		</div>
+			     	</div>
+					</c:if>
+					
+					<c:if test="${messageOk != null}">
+			     	<div class="row wrap30">
+			     		<div class="box u100 txtc">
+			     		<p class="alert ok">${messageOk}</p>
 			     		</div>
 			     	</div>
 					</c:if>
@@ -43,7 +51,7 @@
 					        
 					        <c:forEach var="forum" items="${forums}"> 
 					        
-					        	<c:if test="${category.id == forum.categoryId}">
+					        	<c:if test="${category.id == forum.category.id}">
 						        <tr>
 						            <td><a href="/laboClient/forum.do?id=${forum.id}"><c:out value="${forum.name}"/></a> <br> ${forum.description}</td>
 						            <td>${forum.totalTopics}</td>
@@ -67,15 +75,7 @@
 	     	
 	     	<c:if test="${user == null}">
 	     	
-	     	<div class="row wrap30 mt2 mb2 login">
-	     		<div class="box u100 txtc">
-	     		
-	     			<%@include file="registerForm.jsp" %>
-	     			
-	     		</div>
-	     	</div>
-	     	
-	     	<div class="row wrap30 mb2 register">
+	     	<div class="row wrap30 mt2 mb2 register">
 	     		<div class="box u100 txtc">
 	     		
 	     			<%@include file="loginForm.jsp" %>
@@ -83,6 +83,26 @@
 	     		</div>
 	     	</div>
 	     	
+	     	<div class="row wrap30 mb2 login">
+	     		<div class="box u100 txtc">
+	     		
+	     			<%@include file="registerForm.jsp" %>
+	     			
+	     		</div>
+	     	</div>
+	     	
+	     	</c:if>
+	     	
+	     	<c:if test="${user != null && role == 1}">
+	     	
+	     	<div class="row wrap30 mt2 mb2 register">
+	     		<div class="box u100 txtc">
+	     		
+	     			<%@include file="admin.jsp" %>
+	     			
+	     		</div>
+	     	</div>
+
 	     	</c:if>
 
 	     </section>

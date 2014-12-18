@@ -31,6 +31,8 @@ public class SubjectServlet extends HttpServlet {
 	IPostManager postManager;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		request.getSession().setAttribute("hellotxt", "Hello");
+		
 		Forum forum = forumManager.findById(Integer.parseInt(request.getParameter("forum")));
 		Topic topic = topicManager.findById(Integer.parseInt(request.getParameter("id")));
 		List<Post> posts = postManager.findByTopicId(topic.getId());
@@ -40,8 +42,14 @@ public class SubjectServlet extends HttpServlet {
 		request.getSession().setAttribute("topic", topic);
 		request.getSession().setAttribute("posts", posts);
 		request.getSession().setAttribute("forum", forum);
+		request.getSession().setAttribute("category", forum.getCategory().getName());
 		
 		request.getRequestDispatcher("/WEB-INF/jsp/subject.jsp").include(request, response);
+		
+		request.getSession().setAttribute("topic", null);
+		request.getSession().setAttribute("posts", null);
+		request.getSession().setAttribute("forum", null);
+		request.getSession().setAttribute("category", null);
 	}
 
 	

@@ -1,9 +1,9 @@
 <%@include file="partial/header.jsp" %>
 
 		<header id="header">
-	     	<div class="row wrap30">
-	     		<div class="box u100">
-	     			<p>Forum <c:out value="${forum.name}"/></p>
+		    <div class="row wrap30">
+	     		<div class="box u100 row">
+	     			<div class="box u50 hidden-phone hidden-tablet fl"><p><c:out value="${category}"/> - forum <c:out value="${forum.name}"/></p></div> <div class="box u50 txtr fr"><p>${hellotxt} <c:out value="${user.username}" default="visitor"></c:out> <c:if test="${user != null}"><a href="/laboClient/endsession.do" class="nohref whi"><i class="fa fa-times-circle-o"></i></a></c:if></p></div>
 	     		</div>
 		    </div>
 	 	</header>
@@ -15,7 +15,7 @@
 	     			<div class="box u80"><h1 class="mt0"><c:out value="${topic.title}"/></h1></div> <div class="box u20 txtr"><a href="/laboClient/response.do?subject=${topic.id}" class="btn">Post response</a></div>
 	     			
 	     			<div class="row">
-	     				<div class="box u100"><a href="/laboClient/index.do">Home</a> > <a href="/laboClient/forum.do?id=${forum.id}">Forum <c:out value="${forum.name}"/></a> > <a href="/laboClient/subject.do?id=${topic.id}&forum=${forum.id}"><c:out value="${topic.title}"/></a></div>
+	     				<div class="box u100"><a href="/laboClient/index.do">Home</a> > <c:out value="${category}"/> > <a href="/laboClient/forum.do?id=${forum.id}">Forum <c:out value="${forum.name}"/></a> > <a href="/laboClient/subject.do?id=${topic.id}&forum=${forum.id}"><c:out value="${topic.title}"/></a></div>
 	     			</div>
 	     			
 	     			<table class="table">

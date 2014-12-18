@@ -3,6 +3,7 @@ package be.technofutur.labo.servlets;
 
 import java.io.IOException;
 
+import javax.ejb.EJB;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -10,16 +11,17 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
-import be.technofutur.labo.entities.User;
+import be.technofutur.labo.ejbs.IPostManager;
+import be.technofutur.labo.ejbs.ITopicManager;
+import be.technofutur.labo.entities.Topic;
 
 /**
  * Servlet Filter implementation class AccessFilter
  */
-public class AccessFilter implements Filter {
+public class StatisticsFilter implements Filter {
 
-    public AccessFilter() {
+    public StatisticsFilter() {
         // TODO Auto-generated constructor stub
     }
 
@@ -27,6 +29,10 @@ public class AccessFilter implements Filter {
 		// TODO Auto-generated method stub
 	}
 
+	@EJB()
+	ITopicManager topicManager;
+	@EJB() 
+	IPostManager postManager;
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 
 		if(request instanceof HttpServletRequest) {
@@ -34,31 +40,21 @@ public class AccessFilter implements Filter {
 			HttpServletRequest req = (HttpServletRequest) request;
 			String url = req.getRequestURL().toString();
 			
-			if(url.contains("/response.do") || url.contains("/create.do")) {
+			if(url.contains("/subject.do")) {
 				
-				User user = (User) req.getSession().getAttribute("user");
+				//statistics
 				
-				if(user == null) {
-					
-					req.getSession().setAttribute("alertForm", "1");
-					
-					HttpServletResponse res = (HttpServletResponse) response;
-					
-					res.sendRedirect("/laboClient/");
-				}
+				int id = Integer.parseInt(request.getParameter("id"));
 				
-				chain.doFilter(request, response);
+				Topic topic = topicManager.findById(id);
+				topic.setTotalViews(topic.getTotalViews() + 1);
+				
+				topicManager.save(topic);
 			}
-			
-			if(url.contains("/endsession.do")) {
-				
-				req.getSession().setAttribute("user", null);
-				
-				HttpServletResponse res = (HttpServletResponse) response;
-				
-				res.sendRedirect("/laboClient/");
-			}
-		}		
+		}
+
+		chain.doFilter(request, response);
+		
 	}
 
 	/**

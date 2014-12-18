@@ -5,6 +5,7 @@ import java.util.List;
 import javax.ejb.Local;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
@@ -45,20 +46,37 @@ public class UserManager implements IUserManager {
 	public User findById(int id) {
 		
 		Query query = em.createQuery("SELECT u FROM User u WHERE u.id = :id");
-		
+			
 		query.setParameter("id", id);
+			
+		@SuppressWarnings("unchecked")
+		List<User> users = query.getResultList();
 		
-		return (User)query.getSingleResult();
+		if(users.size() > 0) {
+			
+			return users.get(0);
+		}
+		
+		return null;
 	}
 	
 	@Override
 	public User findByUsername(String username) {
 		
-		Query query = em.createQuery("SELECT u FROM User u WHERE u.userName = :username");
+		try {
+			
+			Query query = em.createQuery("SELECT u FROM User u WHERE u.username = :username");
+			
+			query.setParameter("username", username);
+			
+			return (User)query.getSingleResult();
+			
+	    } catch(NoResultException e) {
+	        
+	    	return null;
+	    }
 		
-		query.setParameter("username", username);
 		
-		return (User)query.getSingleResult();
 	}
 
 	@Override

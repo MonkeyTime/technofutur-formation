@@ -1,12 +1,17 @@
 package be.technofutur.labo.entities;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -20,7 +25,7 @@ public class Forum implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="id", unique = true, nullable = false)
 	private int id;
 	
@@ -36,9 +41,13 @@ public class Forum implements Serializable {
 	@Column(name="totalPosts", nullable = true)
 	private int totalPosts;
 	
-	@Column(name="categoryId", nullable = false)
-	private int categoryId;
-
+	@ManyToOne()
+	@JoinColumn(name="categoryId")
+	private Category category;
+	
+	@OneToMany(mappedBy="forum", fetch = FetchType.EAGER)
+	private List<Topic> Topics;
+	
 	public Forum() {}
 
 	public int getId() {
@@ -80,14 +89,23 @@ public class Forum implements Serializable {
 	public void setTotalPosts(int totalPosts) {
 		this.totalPosts = totalPosts;
 	}
-
-	public int getCategoryId() {
-		return categoryId;
+	
+	public List<Topic> getTopics() {
+		return Topics;
+	}
+	
+	public void setTopics(List<Topic> topics) {
+		Topics = topics;
+	}
+	
+	public Category getCategory() {
+		return category;
 	}
 
-	public void setCategoryId(int categoryId) {
-		this.categoryId = categoryId;
+	public void setCategory(Category category) {
+		this.category = category;
 	}
+
 	@Override
 	public String toString() {
 		return "Forum " + id + " - " + name;

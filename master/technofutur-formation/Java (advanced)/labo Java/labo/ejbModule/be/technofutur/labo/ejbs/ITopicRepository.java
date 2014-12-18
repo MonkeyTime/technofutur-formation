@@ -18,6 +18,4 @@ public interface ITopicRepository {
 	void delete(final Topic topic);
 	
 	void delete(final int id);
-
-	List<Topic> findByForumId(int id);
 }

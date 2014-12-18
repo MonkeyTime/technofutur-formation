@@ -33,7 +33,7 @@
 		
 		<div class="control-group">
         	<label>&nbsp;</label>
-            <input name="register" class="mt2" type="submit" value="Register" /> <input class="mt2" type="reset" value="Clear" />
+            <input name="register" class="mt2" type="submit" value="Register" /> <input class="mt2" type="reset" value="Reset" />
         </div>
 
 	</fieldset>

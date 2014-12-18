@@ -2,12 +2,16 @@ package be.technofutur.labo.entities;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -20,7 +24,7 @@ public class Topic implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="id", unique = true, nullable = false)
 	private int id;
 	
@@ -45,8 +49,12 @@ public class Topic implements Serializable {
 	@Column(name="lastPostBy", nullable = false)
 	private String lastPostBy;
 	
-	@Column(name = "forumId", nullable = false)
-	private int forumId;
+	@ManyToOne
+	@JoinColumn(name="forumId")
+	private Forum forum;
+	
+	@OneToMany(mappedBy="topic")
+	private List<Post> posts;
 	
 	public Topic() {}
 
@@ -109,24 +117,23 @@ public class Topic implements Serializable {
 	public String getCreatedBy() {
 		return createdBy;
 	}
-
-	public void setCreatedBy(User createdBy) {
-		this.createdBy = createdBy.getUsername();
-	}
-
 	public String getLastPostBy() {
 		return lastPostBy;
 	}
-
-	public void setLastPostBy(User lastPostBy) {
-		this.lastPostBy = lastPostBy.getUsername();
+	
+	public List<Post> getPosts() {
+		return posts;
 	}
 
-	public int getForumId() {
-		return forumId;
+	public void setPosts(List<Post> posts) {
+		this.posts = posts;
 	}
 
-	public void setForumId(int forumId) {
-		this.forumId = forumId;
+	public void setForum(Forum forum) {
+		this.forum = forum;
+	}
+
+	public Forum getForum() {
+		return forum;
 	}
 }

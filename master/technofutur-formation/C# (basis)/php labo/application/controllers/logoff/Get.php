@@ -8,4 +8,4 @@ Session::start();
 Session::regen();
 Session::close();
 		
-header('Location: /' . $language . '/' . LOGIN_REDIRECT);
+header('Location: /' . $language);
